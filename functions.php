@@ -116,7 +116,7 @@ if ( ! function_exists( 'velox_setup' ) ) :
 			),
 			array(
 				'name'  => 'Bright Red',
-				'color' => '#B50000',
+				'color' => '#A51323',
 			)
 		);
 

@@ -373,7 +373,7 @@ hr,
 hr.wp-block-separator {
 	margin-bottom: 2em;
 	background-color: transparent;
-	border-bottom: 3px solid #B50000;
+	border-bottom: 3px solid #A51323;
 	width: 75%;
 	max-width: 75%;
 }
@@ -442,7 +442,7 @@ input[type="submit"],
 	color: #FFFFFF;
 	padding: .5em 1em;
 	font-size: 1rem;
-	background-color: #B50000;
+	background-color: #A51323;
 	text-transform: uppercase;
 	font-weight: bold;
 	letter-spacing: 1px;
@@ -1035,6 +1035,14 @@ img.alignright,
 	text-decoration: underline;
 }
 
+.footer-sidebar a:hover,
+.footer-sidebar a:focus,
+.site-info a:hover,
+.site-info a:focus {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -1085,8 +1093,6 @@ img.alignright,
 
 .footer-sidebar .widget {
 	margin-bottom: 0;
-	flex: 1 0 auto;
-	max-width: auto;
 	word-break: break-word;
 }
 
@@ -1417,9 +1423,9 @@ blockquote.wp-block-quote.is-large cite {
 
 /* Pullquotes */
 .wp-block-pullquote {
-	border-bottom: 3px solid #B50000;
+	border-bottom: 3px solid #A51323;
 	border-left: none;
-	border-top: 3px solid #B50000;
+	border-top: 3px solid #A51323;
 	padding: .75em;
 	color: #1D2731;
 }
@@ -1924,32 +1930,6 @@ body.night-mode .author-info {
 	.wp-block-pullquote {
 		padding: 1.5em 0.75em;
 	}
-
-	.footer-sidebar {
-		flex-direction: row;
-		align-items: start;
-	}
-
-	.footer-sidebar .widget {
-		max-width: 200px;
-	}
-
-}
-
-
-@media screen and (min-width: 768px) and (min-height: 740px) {
-
-	/* Make side header fixed when we have enough height for it */
-/*	.header-side .site-header-wrap {
-		position: fixed;
-	}
-*/
-/*	.header-right-sidebar {
-		position: absolute;
-		top: 12px;
-		right: 12px;
-	}
-*/
 
 }
 

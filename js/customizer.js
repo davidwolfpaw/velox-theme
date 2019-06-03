@@ -142,7 +142,7 @@
 		function( value ) {
 			value.bind(
 				function( to ) {
-					$( '.site-navigation, .site-footer' ).css(
+					$( '.header-top .site-navigation, .site-footer' ).css(
 						{
 							'background-color': to
 						}
