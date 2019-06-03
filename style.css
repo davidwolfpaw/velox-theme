@@ -698,9 +698,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-#main-navigation {
-}
-
 #main-navigation ul {
 	display: none;
 	list-style: none;
@@ -1046,9 +1043,6 @@ img.alignright,
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-.widget-area {
-}
-
 .widget {
 	margin: 0 0 2em;
 }
@@ -1058,7 +1052,6 @@ img.alignright,
 }
 
 .widget select {
-	/* Make sure select elements fit in widgets. */
 	max-width: 100%;
 }
 
