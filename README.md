@@ -1,4 +1,5 @@
-# Velox Theme - A Mobile-First, WordPress Block Ready Theme
+# Velox - A Mobile-First, WordPress Block Ready Theme
+![Velox Theme icon](screenshot.jpg)
 
 ## Howdy
 
