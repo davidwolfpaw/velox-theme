@@ -13,9 +13,7 @@ get_header();
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php
-		if ( have_posts() ) :
-			?>
+		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<h1 class="page-title">
@@ -42,13 +40,13 @@ get_header();
 			endwhile;
 
 			the_posts_navigation();
+			?>
 
-		else :
+		<?php else : ?>
 
-			get_template_part( 'template-parts/content', 'none' );
+			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-		endif;
-		?>
+		<?php endif; ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->

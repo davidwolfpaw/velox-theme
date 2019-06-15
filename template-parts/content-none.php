@@ -9,12 +9,12 @@
 
 ?>
 
-<article class="no-results not-found">
-	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'velox' ); ?></h1>
-	</header><!-- .page-header -->
+<article id="post-0" class="post no-results not-found">
+	<header class="entry-header">
+		<h1 class="entry-title p-entry-title"><?php esc_html_e( 'Nothing Found', 'velox' ); ?></h1>
+	</header><!-- .entry-header -->
 
-	<div class="page-content">
+	<div class="entry-content e-entry-content">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
 			?>
