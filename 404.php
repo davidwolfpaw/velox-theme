@@ -12,9 +12,9 @@ get_header(); ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-			<article class="error-404 not-found">
+			<article id="post-0" class="error-404 not-found">
 				<header class="entry-header">
-					<h1 class="entry-title p-entry-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'velox' ); ?></h1>
+					<h1 class="entry-title p-entry-title"><?php esc_html_e( 'That page can&rsquo;t be found.', 'velox' ); ?></h1>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content e-entry-content">
