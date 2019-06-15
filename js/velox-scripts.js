@@ -11,12 +11,6 @@ jQuery(document).ready(function($) {
     const alignFullBlocks = document.querySelectorAll(".alignfull");
     const coverImageBlocks = document.querySelectorAll(".wp-block-cover-image");
 
-    if ($(".primary-sidebar").length) {
-      const sidebar = $(".primary-sidebar");
-      let sidebarTop = sidebar.position().top;
-      let sidebarBottom = sidebarTop + sidebar.outerHeight(true);
-    }
-
     function getPosition(element) {
       var yPosition = 0;
 
@@ -43,11 +37,6 @@ jQuery(document).ready(function($) {
         let dalignWideTop = alignWideTop - siteTop;
         let dalignWideBottom = alignWideBottom - siteTop;
 
-        if (sidebarBottom > dalignWideTop) {
-          sidebar.addClass("fade-out");
-        } else if (sidebarBottom < dalignWideTop) {
-          sidebar.removeClass("fade-out");
-        }
       });
     }
 

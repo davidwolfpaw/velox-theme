@@ -491,7 +491,7 @@ add_action( 'customize_preview_init', 'velox_customize_preview_js' );
 function velox_customizer_css() {
 	?>
 	<style type="text/css">
-		.site-header-content, #secondary.primary-sidebar { background-color: <?php echo get_theme_mod( 'background_color', '#FFFFFF' ); ?>; }
+		.site-header-content, #secondary { background-color: <?php echo get_theme_mod( 'background_color', '#FFFFFF' ); ?>; }
 		body, button, input, select, optgroup, textarea, h1, h2, h3, h4, h5, h6, .wp-block-pullquote { color: <?php echo get_theme_mod( 'text_color', '#1D2731' ); ?>; }
 		.entry-footer, .entry-meta, .wp-block-image figcaption, .wp-block-pullquote > cite, .wp-block-latest-posts__post-date, .wp-caption-text { color: <?php echo get_theme_mod( 'accent_text_color', '#808182' ); ?>; }
 		.wp-block-button .wp-block-button__link {	background-color: <?php echo get_theme_mod( 'link_color', '#205493' ); ?>; }

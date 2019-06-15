@@ -157,8 +157,8 @@ function velox_widgets_init() {
 			'description'   => esc_html__( 'Displays in the header, to the right of the site title.', 'velox' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 	register_sidebar(
@@ -168,8 +168,8 @@ function velox_widgets_init() {
 			'description'   => esc_html__( 'Displays in the footer, below the footer menu.', 'velox' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 }

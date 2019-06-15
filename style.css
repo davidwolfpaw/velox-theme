@@ -1014,12 +1014,6 @@ img.alignright,
 /*--------------------------------------------------------------
 # Sidebars
 --------------------------------------------------------------*/
-.primary-sidebar {
-	position: relative;
-	width: 200px;
-	margin: 0 auto;
-}
-
 .footer-sidebar {
 	display: flex;
 	flex-direction: column;
@@ -1763,15 +1757,6 @@ body.night-mode .author-info {
 
 	#primary {
 		margin-left: 0;
-	}
-
-	#secondary.primary-sidebar {
-		position: fixed;
-		top: 300px;
-		left: 20px;
-		width: 180px;
-		padding: 12px;
-		background-color: #FFFFFF;
 	}
 
 	/*--------------------------------------------------------------

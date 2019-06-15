@@ -42,7 +42,7 @@
 	// Background Color.
 	wp.customize("background_color", function(value) {
 		value.bind(function(to) {
-			$(".site-header-content, #secondary.primary-sidebar").css({
+			$(".site-header-content, #secondary").css({
 				"background-color": to
 			});
 		});
