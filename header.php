@@ -9,43 +9,41 @@
  * @package Velox
  */
 
-?>
-<!doctype html>
+?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width" />
 	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="profile" href="http://microformats.org/profile/specs" />
+	<link rel="profile" href="http://microformats.org/profile/hatom" />
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site site-wrap">
+<div id="page" class="site-wrap">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'velox' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header" role="banner">
 		<div class="site-header-wrap">
 			<div class="site-header-content">
 				<div class="site-branding">
 					<?php
-					the_custom_logo();
-					if ( is_front_page() && is_home() ) :
+					// If there is a custom logo, display it.
+					if ( has_custom_logo() ) :
+						$image = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) );
 						?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php else : ?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-						<?php
-					endif;
-
-					$description = get_bloginfo( 'description', 'display' );
-
-					if ( $description || is_customize_preview() ) :
-						?>
-						<p class="site-description"><?php echo $description;  // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+						<div class="u-photo photo logo custom-logo-link" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+							<img itemprop="url" src="<?php echo esc_url( current( $image ) ); ?>" />
+							<meta itemprop="width" content="<?php echo esc_attr( next( $image ) ); ?>" />
+							<meta itemprop="height" content="<?php echo esc_attr( next( $image ) ); ?>" />
+						</div>
 						<?php
 					endif;
 					?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 				</div><!-- .site-branding -->
 
 				<?php
@@ -61,7 +59,7 @@
 				<?php
 				if ( is_active_sidebar( 'header-right' ) ) :
 					?>
-					<aside id="secondary" class="widget-area header-right-sidebar">
+					<aside id="secondary" class="widget-area header-right-sidebar" role="complementary">
 						<?php dynamic_sidebar( 'header-right' ); ?>
 					</aside><!-- #secondary -->
 					<?php
@@ -69,7 +67,8 @@
 				?>
 			</div>
 
-			<nav id="main-navigation" class="site-navigation">
+			<nav id="main-navigation" class="site-navigation" role="navigation">
+				<h1 class="screen-reader-text section-heading"><a href="#access" title="<?php esc_attr_e( 'Main menu', 'sempress' ); ?>"><?php _e( 'Main menu', 'sempress' ); ?></a></h1>
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="menu-icon"></span><span class="menu-icon-text"><?php esc_html_e( 'Menu', 'velox' ); ?></span></button>
 				<?php
 					wp_nav_menu(

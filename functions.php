@@ -53,6 +53,9 @@ if ( ! function_exists( 'velox_setup' ) ) :
 			)
 		);
 
+		// Remove th WordPress core custom header image feature.
+		remove_theme_support( 'custom-header' );
+
 		// Set up the WordPress core custom background feature.
 		add_theme_support(
 			'custom-background',
