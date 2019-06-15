@@ -192,28 +192,28 @@ function velox_fonts_url() {
 		$font_selection = get_theme_mod( 'font_pairing', 'playfair_lato' );
 		if ( 'playfair_lato' === $font_selection ) {
 			$font_families[] = 'Playfair Display:400,700';
-			$font_families[] = 'Lato:400,400i,700';
+			$font_families[] = 'Lato:400,700';
 		} elseif ( 'opensans_gentiumbasic' === $font_selection ) {
 			$font_families[] = 'Open Sans:400,700';
-			$font_families[] = 'Gentium Basic:400,400i,700';
+			$font_families[] = 'Gentium Basic:400,700';
 		} elseif ( 'archivoblack_tenorsans' === $font_selection ) {
 			$font_families[] = 'Archivo Black:400';
 			$font_families[] = 'Tenor Sans:400';
 		} elseif ( 'rubik_robotomono' === $font_selection ) {
 			$font_families[] = 'Rubik:400,700';
-			$font_families[] = 'Roboto Mono:400,400i,700';
+			$font_families[] = 'Roboto Mono:400,700';
 		} elseif ( 'ovo_muli' === $font_selection ) {
 			$font_families[] = 'Ovo:400';
-			$font_families[] = 'Muli:400,400i,700';
+			$font_families[] = 'Muli:400,700';
 		} elseif ( 'opensanscondensed_lora' === $font_selection ) {
 			$font_families[] = 'Open Sans Condensed:300,700';
-			$font_families[] = 'Lora:400,400i,700';
+			$font_families[] = 'Lora:400,700';
 		} elseif ( 'nixieone_librebaskerville' === $font_selection ) {
 			$font_families[] = 'Nixie One:400';
-			$font_families[] = 'Libre Baskerville:400,400i,700';
+			$font_families[] = 'Libre Baskerville:400,700';
 		} else {
 			$font_families[] = 'Playfair Display:400,700';
-			$font_families[] = 'Lato:400,400i,700';
+			$font_families[] = 'Lato:400,700';
 		}
 		$query_args = array(
 			'family' => rawurlencode( implode( '|', $font_families ) ),
