@@ -29,7 +29,7 @@ function velox_body_classes( $classes ) {
 	if ( 'side' === get_theme_mod( 'header_location', 'top' ) ) {
 		$classes[] = 'header-side';
 	}
-	// Adds a class pf page-no-title to page-no-title.php template
+	// Adds a class pf page-no-title to page-no-title.php template.
 	if ( is_page_template( 'page-no-title.php' ) ) {
 		$classes[] = 'page-no-title';
 	}
@@ -52,7 +52,7 @@ function velox_post_classes( $classes ) {
 	$classes = array_diff( $classes, array( 'hentry' ) );
 	if ( ! is_singular() ) {
 		// Adds a class of hentry and h-entry for microformats v2.
-		// These are already added to the body class on singular pages.s
+		// These are already added to the body class on singular pages.
 		$classes[] = 'h-entry';
 		$classes[] = 'hentry';
 	}
@@ -85,8 +85,8 @@ add_filter( 'comment_class', 'velox_comment_classes', 11 );
  *
  * @link http://microformats.org/wiki/microformats2
  *
- * @param array $args Arguments passed to get_avatar_data(), after processing.
- * @param int|string|object $id_or_email A user ID, email address, or comment object
+ * @param array             $args Arguments passed to get_avatar_data(), after processing.
+ * @param int|string|object $id_or_email A user ID, email address, or comment object.
  * @return array $args
  */
 function velox_mf2_get_avatar_data( $args, $id_or_email ) {

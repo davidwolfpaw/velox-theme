@@ -443,7 +443,6 @@ function velox_post_meta_shortcode_message() {
  * Sanitize checkbox callbacks
  *
  * @param bool $checked whether it is checked or not.
- *
  * @return checked
  */
 function velox_sanitize_checkbox( $checked ) {
@@ -456,7 +455,6 @@ function velox_sanitize_checkbox( $checked ) {
  *
  * @param string $input radio input values.
  * @param object $setting parameters.
- *
  * @return input
  */
 function velox_sanitize_radio( $input, $setting ) {
@@ -476,7 +474,6 @@ function velox_sanitize_radio( $input, $setting ) {
  *
  * @param string $input select input values.
  * @param object $setting parameters.
- *
  * @return input
  */
 function velox_sanitize_select( $input, $setting ) {
