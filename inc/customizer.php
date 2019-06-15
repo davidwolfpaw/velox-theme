@@ -150,15 +150,16 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'header_location',
 		array(
-			'default'    => 'top',
-			'transport'  => 'refresh',
-			'capability' => 'edit_theme_options',
+			'default'           => 'top',
+			'transport'         => 'refresh',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'velox_sanitize_radio',
 		)
 	);
 
 	// Control: Header Location.
 	$wp_customize->add_control(
-		'header_location_control',
+		'header_location',
 		array(
 			'label'       => __( 'Header Location', 'velox' ),
 			'description' => __( 'Choose whether to place the site header at the top or side of the page.<br /> <strong>Header will always display on top on mobile</strong>', 'velox' ),
@@ -168,7 +169,6 @@ function velox_customize_register( $wp_customize ) {
 				'top'  => 'Top of page',
 				'side' => 'Side of page',
 			),
-			'settings'    => 'header_location',
 		)
 	);
 
@@ -185,13 +185,12 @@ function velox_customize_register( $wp_customize ) {
 
 	// Control: Hide Header on Scroll.
 	$wp_customize->add_control(
-		'hide_header_control',
+		'hide_header',
 		array(
 			'label'       => __( 'Hide Header on Scroll', 'velox' ),
 			'description' => __( 'Hide the header (logo, site title, header sidebar) on scroll.<br /> <strong>Header will always hide on mobile</strong>', 'velox' ),
 			'section'     => 'velox_theme_settings',
 			'type'        => 'checkbox',
-			'settings'    => 'hide_header',
 		)
 	);
 
@@ -208,13 +207,12 @@ function velox_customize_register( $wp_customize ) {
 
 	// Control: Hide Header Menu on Scroll.
 	$wp_customize->add_control(
-		'hide_header_menu_control',
+		'hide_header_menu',
 		array(
 			'label'       => __( 'Hide Header Menu on Scroll', 'velox' ),
 			'description' => __( 'Hide the header menu on scroll.', 'velox' ),
 			'section'     => 'velox_theme_settings',
 			'type'        => 'checkbox',
-			'settings'    => 'hide_header_menu',
 		)
 	);
 
@@ -222,15 +220,16 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'font_pairing',
 		array(
-			'default'    => 'playfair_lato',
-			'transport'  => 'refresh',
-			'capability' => 'edit_theme_options',
+			'default'           => 'playfair_lato',
+			'transport'         => 'refresh',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'velox_sanitize_select',
 		)
 	);
 
 	// Control: Font Pairing.
 	$wp_customize->add_control(
-		'font_pairing_control',
+		'font_pairing',
 		array(
 			'label'       => __( 'Font Pairing', 'velox' ),
 			'description' => __( 'Pairings of fonts for headings and body content.', 'velox' ),
@@ -245,7 +244,6 @@ function velox_customize_register( $wp_customize ) {
 				'opensanscondensed_lora'    => 'Open Sans Condensed / Lora',
 				'nixieone_librebaskerville' => 'Nixie One / Libre Baskerville',
 			),
-			'settings'    => 'font_pairing',
 		)
 	);
 
@@ -262,13 +260,12 @@ function velox_customize_register( $wp_customize ) {
 
 	// Control: Night Mode.
 	$wp_customize->add_control(
-		'night_mode_control',
+		'night_mode',
 		array(
 			'label'       => __( 'Night Mode', 'velox' ),
 			'description' => __( 'Allow a night mode setting to be active for visitors to your site to change to a darker page style.', 'velox' ),
 			'section'     => 'velox_theme_settings',
 			'type'        => 'checkbox',
-			'settings'    => 'night_mode',
 		)
 	);
 
@@ -285,13 +282,12 @@ function velox_customize_register( $wp_customize ) {
 
 	// Control: Read Time.
 	$wp_customize->add_control(
-		'read_time_control',
+		'read_time',
 		array(
 			'label'       => __( 'Read Time', 'velox' ),
 			'description' => __( 'Display an estimate of time to read posts.', 'velox' ),
 			'section'     => 'velox_theme_settings',
 			'type'        => 'checkbox',
-			'settings'    => 'read_time',
 		)
 	);
 
@@ -308,13 +304,12 @@ function velox_customize_register( $wp_customize ) {
 
 	// Control: Article Progress Bar.
 	$wp_customize->add_control(
-		'progress_bar_control',
+		'progress_bar',
 		array(
 			'label'       => __( 'Article Progress Bar', 'velox' ),
 			'description' => __( 'Display a progress bar for post length.', 'velox' ),
 			'section'     => 'velox_theme_settings',
 			'type'        => 'checkbox',
-			'settings'    => 'progress_bar',
 		)
 	);
 
@@ -331,13 +326,12 @@ function velox_customize_register( $wp_customize ) {
 
 	// Control: Author Info.
 	$wp_customize->add_control(
-		'author_info_control',
+		'author_info',
 		array(
 			'label'       => __( 'Author Info', 'velox' ),
 			'description' => __( 'Display author information on posts.', 'velox' ),
 			'section'     => 'velox_theme_settings',
 			'type'        => 'checkbox',
-			'settings'    => 'author_info',
 		)
 	);
 
@@ -354,13 +348,12 @@ function velox_customize_register( $wp_customize ) {
 
 	// Control: Post Meta Header.
 	$wp_customize->add_control(
-		'post_meta_header_control',
+		'post_meta_header',
 		array(
 			'label'       => __( 'Post Meta Header', 'velox' ),
 			'description' => __( 'Post meta that displays before the post content. See shortcodes below.', 'velox' ),
 			'section'     => 'velox_theme_settings',
 			'type'        => 'text',
-			'settings'    => 'post_meta_header',
 		)
 	);
 
@@ -377,13 +370,12 @@ function velox_customize_register( $wp_customize ) {
 
 	// Control: Post Meta Footer.
 	$wp_customize->add_control(
-		'post_meta_footer_control',
+		'post_meta_footer',
 		array(
 			'label'       => __( 'Post Meta Footer', 'velox' ),
 			'description' => __( 'Post meta that displays after the post content. See shortcodes below.', 'velox' ),
 			'section'     => 'velox_theme_settings',
 			'type'        => 'text',
-			'settings'    => 'post_meta_footer',
 		)
 	);
 
@@ -457,6 +449,46 @@ function velox_post_meta_shortcode_message() {
 function velox_sanitize_checkbox( $checked ) {
 	// Boolean check.
 	return ( ( isset( $checked ) && true === $checked ) ? true : false );
+}
+
+/**
+ * Sanitize radio callbacks
+ *
+ * @param string $input radio input values
+ * @param object $setting parameters
+ *
+ * @return input
+ */
+function velox_sanitize_radio( $input, $setting ) {
+	// Input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only.
+	$input = sanitize_key( $input );
+
+	// Get the list of possible radio box options.
+	$choices = $setting->manager->get_control( $setting->id )->choices;
+
+	// Return input if valid or return default option.
+	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+
+}
+
+/**
+ * Sanitize select callbacks
+ *
+ * @param string $input select input values
+ * @param object $setting parameters
+ *
+ * @return input
+ */
+function velox_sanitize_select( $input, $setting ) {
+	//input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
+	$input = sanitize_key( $input );
+
+	//get the list of possible select options
+	$choices = $setting->manager->get_control( $setting->id )->choices;
+
+	//return input if valid or return default option
+	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+
 }
 
 /**
@@ -548,7 +580,7 @@ function velox_font_families() {
 		}
 	";
 
-	// Add inline style to use the selected fonts
+	// Add inline style to use the selected fonts.
 	wp_add_inline_style( 'velox-style', $font_css );
 }
 add_action( 'wp_enqueue_scripts', 'velox_font_families' );

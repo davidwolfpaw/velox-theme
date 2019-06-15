@@ -33,14 +33,14 @@ if ( post_password_required() ) {
 				printf(
 					/* translators: 1: title. */
 					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'velox' ),
-					'<span>' . get_the_title() . '</span>' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					'<span>' . esc_html( get_the_title() ) . '</span>'
 				);
 			} else {
 				printf( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					/* translators: 1: comment count number, 2: title. */
 					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $velox_comment_count, 'comments title', 'velox' ) ),
 					number_format_i18n( $velox_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					'<span>' . get_the_title() . '</span>' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					'<span>' . esc_html( get_the_title() ) . '</span>'
 				);
 			}
 			?>
