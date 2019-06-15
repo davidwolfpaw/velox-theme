@@ -32,12 +32,12 @@
 					<?php
 					// If there is a custom logo, display it.
 					if ( has_custom_logo() ) :
-						$image = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) );
+						$velox_logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) );
 						?>
 						<div class="u-photo photo logo custom-logo-link" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-							<img itemprop="url" src="<?php echo esc_url( current( $image ) ); ?>" />
-							<meta itemprop="width" content="<?php echo esc_attr( next( $image ) ); ?>" />
-							<meta itemprop="height" content="<?php echo esc_attr( next( $image ) ); ?>" />
+							<img itemprop="url" src="<?php echo esc_url( current( $velox_logo ) ); ?>" />
+							<meta itemprop="width" content="<?php echo esc_attr( next( $velox_logo ) ); ?>" />
+							<meta itemprop="height" content="<?php echo esc_attr( next( $velox_logo ) ); ?>" />
 						</div>
 						<?php
 					endif;

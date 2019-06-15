@@ -29,8 +29,8 @@
 				<meta itemprop="url" content="<?php echo esc_url( home_url( '/' ) ); ?>" />
 			</div>
 			<?php
-			$blog_info = get_bloginfo( 'name' );
-			if ( ! empty( $blog_info ) ) :
+			$velox_blog_info = get_bloginfo( 'name' );
+			if ( ! empty( $velox_blog_info ) ) :
 				?>
 				<span class="copyright">&copy; <?php echo esc_html( date( 'Y' ) ); ?></span> <a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 			<?php endif; ?>
