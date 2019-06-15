@@ -54,6 +54,7 @@ if ( post_password_required() ) {
 					array(
 						'style'      => 'ol',
 						'short_ping' => true,
+						'format'     => 'html5',
 					)
 				);
 			?>
@@ -71,7 +72,7 @@ if ( post_password_required() ) {
 
 	endif; // Check for have_comments().
 
-	comment_form();
+	comment_form( array( 'format' => 'html5' ) );
 	?>
 
 </div><!-- #comments -->
