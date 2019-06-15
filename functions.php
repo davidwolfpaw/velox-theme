@@ -33,8 +33,8 @@ if ( ! function_exists( 'velox_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'primary'   => esc_html__( 'Primary', 'velox' ),
-				'secondary' => esc_html__( 'Secondary', 'velox' ),
+				'primary' => esc_html__( 'Primary', 'velox' ),
+				'footer'  => esc_html__( 'Footer', 'velox' ),
 			)
 		);
 

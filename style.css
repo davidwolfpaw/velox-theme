@@ -619,13 +619,18 @@ textarea {
 }
 
 .site-description {
-	margin: .375em 0 0;
+	color: #1D2731;
 	font-size: 1em;
 	font-weight: inherit;
-	line-height: 1;
-	word-wrap: break-word;
-	color: #1D2731;
 	grid-area: site-description;
+	line-height: 1;
+	margin: .375em 0 0;
+	text-align: left;
+	word-wrap: break-word;
+}
+
+.header-side .site-description {
+	text-align: center;
 }
 
 .site-options {
@@ -825,6 +830,22 @@ a:hover, a:active {
 	display: block;
 }
 
+#footer-navigation,
+#footer-menu {
+	display: inline;
+}
+
+#footer-menu {
+	margin: 0;
+	padding: 0;
+}
+
+#footer-menu li {
+	display: inline-block;
+	list-style: none;
+	margin-left: 0.5em;
+}
+
 .comment-navigation,
 .posts-navigation,
 .post-navigation,
@@ -858,11 +879,16 @@ a:hover, a:active {
 # Headers & Titles
 --------------------------------------------------------------*/
 .site-title {
-	margin: 0;
 	font-size: 2em;
 	font-weight: bold;
-	line-height: 1.2;
 	grid-area: site-title;
+	line-height: 1.2;
+	margin: 0;
+	text-align: left;
+}
+
+.header-side .site-title {
+	text-align: center;
 }
 
 .site-title a {
@@ -1015,10 +1041,16 @@ img.alignright,
 # Sidebars
 --------------------------------------------------------------*/
 .footer-sidebar {
+	align-items: top;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: space-between;
-	align-items: center;
+}
+
+.footer-sidebar .widget {
+	flex: 1 0 50%;
+	padding: 0 1em;
 }
 
 .footer-sidebar a,
@@ -1113,6 +1145,10 @@ img.alignright,
 	padding-right: 32px;
 	text-align: center;
 	color: #FFFFFF;
+}
+
+.separator {
+	padding: 0 0.5em;
 }
 
 /*--------------------------------------------------------------
@@ -1943,6 +1979,10 @@ body.night-mode .author-info {
 		position: relative;
 		width: 80vw;
 		max-width: 80vw;
+	}
+
+	.footer-sidebar .widget {
+		flex: 1 0 33.33%;
 	}
 
 }

@@ -491,7 +491,7 @@ add_action( 'customize_preview_init', 'velox_customize_preview_js' );
 function velox_customizer_css() {
 	?>
 	<style type="text/css">
-		.site-header-content, #secondary { background-color: <?php echo get_theme_mod( 'background_color', '#FFFFFF' ); ?>; }
+		.site-header-content { background-color: <?php echo get_theme_mod( 'background_color', '#FFFFFF' ); ?>; }
 		body, button, input, select, optgroup, textarea, h1, h2, h3, h4, h5, h6, .wp-block-pullquote { color: <?php echo get_theme_mod( 'text_color', '#1D2731' ); ?>; }
 		.entry-footer, .entry-meta, .wp-block-image figcaption, .wp-block-pullquote > cite, .wp-block-latest-posts__post-date, .wp-caption-text { color: <?php echo get_theme_mod( 'accent_text_color', '#808182' ); ?>; }
 		.wp-block-button .wp-block-button__link {	background-color: <?php echo get_theme_mod( 'link_color', '#205493' ); ?>; }
@@ -540,8 +540,7 @@ function velox_font_families() {
 		$body_font    = 'Lato';
 	}
 
-	$font_css = "
-		body, button, input, select, optgroup, textarea {
+	$font_css = "body, button, input, select, optgroup, textarea {
 			font-family: {$body_font},-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
 		}
 		h1, h2, h3, h4, h5, h6 {
@@ -550,6 +549,6 @@ function velox_font_families() {
 	";
 
 	// Add inline style to use the selected fonts
-	wp_add_inline_style( 'velox-fonts', $font_css );
+	wp_add_inline_style( 'velox-style', $font_css );
 }
 add_action( 'wp_enqueue_scripts', 'velox_font_families' );
