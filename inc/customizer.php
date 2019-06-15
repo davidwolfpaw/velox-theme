@@ -454,8 +454,8 @@ function velox_sanitize_checkbox( $checked ) {
 /**
  * Sanitize radio callbacks
  *
- * @param string $input radio input values
- * @param object $setting parameters
+ * @param string $input radio input values.
+ * @param object $setting parameters.
  *
  * @return input
  */
@@ -474,19 +474,19 @@ function velox_sanitize_radio( $input, $setting ) {
 /**
  * Sanitize select callbacks
  *
- * @param string $input select input values
- * @param object $setting parameters
+ * @param string $input select input values.
+ * @param object $setting parameters.
  *
  * @return input
  */
 function velox_sanitize_select( $input, $setting ) {
-	//input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
+	// Input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only.
 	$input = sanitize_key( $input );
 
-	//get the list of possible select options
+	// Get the list of possible select options.
 	$choices = $setting->manager->get_control( $setting->id )->choices;
 
-	//return input if valid or return default option
+	// Return input if valid or return default option.
 	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 
 }
