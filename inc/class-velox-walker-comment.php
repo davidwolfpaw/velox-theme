@@ -32,11 +32,11 @@ class Velox_Walker_Comment extends Walker_Comment {
 		<<?php echo esc_attr( $tag ); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
 			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 				<?php
-				if ( 0 != $args['avatar_size'] ) {
+				if ( 0 !== $args['avatar_size'] ) {
 					if ( empty( $comment_author_url ) ) {
 						echo $avatar;
 					} else {
-						printf( '<a href="%s" rel="external nofollow" class="url">', $comment_author_url );
+						printf( '<a href="%s" rel="external nofollow" class="url">', esc_url( $comment_author_url ) );
 						echo $avatar;
 					}
 				}
@@ -55,7 +55,7 @@ class Velox_Walker_Comment extends Walker_Comment {
 										),
 									)
 								),
-								'<strong class="fn">' . $comment_author . '</strong>'
+								'<strong class="fn">' . esc_attr( $comment_author ) . '</strong>'
 							);
 
 							if ( ! empty( $comment_author_url ) ) {
@@ -70,8 +70,8 @@ class Velox_Walker_Comment extends Walker_Comment {
 									/* translators: 1: comment date, 2: comment time */
 									$comment_timestamp = sprintf( __( '%1$s at %2$s', 'velox' ), get_comment_date( '', $comment ), get_comment_time() );
 								?>
-								<time datetime="<?php comment_time( 'c' ); ?>" title="<?php echo $comment_timestamp; ?>">
-									<?php echo $comment_timestamp; ?>
+								<time datetime="<?php comment_time( 'c' ); ?>" title="<?php echo esc_attr( $comment_timestamp ); ?>">
+									<?php echo esc_attr( $comment_timestamp ); ?>
 								</time>
 							</a>
 							<?php
@@ -79,8 +79,8 @@ class Velox_Walker_Comment extends Walker_Comment {
 							?>
 						</div><!-- .comment-metadata -->
 
-						<?php if ( '0' == $comment->comment_approved ) : ?>
-						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'velox' ); ?></p>
+						<?php if ( '0' === $comment->comment_approved ) : ?>
+						<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'velox' ); ?></p>
 						<?php endif; ?>
 					</footer><!-- .comment-meta -->
 

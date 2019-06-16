@@ -1249,7 +1249,7 @@ img.alignright,
 }
 
 .comment-content-wrap {
-	background: #f3f4f5;
+	background: #fafbfc;
 	border: 2px solid rgba(158, 158, 158, 0.33);
 	border-radius: .5em;
 	margin-bottom: 16px;
@@ -1271,7 +1271,7 @@ img.alignright,
 
 .comment-content-wrap:after {
 	border-width: 0 11px 11px 0;
-    border-color: transparent #f3f4f5;
+    border-color: transparent #fafbfc;
     border-style: solid;
     bottom: auto;
     content: '';
