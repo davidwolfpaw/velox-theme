@@ -85,7 +85,7 @@
 	// Header & Footer Color.
 	wp.customize("header_footer_color", function(value) {
 		value.bind(function(to) {
-			$(".header-top .site-navigation, .site-footer").css({
+			$(".header-top .site-navigation, .header-top .site-navigation .sub-menu, .site-footer").css({
 				"background-color": to
 			});
 		});
