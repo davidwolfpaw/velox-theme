@@ -31,20 +31,26 @@ class Velox_Walker_Comment extends Walker_Comment {
 		?>
 		<<?php echo esc_attr( $tag ); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
 			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
-				<?php
-				if ( 0 !== $args['avatar_size'] ) {
-					if ( empty( $comment_author_url ) ) {
-						echo $avatar;
-					} else {
-						printf( '<a href="%s" rel="external nofollow" class="url">', esc_url( $comment_author_url ) );
-						echo $avatar;
+				<div class="comment-avatar">
+					<?php
+					if ( 0 !== $args['avatar_size'] ) {
+						if ( empty( $comment_author_url ) ) {
+							echo $avatar;
+						} else {
+							printf( '<a href="%s" rel="external nofollow" class="url">', esc_url( $comment_author_url ) );
+							echo $avatar;
+							echo '</a>';
+						}
 					}
-				}
-				?>
+					?>
+				</div>
 				<div class="comment-content-wrap">
 					<footer class="comment-meta">
 						<div class="comment-author vcard">
 							<?php
+							if ( ! empty( $comment_author_url ) ) {
+								printf( '<a href="%s" rel="external nofollow" class="url">', esc_url( $comment_author_url ) );
+							}
 							printf(
 								/* translators: %s: comment author link */
 								wp_kses(

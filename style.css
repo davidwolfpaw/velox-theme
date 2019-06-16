@@ -1240,7 +1240,7 @@ img.alignright,
 }
 
 .comment-list .children {
-	margin-left: 2em;
+	margin-left: 40px;
 }
 
 .comment-body {
@@ -1283,10 +1283,40 @@ img.alignright,
 
 .comment .avatar {
 	border-radius: 50%;
+	position: relative;
+	z-index: 1
 }
 
-.comment.parent > .comment-body .reply {
-	margin-bottom: 1em;
+.comment-avatar {
+	position: relative;
+	z-index: 0
+}
+
+.comment.parent .comment-avatar:after {
+	border-left: 2px dashed rgba(158, 158, 158, 0.33);
+	content: '';
+	display: block;
+	height: 100%;
+	left: 23px;
+	position: absolute;
+	top: 24px;
+	width: 2px;
+}
+
+.comment.parent .comment:not(.parent) .comment-avatar:after,
+.comment .children .comment:last-child:not(:only-child) .comment-avatar:before {
+	display: none
+}
+
+.comment .children .comment .comment-avatar:before {
+	border-top: 2px dashed rgba(158, 158, 158, 0.33);
+	content: '';
+	display: block;
+	width: 24px;
+	left: -12px;
+	position: absolute;
+	top: 24px;
+	height: 2px;
 }
 
 .comment-content a {
