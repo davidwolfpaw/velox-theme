@@ -293,6 +293,13 @@ function velox_defer_scripts( $tag, $handle ) {
 }
 add_filter( 'script_loader_tag', 'velox_defer_scripts', 10, 2 );
 
+
+/**
+ * Custom Comment Walker template.
+ */
+require get_template_directory() . '/inc/class-velox-walker-comment.php';
+
+
 /**
  * Implement the Custom Header feature.
  */

@@ -1239,11 +1239,50 @@ img.alignright,
 	list-style: none;
 }
 
-.comment {
-	background: rgba(158, 158, 158, 0.1);
+.comment-list .children {
+	margin-left: 2em;
+}
+
+.comment-body {
+	display: grid;
+    grid-template-columns: 64px calc(100% - 64px);
+}
+
+.comment-content-wrap {
+	background: #f3f4f5;
+	border: 2px solid rgba(158, 158, 158, 0.33);
+	border-radius: .5em;
 	margin-bottom: 16px;
 	padding: 16px;
-	border: 1px solid rgba(158, 158, 158, 0.50);
+	position: relative;
+}
+
+.comment-content-wrap:before {
+    border-width: 0 15px 15px 0;
+    border-color: transparent rgba(158, 158, 158, 0.33);
+    border-style: solid;
+    bottom: auto;
+	content: '';
+    display: block;
+    left: -15px;
+	position: absolute;
+    top: 1em;
+}
+
+.comment-content-wrap:after {
+	border-width: 0 11px 11px 0;
+    border-color: transparent #f3f4f5;
+    border-style: solid;
+    bottom: auto;
+    content: '';
+    display: block;
+    left: -10px;
+    position: absolute;
+    top: calc(1em + 2px);
+}
+
+.comment .avatar {
+	border-radius: 50%;
 }
 
 .comment.parent > .comment-body .reply {
@@ -1254,8 +1293,12 @@ img.alignright,
 	word-wrap: break-word;
 }
 
-.bypostauthor {
-	display: block;
+.bypostauthor .comment-body {
+	border-color: rgba(158, 158, 158, 1);;
+}
+
+.bypostauthor .comment-body:before {
+	border-color: transparent rgba(158, 158, 158, 1);;
 }
 
 /*--------------------------------------------------------------

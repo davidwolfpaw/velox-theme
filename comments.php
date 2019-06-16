@@ -32,13 +32,13 @@ if ( post_password_required() ) {
 			if ( '1' === $velox_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'velox' ),
+					esc_html__( 'One comment on &ldquo;%1$s&rdquo;', 'velox' ),
 					'<span>' . esc_html( get_the_title() ) . '</span>'
 				);
 			} else {
 				printf( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $velox_comment_count, 'comments title', 'velox' ) ),
+					esc_html( _nx( '%1$s comment on &ldquo;%2$s&rdquo;', '%1$s comments on &ldquo;%2$s&rdquo;', $velox_comment_count, 'comments title', 'velox' ) ),
 					number_format_i18n( $velox_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					'<span>' . esc_html( get_the_title() ) . '</span>'
 				);
@@ -53,9 +53,11 @@ if ( post_password_required() ) {
 			<?php
 				wp_list_comments(
 					array(
-						'style'      => 'ol',
-						'short_ping' => true,
-						'format'     => 'html5',
+						'walker'      => new Velox_Walker_Comment(),
+						'avatar_size' => 48,
+						'style'       => 'ol',
+						'short_ping'  => true,
+						'format'      => 'html5',
 					)
 				);
 			?>
