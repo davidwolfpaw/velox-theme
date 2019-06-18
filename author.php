@@ -33,12 +33,7 @@ get_header(); ?>
 						<span itemprop="name"><?php echo get_the_author(); ?></span>
 					</a>
 				</h1>
-				<?php echo get_avatar( get_the_author_meta( 'ID' ), 60 ); ?>
-				<?php if ( get_the_author_meta( 'description' ) ) { ?>
-					<div class="author-note note p-note" itemprop="description">
-						<p><?php echo wp_kses( get_the_author_meta( 'description' ), null ); ?></p>
-					</div>
-				<?php } ?>
+				<?php velox_author_info(); ?>
 			</header>
 
 			<?php

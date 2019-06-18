@@ -1213,23 +1213,16 @@ img.alignright,
 }
 
 .author-info {
-	display: block;
+	display: grid;
+	grid-gap: 24px;
+	grid-template-columns: 72px auto;
+	justify-content: space-between;
 	overflow: hidden;
 	padding-bottom: 0;
 }
 
-.author-image {
-	float: left;
-	width: 80px;
-}
-
-.author-image img {
-	width: 64px;
-}
-
-.author-description {
-	float: right;
-	width: calc(100% - 80px);
+.author-image .avatar {
+	border-radius: 50%;
 }
 
 /*--------------------------------------------------------------

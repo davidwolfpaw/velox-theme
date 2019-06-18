@@ -166,3 +166,31 @@ if ( ! function_exists( 'velox_categories' ) ) :
 		}
 	}
 endif;
+
+if ( ! function_exists( 'velox_author_info' ) ) :
+	/**
+	 * Prints HTML with author info for archives and posts
+	 */
+	function velox_author_info() {
+		?>
+		<div class="author-info author vcard h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+			<div class="author-image">
+				<?php echo get_avatar( get_the_author_meta( 'ID' ), 72, 'mysteryman', get_the_author_meta( 'display_name' ) ); ?>
+			</div>
+			<div class="author-description">
+				<?php if ( ! is_archive() ) { ?>
+					<a class="url u-url fn p-fn n p-name" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo get_the_author(); ?>" rel="me author" itemprop="url">
+						<span itemprop="name"><?php echo get_the_author(); ?></span>
+					</a>
+				<?php } ?>
+				<?php if ( get_the_author_meta( 'description' ) ) { ?>
+					<div class="author-note note p-note" itemprop="description">
+						<p><?php echo wp_kses( get_the_author_meta( 'description' ), null ); ?></p>
+					</div>
+				<?php } ?>
+			</div>
+		</div><!-- .author-info -->
+		<?php
+	}
+endif;
+
