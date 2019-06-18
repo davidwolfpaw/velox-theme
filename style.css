@@ -173,16 +173,17 @@ hr {
 	height: 0;
 }
 
-pre {
-	overflow: auto;
-}
-
 code,
 kbd,
 pre,
 samp {
-	font-family: monospace, monospace;
+	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 	font-size: 1em;
+  	tab-size: 4;
+}
+
+pre {
+	overflow: auto;
 }
 
 button,
@@ -318,8 +319,7 @@ address {
 }
 
 pre {
-	background: #efefef;
-	font-family: "Courier 10 Pitch", Courier, monospace;
+	background: #f3f4f5;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	line-height: 1.6;
@@ -330,7 +330,6 @@ pre {
 }
 
 code, kbd, tt, var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
