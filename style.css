@@ -49,6 +49,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Galleries
 	## Gutenberg Blocks
 # Night Mode
+# Misc Elements
 # Media Queries
 	@media screen and (max-width: 600px)
 	@media screen and (min-width: 600px)
@@ -1763,16 +1764,9 @@ body.night-mode .author-info {
 
 
 /*--------------------------------------------------------------
-# Custom for personal site
+# Misc Elements
 --------------------------------------------------------------*/
-.speaking-event {
-	margin-bottom: 24px;
-}
 
-.speaking-event .event-date {
-	font-size: 0.75em;
-	color: #6c7781;
-}
 
 
 /*--------------------------------------------------------------
