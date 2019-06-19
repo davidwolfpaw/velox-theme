@@ -526,6 +526,7 @@ function velox_customizer_css() {
 		.wp-block-button .wp-block-button__link {	background-color: <?php echo esc_html( get_theme_mod( 'link_color', '#205493' ) ); ?>; }
 		.wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:active, .wp-block-button .wp-block-button__link:focus {	background-color: <?php echo esc_html( get_theme_mod( 'link_active_color', '#0B3C5D' ) ); ?>; }
 		.comment-navigation, .posts-navigation, .post-navigation, .entry-footer, .author-info, hr, .wp-block-separator { border-bottom-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
+		.navigation .nav-previous { border-right-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		.wp-block-pullquote { border-top-color: <?php echo esc_html( get_theme_mod( 'accent_color' ) ); ?>; border-bottom-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		.site-navigation, .site-navigation .sub-menu, .site-footer { background-color: <?php echo esc_html( get_theme_mod( 'header_footer_color', '#0B3C5D' ) ); ?>; }
 		.wp-block-quote:not(.is-large) { border-left-color: <?php echo esc_html( get_theme_mod( 'link_color', '#205493' ) ); ?>; }

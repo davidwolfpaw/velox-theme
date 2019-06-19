@@ -23,7 +23,17 @@ get_header(); ?>
 				velox_author_info();
 			endif;
 
-			the_post_navigation();
+			// Previous/next post navigation.
+			the_post_navigation(
+				array(
+					'next_text' => '<span class="navigation-arrow">&rsaquo;</span><span class="meta-nav" aria-hidden="true">' . __( 'Next Post', 'velox' ) . '</span>' .
+						'<span class="screen-reader-text">' . __( 'Next post:', 'velox' ) . '</span> <br/>' .
+						'<span class="post-title">%title</span>',
+					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous Post', 'velox' ) . '</span><span class="navigation-arrow">&lsaquo;</span>' .
+						'<span class="screen-reader-text">' . __( 'Previous post:', 'velox' ) . '</span> <br/>' .
+						'<span class="post-title">%title</span>',
+				)
+			);
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :

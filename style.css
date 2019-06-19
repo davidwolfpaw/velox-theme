@@ -322,8 +322,7 @@ pre {
 	background: #f3f4f5;
 	font-size: 15px;
 	font-size: 0.9375rem;
-	line-height: 1.6;
-	margin-bottom: 1.6em;
+	margin-bottom: 2em;
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
@@ -862,20 +861,42 @@ a:hover, a:active {
 
 .nav-links {
 	display: flex;
+	position: relative;
 }
 
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
+.nav-links .meta-nav {
+	font-weight: 700;
+}
+
+.navigation-arrow {
+	position: absolute;
+	font-size: 3em;
+}
+
+.nav-previous .navigation-arrow {
+	left: 0;
+}
+
+.nav-next .navigation-arrow {
+	right: 0;
+}
+
+.nav-next,
+.nav-previous {
+	font-size: 0.875em;
 	width: 50%;
-	flex: 1 0 50%;
 }
 
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	text-align: end;
-	flex: 1 0 50%;
+.nav-previous {
+	border-right: 1px solid #1D2731;
+	margin-left: 2em;
+	padding-right: 1em;
+}
+
+.nav-next {
+	margin-right: 2em;
+	padding-left: 1em;
+	text-align: right;
 }
 
 /*--------------------------------------------------------------
