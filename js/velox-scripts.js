@@ -314,6 +314,7 @@ jQuery(document).ready(function($) {
   );
 
 /* PrognRoll | https://mburakerman.github.io/prognroll/ | @mburakerman | License: MIT */
+// n(document).height() has been updated to n("article").height() to only scroll content.
 !(function(n) {
   n.fn.prognroll = function(o) {
     var e = n.extend({ height: 5, color: "#50bcb6", custom: !1 }, o);
@@ -328,7 +329,7 @@ jQuery(document).ready(function($) {
               o.preventDefault();
               var t = n(window).scrollTop(),
                 r = n(window).outerHeight(),
-                i = (t / (n(document).height() - r)) * 100;
+                i = (t / (n("article").height() - r)) * 100;
               n(".progress-bar").css("width", i + "%");
             })
           : n(this).scroll(function(o) {
