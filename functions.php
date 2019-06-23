@@ -124,9 +124,14 @@ if ( ! function_exists( 'velox_setup' ) ) :
 		);
 
 		/**
-		 * Add support for Gutenberg wide images.
+		 * Add support for block editor wide images.
 		 */
 		add_theme_support( 'align-wide' );
+
+		/**
+		 * Add support for block editor responsive embedded content.
+		 */
+		add_theme_support( 'responsive-embeds' );
 
 	}
 endif;
