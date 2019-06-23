@@ -51,7 +51,7 @@
 	// Text Color.
 	wp.customize("text_color", function(value) {
 		value.bind(function(to) {
-			$("body, button, input, select, optgroup, textarea, h1, h2, h3, h4, h5, h6, .wp-block-pullquote").css({
+			$("body, button, input, select, optgroup, textarea, h1, h2, h3, h4, h5, h6").css({
 				color: to
 			});
 		});
@@ -60,7 +60,7 @@
 	// Accent Text Color.
 	wp.customize("accent_text_color", function(value) {
 		value.bind(function(to) {
-			$(".entry-footer, .entry-meta, .wp-block-image figcaption, .wp-block-pullquote > cite, .wp-block-latest-posts__post-date, .wp-caption-text").css({
+			$(".entry-footer, .entry-meta, .wp-block-image figcaption, .wp-block-pullquote cite, .wp-block-latest-posts__post-date, .wp-caption-text").css({
 				color: to
 			});
 		});
