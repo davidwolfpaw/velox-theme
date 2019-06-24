@@ -684,6 +684,7 @@ textarea {
 a {
 	color: #205493;
 	text-decoration: none;
+	word-break: break-word;
 }
 
 a:visited {
@@ -1020,7 +1021,6 @@ img.alignright,
 	position: relative;
 	width: 100vw;
 	max-width: 100vw;
-	overflow-x: hidden;
 	margin: 2em calc(50% - 50vw);
 }
 
@@ -1782,16 +1782,6 @@ body.night-mode .author-info {
 		position: relative;
 		grid-area: main;
 		overflow: hidden;
-	}
-
-	.header-side .wp-block-cover-image.alignfull,
-	.header-side .alignwide,
-	.header-side .alignfull {
-		width: calc(100vw - 240px);
-	}
-
-	.header-side .wp-block-cover-image.alignfull {
-		transform: translateX(120px);
 	}
 
 	.header-side .site-footer {
