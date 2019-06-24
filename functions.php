@@ -98,28 +98,54 @@ if ( ! function_exists( 'velox_setup' ) ) :
 		add_theme_support(
 			'editor-color-palette',
 			array(
-				'name'  => 'Ivory Black',
-				'color' => '#1D2731',
-			),
-			array(
-				'name'  => 'Prussian Blue',
-				'color' => '#0B3C5D',
-			),
-			array(
-				'name'  => 'Matisse',
-				'color' => '#205493',
-			),
-			array(
-				'name'  => 'Gold Leaf',
-				'color' => '#D6BB53',
-			),
-			array(
-				'name'  => 'Carbon Grey',
-				'color' => '#808182',
-			),
-			array(
-				'name'  => 'Bright Red',
-				'color' => '#A51323',
+				array(
+
+					'name'  => __( 'Text Color', 'velox' ),
+					'slug'  => 'text-color',
+					'color' => get_theme_mod( 'text_color', '#1D2731' ),
+				),
+				array(
+
+					'name'  => __( 'Accent Text Color', 'velox' ),
+					'slug'  => 'accent-text-color',
+					'color' => get_theme_mod( 'accent_text_color', '#808182' ),
+				),
+				array(
+
+					'name'  => __( 'Accent Color', 'velox' ),
+					'slug'  => 'accent-color',
+					'color' => get_theme_mod( 'accent_color', '#A51323' ),
+				),
+				array(
+					'name'  => 'Ivory Black',
+					'slug'  => 'ivory-black',
+					'color' => '#1D2731',
+				),
+				array(
+					'name'  => 'Prussian Blue',
+					'slug'  => 'prussian-blue',
+					'color' => '#0B3C5D',
+				),
+				array(
+					'name'  => 'Matisse',
+					'slug'  => 'matisse',
+					'color' => '#205493',
+				),
+				array(
+					'name'  => 'Gold Leaf',
+					'slug'  => 'gold-leaf',
+					'color' => '#D6BB53',
+				),
+				array(
+					'name'  => 'Carbon Grey',
+					'slug'  => 'carbon-grey',
+					'color' => '#808182',
+				),
+				array(
+					'name'  => 'Bright Red',
+					'slug'  => 'bright-red',
+					'color' => '#A51323',
+				),
 			)
 		);
 
