@@ -129,7 +129,7 @@ if ( ! function_exists( 'velox_setup' ) ) :
 				array(
 					'name'  => 'Matisse',
 					'slug'  => 'matisse',
-					'color' => '#205493',
+					'color' => '#0059a7',
 				),
 				array(
 					'name'  => 'Gold Leaf',
@@ -292,7 +292,7 @@ function velox_scripts() {
 		'hide_header_menu' => get_theme_mod( 'hide_header_menu', true ),
 		'read_time'        => get_theme_mod( 'read_time', true ),
 		'progress_bar'     => get_theme_mod( 'progress_bar', true ),
-		'link_color'       => get_theme_mod( 'link_color', '205493' ),
+		'link_color'       => get_theme_mod( 'link_color', '0059a7' ),
 	);
 	wp_localize_script( 'velox-scripts', 'velox_options', $velox_options );
 

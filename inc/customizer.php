@@ -101,7 +101,7 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'link_color',
 		array(
-			'default'   => '#205493',
+			'default'   => '#0059a7',
 			'transport' => 'postMessage',
 		)
 	);
@@ -523,7 +523,7 @@ function velox_customizer_css() {
 		.site-header-content { background-color: <?php echo esc_html( get_theme_mod( 'background_color', '#FFFFFF' ) ); ?>; }
 		body, button, input, select, optgroup, textarea, h1, h2, h3, h4, h5, h6 { color: <?php echo esc_html( get_theme_mod( 'text_color', '#1D2731' ) ); ?>; }
 		.entry-footer, .entry-meta, .wp-block-image figcaption, .wp-block-pullquote cite, .wp-block-latest-posts__post-date, .wp-caption-text { color: <?php echo esc_html( get_theme_mod( 'accent_text_color', '#808182' ) ); ?>; }
-		.wp-block-button .wp-block-button__link {	background-color: <?php echo esc_html( get_theme_mod( 'link_color', '#205493' ) ); ?>; }
+		.wp-block-button .wp-block-button__link {	background-color: <?php echo esc_html( get_theme_mod( 'link_color', '#0059a7' ) ); ?>; }
 		.wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:active, .wp-block-button .wp-block-button__link:focus {	background-color: <?php echo esc_html( get_theme_mod( 'link_active_color', '#0B3C5D' ) ); ?>; }
 		.comment-navigation, .posts-navigation, .post-navigation, .entry-footer, .author-info, hr, .wp-block-separator { border-bottom-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		.navigation .nav-previous { border-right-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
@@ -531,7 +531,7 @@ function velox_customizer_css() {
 		.site-navigation, .site-navigation .sub-menu, .site-footer { background-color: <?php echo esc_html( get_theme_mod( 'header_footer_color', '#0B3C5D' ) ); ?>; }
 		.wp-block-quote:not(.is-large) { border-left-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		.wp-block-separator.is-style-dots:before { color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
-		a, a:visited { color: <?php echo esc_html( get_theme_mod( 'link_color', '#205493' ) ); ?>; }
+		a, a:visited { color: <?php echo esc_html( get_theme_mod( 'link_color', '#0059a7' ) ); ?>; }
 		a:hover, a:focus, a:active { color: <?php echo esc_html( get_theme_mod( 'link_active_color', '#0B3C5D' ) ); ?>; }
 	</style>
 	<?php

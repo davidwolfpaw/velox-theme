@@ -330,6 +330,7 @@ pre {
 }
 
 code, kbd, tt, var {
+	background: #f7f8f9;
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
@@ -678,13 +679,13 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: #205493;
+	color: #0059a7;
 	text-decoration: none;
 	word-break: break-word;
 }
 
 a:visited {
-	color: #205493;
+	color: #0059a7;
 }
 
 a:hover, a:focus, a:active {
@@ -726,7 +727,9 @@ a:hover, a:active {
 
 #main-navigation ul ul li:hover > ul,
 #main-navigation ul ul li.focus > ul {
-	left: 100%;
+	/*left: 100%;*/
+	left: 0;
+	top: 2em;
 }
 
 #main-navigation ul ul a {
@@ -749,6 +752,16 @@ a:hover, a:active {
 	text-decoration: none;
 	color: #FFFFFF;
 	padding: 0.25em 32px;
+}
+
+#main-navigation a:hover,
+#main-navigation a:focus {
+	background-color: #0059a7;
+}
+
+#main-navigation li.menu-item-has-children > a:after {
+	content: " \25BE";
+	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 }
 
 /* Small menu. */
@@ -1515,8 +1528,13 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 /* Tables */
-.wp-block-table {
-	overflow-x: auto;
+.wp-block-table,
+.wp-block-table.aligncenter,
+.wp-block-table.alignleft,
+.wp-block-table.alignright {
+	overflow: hidden;
+	overflow-x: scroll;
+	display:block;
 }
 
 /* Separator */

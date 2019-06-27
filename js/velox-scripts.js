@@ -108,7 +108,7 @@ jQuery(document).ready(function($) {
     let previousTop = 0;
     let currentTop = 0;
     let scrollDelta = 1;
-    let scrollOffset = 50;
+    let scrollOffset = headerHeight;
 
     if ("top" === sideOrTop()) {
       // Push the site content below the fixed header.
