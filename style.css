@@ -320,7 +320,7 @@ address {
 }
 
 pre {
-	background: #f3f4f5;
+	background: #f7f8f9;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	margin-bottom: 2em;
@@ -370,11 +370,7 @@ body {
 
 hr,
 hr.wp-block-separator {
-	margin-bottom: 2em;
-	background-color: transparent;
-	border-bottom: 3px solid #A51323;
-	width: 75%;
-	max-width: 75%;
+	margin: 3em auto;
 }
 
 ul, ol {
@@ -971,11 +967,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-.alignleft,
-.alignright {
-	max-width: 700px !important;	/* Let's work to make this !important unnecessary */
-}
-
 .alignleft figcaption,
 figure.alignleft {
 	clear: left;
@@ -1460,10 +1451,84 @@ ul.wp-block-gallery {
 }
 
 /*--------------------------------------------------------------
-## Gutenberg Blocks
+## Block Editor Blocks
 --------------------------------------------------------------*/
+/* Cover Block */
+.wp-block-cover p {
+  margin: 0;
+}
 
+/* Dropcaps */
+.has-drop-cap:first-letter,
+.has-drop-cap:not(:focus):first-letter {
+	font-family: inherit;
+	font-size: 63px;
+	font-size: 3.5rem;
+	margin: 0 0.1em 0 0;
+	line-height: 1em;
+}
 
+/* Images */
+.wp-block-image figcaption {
+	font-style: italic;
+	font-size: 16px;
+	font-size: 0.89rem;
+}
+
+/* Blockquotes*/
+q,
+blockquote,
+.wp-block-quote {
+	margin-bottom: 2em;
+	border-left: 3px solid #A51323;
+	padding-left: 1em;
+	font-style: italic;
+	font-size: 1.125em;
+}
+
+blockquote cite,
+.wp-block-quote > cite,
+.wp-block-pullquote > cite {
+	display: block;
+}
+
+blockquote.is-style-large {
+	border-left: none;
+}
+
+blockquote.is-style-large cite,
+blockquote.wp-block-quote.is-style-large cite {
+	font-style: normal;
+	font-size: 24px;
+	font-size: 1.5rem;
+	margin-bottom: 2em;
+}
+
+/* Pullquotes */
+.wp-block-pullquote {
+	border-bottom: 3px solid #A51323;
+	border-top: 3px solid #A51323;
+}
+
+.wp-block-pullquote blockquote {
+	border-left: none;
+}
+
+/* Tables */
+.wp-block-table {
+	overflow-x: auto;
+}
+
+/* Separator */
+.wp-block-separator.is-style-default {
+	width: 50%;
+	max-width: 50%;
+}
+
+.wp-block-separator.is-style-wide {
+	width: 100%;
+	max-width: 100%;
+}
 
 /*--------------------------------------------------------------
 # Night Mode

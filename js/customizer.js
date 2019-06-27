@@ -79,6 +79,9 @@
 				"border-top-color": to,
 				"border-bottom-color": to
 			});
+			$(".wp-block-quote:not(.is-large)").css({
+				"border-left-color": to
+			});
 		});
 	});
 
@@ -111,9 +114,6 @@
 			});
 			$(".wp-block-button .wp-block-button__link").css({
 				color: "#FFFFFF"
-			});
-			$(".wp-block-quote:not(.is-large)").css({
-				"border-left-color": to
 			});
 		});
 	});
