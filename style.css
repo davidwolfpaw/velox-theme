@@ -705,7 +705,6 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 #main-navigation ul {
-	display: none;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
@@ -1187,6 +1186,28 @@ img.alignright,
 
 .hentry {
 	margin: 0 auto;
+}
+
+.hentry a {
+	text-decoration: none;
+	border-bottom: 2px solid #00adef;
+    -webkit-box-shadow: inset 0 -2px 0 #00adef;
+    box-shadow: inset 0 -2px 0 #00adef;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+
+.hentry a:visited {
+	color: #00adef;
+}
+
+.hentry a:hover,
+.hentry a:focus,
+.hentry a:active {
+	color: #FFFFFF;
+	background-color: #00adef;
+	text-decoration: none;
 }
 
 .updated:not(.published) {
@@ -1854,6 +1875,12 @@ body.night-mode .author-info {
 	}
 
 	body.header-side #main-navigation a {
+		color: #1D2731;
+		background-color: transparent;
+	}
+
+	body.header-side #main-navigation a:hover,
+	body.header-side #main-navigation a:focus {
 		color: #1D2731;
 	}
 
