@@ -16,9 +16,11 @@
 		<div class="entry-header-content">
 			<?php
 			if ( is_singular() ) :
-				the_title( '<h1 class="entry-title">', '</h1>' );
+				the_title( '<h1 class="entry-title p-name" itemprop="name headline">', '</h1>' );
 			else :
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				?>
+				<h2 class="entry-title p-name" itemprop="name headline"><a href="<?php the_permalink(); ?>" class="u-url url" title="<?php the_title_attribute( array( 'before' => __( 'Permalink to: ', 'velox' ) ) ); ?>" rel="bookmark" itemprop="url"><?php the_title(); ?></a></h1>
+				<?php
 			endif;
 
 			if ( 'post' === get_post_type() ) :

@@ -11,13 +11,17 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title p-name" itemprop="name headline">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php velox_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
+	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+		<div class="entry-summary p-summary" itemprop="description">
+			<?php the_excerpt(); ?>
+		</div><!-- .entry-summary -->
+	<?php else : ?>
+		<?php velox_post_thumbnail(); ?>
+		<div class="entry-content e-content" itemprop="description text">
+			<?php
 			the_content();
 
 			wp_link_pages(
@@ -27,7 +31,8 @@
 				)
 			);
 			?>
-	</div><!-- .entry-content -->
+		</div><!-- .entry-content -->
+	<?php endif; ?>
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
