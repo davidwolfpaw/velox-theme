@@ -53,7 +53,13 @@ if ( ! function_exists( 'velox_setup' ) ) :
 			)
 		);
 
-		// Remove th WordPress core custom header image feature.
+		// Add theme support for Post Formats.
+		add_theme_support(
+			'post-formats',
+			array( 'status', 'quote', 'gallery', 'image', 'video', 'audio', 'link', 'aside', 'chat' )
+		);
+
+		// Remove the WordPress core custom header image feature.
 		remove_theme_support( 'custom-header' );
 
 		// Set up the WordPress core custom background feature.

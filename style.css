@@ -701,6 +701,20 @@ a:hover, a:active {
 	outline: 0;
 }
 
+.mejs-controls a.mejs-horizontal-volume-slider,
+.mejs-controls a.mejs-horizontal-volume-slider:active,
+.mejs-controls a.mejs-horizontal-volume-slider:focus,
+.mejs-controls a.mejs-horizontal-volume-slider:hover,
+.hentry .mejs-controls a.mejs-horizontal-volume-slider,
+.hentry .mejs-controls a.mejs-horizontal-volume-slider:active,
+.hentry .mejs-controls a.mejs-horizontal-volume-slider:focus,
+.hentry .mejs-controls a.mejs-horizontal-volume-slider:hover {
+    background-color: transparent;
+    border-bottom: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -1187,9 +1201,9 @@ img.alignright,
 	margin: 0 auto;
 }
 
-.hentry .site-content a {
+.hentry .entry-content a {
 	text-decoration: none;
-	border-bottom: 2px solid #00adef;
+	border-bottom: 1px solid #00adef;
     -webkit-box-shadow: inset 0 -2px 0 #00adef;
     box-shadow: inset 0 -2px 0 #00adef;
     overflow-wrap: break-word;
@@ -1197,16 +1211,30 @@ img.alignright,
     word-wrap: break-word;
 }
 
-.hentry .site-content a:visited {
+.hentry .entry-content a:visited {
 	color: #00adef;
 }
 
-.hentry .site-content a:hover,
-.hentry .site-content a:focus,
-.hentry .site-content a:active {
+.hentry .entry-content a:hover,
+.hentry .entry-content a:focus,
+.hentry .entry-content a:active {
 	color: #FFFFFF;
 	background-color: #00adef;
 	text-decoration: none;
+}
+
+.hentry .wp-block-image a,
+.hentry .wp-block-image a:active,
+.hentry .wp-block-image a:focus,
+.hentry .wp-block-image a:hover,
+.hentry .wp-block-gallery a,
+.hentry .wp-block-gallery a:active,
+.hentry .wp-block-gallery a:focus,
+.hentry .wp-block-gallery a:hover {
+    background-color: transparent;
+    border-bottom: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .updated:not(.published) {

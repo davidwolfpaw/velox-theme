@@ -19,7 +19,7 @@
 				the_title( '<h1 class="entry-title p-name" itemprop="name headline">', '</h1>' );
 			else :
 				?>
-				<h2 class="entry-title p-name" itemprop="name headline"><a href="<?php the_permalink(); ?>" class="u-url url" title="<?php the_title_attribute( array( 'before' => __( 'Permalink to: ', 'velox' ) ) ); ?>" rel="bookmark" itemprop="url"><?php the_title(); ?></a></h1>
+				<h2 class="entry-title p-name" itemprop="name headline"><a href="<?php the_permalink(); ?>" class="u-url url" title="<?php the_title_attribute( array( 'before' => __( 'Permalink to: ', 'velox' ) ) ); ?>" rel="bookmark" itemprop="url"><?php the_title(); ?></a></h2>
 				<?php
 			endif;
 
@@ -39,7 +39,7 @@
 			<?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 	<?php else : ?>
-		<div class="entry-content e-content p-summary entry-title p-name" itemprop="name headline description articleBody">
+		<div class="entry-content e-content" itemprop="name headline description articleBody">
 			<?php
 				the_content(
 					sprintf(
