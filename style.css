@@ -320,7 +320,7 @@ address {
 }
 
 pre {
-	background: #f7f8f9;
+	background: #F7F8F9;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	margin-bottom: 2em;
@@ -330,9 +330,17 @@ pre {
 }
 
 code, kbd, tt, var {
-	background: #f7f8f9;
+	background: #F7F8F9;
+    border: 1px solid rgba(20,21,22,.3);
+    color: #A51323;
 	font-size: 15px;
 	font-size: 0.9375rem;
+    padding: 3px;
+}
+
+pre code {
+	border: none;
+	padding: initial;
 }
 
 abbr, acronym {
