@@ -75,11 +75,27 @@ jQuery(document).ready(function($) {
         color: "#" + velox_options.link_color
       });
     }
-
     // Allow nightmode if activated.
     if (true == velox_options.night_mode) {
-      $("#night-mode").on("click", function() {
-        $(document.body).toggleClass("night-mode");
+      // Store nightmode value in local storage.
+      var localNightMode = localStorage.getItem("nightmode");
+      if ("true" == localNightMode) {
+        $("body").addClass("night-mode");
+        $('#night-mode-track').replaceWith('<span id="night-mode-track" class="night-mode">Light <span class="night-mode-track-icon">☀️</span></span>');
+      } else {
+        $("body").removeClass("night-mode");
+        $('#night-mode-track').replaceWith('<span id="night-mode-track" class="day-mode">Dark <span class="night-mode-track-icon">🌖</span></span>');
+      }
+      // If someone clicks the nightmode checkbox, toggle and store.
+      $("#night-mode-check").click(function() {
+          $("body").toggleClass("night-mode");
+          if ($("body").hasClass("night-mode")) {
+            localStorage.setItem("nightmode", "true");
+            $('#night-mode-track').replaceWith('<span id="night-mode-track" class="night-mode">Light <span class="night-mode-track-icon">☀️</span></span>');
+          } else {
+            localStorage.setItem("nightmode", "false");
+            $('#night-mode-track').replaceWith('<span id="night-mode-track" class="day-mode">Dark <span class="night-mode-track-icon">🌖</span></span>');
+          }
       });
     }
   })(jQuery);

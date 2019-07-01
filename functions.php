@@ -288,7 +288,7 @@ function velox_scripts() {
 	}
 
 	// Scripts for the Velox theme.
-	wp_enqueue_script( 'velox-scripts', get_template_directory_uri() . '/js/velox-scripts.js', array( 'jquery' ), '20180329', true );
+	wp_enqueue_script( 'velox-scripts', get_template_directory_uri() . '/js/velox-scripts.js', array( 'jquery' ), '1.0.0', true );
 
 	// Pass theme mods to Velox scripts.
 	$velox_options = array(

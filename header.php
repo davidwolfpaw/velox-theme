@@ -28,6 +28,18 @@
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-header-wrap">
 			<div class="site-header-content">
+				<?php
+				if ( true === get_theme_mod( 'night_mode', true ) ) :
+					?>
+					<div class="site-options">
+						<label class="switch">
+							<input type="checkbox" id="night-mode-check">
+							<span id="night-mode-track" class="night-mode"><span class="night-mode-track-icon">🌖</span> Dark</span>
+						</label>
+					</div><!-- .site-options -->
+					<?php
+				endif;
+				?>
 				<div class="site-branding">
 					<?php
 					// If there is a custom logo, display it.
@@ -45,16 +57,6 @@
 					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 				</div><!-- .site-branding -->
-
-				<?php
-				if ( true === get_theme_mod( 'night_mode', true ) ) :
-					?>
-				<div class="site-options">
-					<div id="night-mode"><span class="night-mode-icon"></span></div>
-				</div><!-- .site-options -->
-					<?php
-				endif;
-				?>
 
 				<?php
 				if ( is_active_sidebar( 'header-right' ) ) :
