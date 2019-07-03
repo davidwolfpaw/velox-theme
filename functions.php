@@ -288,7 +288,7 @@ function velox_scripts() {
 	}
 
 	// Scripts for the Velox theme.
-	wp_enqueue_script( 'velox-scripts', get_template_directory_uri() . '/js/velox-scripts.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'velox-scripts', get_template_directory_uri() . '/js/velox-scripts.js', array( 'wp-i18n', 'jquery' ), '1.0.0', true );
 
 	// Pass theme mods to Velox scripts.
 	$velox_options = array(
@@ -301,6 +301,7 @@ function velox_scripts() {
 		'link_color'       => get_theme_mod( 'link_color', '0059a7' ),
 	);
 	wp_localize_script( 'velox-scripts', 'velox_options', $velox_options );
+	wp_set_script_translations( 'velox-scripts', 'velox' );
 
 }
 add_action( 'wp_enqueue_scripts', 'velox_scripts' );

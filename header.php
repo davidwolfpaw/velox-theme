@@ -34,7 +34,7 @@
 					<div class="site-options">
 						<label class="switch">
 							<input type="checkbox" id="night-mode-check">
-							<span id="night-mode-track" class="night-mode"><span class="night-mode-track-icon">🌖</span> Dark</span>
+							<span id="night-mode-track" class="night-mode"><span class="night-mode-track-icon">🌖</span> <?php _e( 'Dark', 'velox' ); ?></span>
 						</label>
 					</div><!-- .site-options -->
 					<?php
