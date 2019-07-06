@@ -882,10 +882,10 @@ a:hover, a:active {
 .post-navigation,
 .author-info {
 	border-bottom: 1px solid #1D2731;
-	margin: 0 auto 40px;
+	margin: 0 auto 20px;
 	max-width: 720px;
 	overflow: hidden;
-	padding-bottom: 40px;
+	padding-bottom: 20px;
 }
 
 .nav-links {
@@ -1272,7 +1272,7 @@ img.alignright,
 .page-navigation,
 .comments-area,
 .footer-sidebar {
-	margin: 2em auto;
+	margin: 20px auto;
 	max-width: 800px;
 }
 
@@ -1292,7 +1292,7 @@ img.alignright,
 }
 
 .entry-footer {
-	padding-bottom:40px;
+	padding-bottom:20px;
 	border-bottom: 1px solid #1D2731;
 }
 
@@ -1303,6 +1303,10 @@ img.alignright,
 	justify-content: space-between;
 	overflow: hidden;
 	padding-bottom: 0;
+}
+
+.author-info p {
+	margin-bottom: 1em;
 }
 
 .author-image .avatar {
