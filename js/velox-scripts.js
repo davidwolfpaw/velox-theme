@@ -9,11 +9,6 @@ jQuery(document).ready(function($) {
     // Get viewport width.
     var responsive_viewport = $(window).width();
 
-    let siteTop = 0;
-    const alignWideBlocks = document.querySelectorAll(".alignwide");
-    const alignFullBlocks = document.querySelectorAll(".alignfull");
-    const coverImageBlocks = document.querySelectorAll(".wp-block-cover-image");
-
     function getPosition(element) {
       var yPosition = 0;
 
@@ -29,19 +24,6 @@ jQuery(document).ready(function($) {
       offset_top: 48,
       spacer: false
     });
-
-    function fadeSidebarOnScroll() {
-      siteTop = $(window).scrollTop();
-
-      alignWideBlocks.forEach(element => {
-        const alignWide = $(element);
-        const alignWideTop = alignWide.position().top;
-        const alignWideBottom = alignWide.position().top + alignWide.outerHeight(true);
-        let dalignWideTop = alignWideTop - siteTop;
-        let dalignWideBottom = alignWideBottom - siteTop;
-
-      });
-    }
 
     // Display read time on articles if activated.
     if (true == velox_options.read_time) {
