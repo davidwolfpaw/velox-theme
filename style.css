@@ -616,7 +616,6 @@ textarea {
 .custom-logo-link {
 	line-height: 1;
 	display: block;
-	height: 36px;
 	width: auto;
 	grid-area: custom-logo-link;
 }
@@ -724,6 +723,7 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 #main-navigation ul {
+	display: none;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
@@ -1814,7 +1814,15 @@ body.night-mode .author-info {
 	}
 
 	.header-side .site-header-content {
-    	grid-template-columns: none;
+	    grid-template-columns: none;
+		grid-template-areas: "site-options"
+							 "site-branding"
+							 "header-sidebar";
+    }
+
+    .header-side .site-options {
+    	text-align: center;
+    	margin-bottom: 16px;
     }
 
 	.entry-title,
