@@ -577,8 +577,10 @@ textarea {
 	align-items: center;
 	background-color: #FFFFFF;
     display: grid;
-    grid-gap: 0 2em;
-    grid-template-columns: none;
+    grid-gap: 0 1em;
+    grid-template-columns: 360px 1fr;
+	grid-template-areas: "site-options site-options"
+						 "site-branding header-sidebar";
     justify-content: space-around;
     padding: 8px 32px;
     position: relative;
@@ -595,12 +597,13 @@ textarea {
 }
 
 .site-options {
-    text-align: center;
-    margin-bottom: 16px;
+	grid-area: site-options;;
+    text-align: right;
 }
 
 .site-branding {
 	display: grid;
+	grid-area: site-branding;
 	grid-template-areas:	"custom-logo-link site-title"
 							"custom-logo-link site-description";
 	margin: 0;
@@ -741,7 +744,7 @@ a:hover, a:active {
 }
 
 #main-navigation ul ul li:hover > ul,
-#main-navigation ul ul li.focus > ul {
+#main-navigation ul ul li:focus > ul {
 	left: 1em;
 	top: 2em;
 }
@@ -751,7 +754,7 @@ a:hover, a:active {
 }
 
 #main-navigation ul li:hover > ul,
-#main-navigation ul li.focus > ul {
+#main-navigation ul li:focus > ul {
 	display: block;
 	left: auto;
 }
@@ -1081,6 +1084,10 @@ img.alignright,
 /*--------------------------------------------------------------
 # Sidebars
 --------------------------------------------------------------*/
+.header-right-sidebar {
+	grid-area: header-sidebar;
+}
+
 .footer-sidebar {
 	align-items: top;
 	display: flex;
@@ -1517,6 +1524,10 @@ ul.wp-block-gallery {
 ## Block Editor Blocks
 --------------------------------------------------------------*/
 /* Cover Block */
+.entry-content .wp-block-cover:first-child {
+	margin-top: 0;
+}
+
 .wp-block-cover p {
   margin: 0;
 }
@@ -1607,32 +1618,14 @@ body {
 	transition: background-color 0.5s, color 0.5s;
 }
 
-#night-mode {
+#night-mode-switch {
 	display: inline-block;
-	position: absolute;
-	height: 20px;
-	width: 20px;
-	transform: rotate(135deg);
-	left: -16px;
-}
-
-.night-mode-icon {
-	position: absolute;
-	top: -2px;
-	right: 0;
-	bottom: 0;
-	left: -10px;
-	width: 20px;
-	height: 20px;
-	background-color: transparent;
-	border-radius: 50%;
-	box-shadow: 8px 2px 0px 0px;
+	line-height: 1;
 }
 
 #night-mode-check {
 	opacity: 0;
 	position: absolute;
-	left: 0
 }
 
 #night-mode-track {
@@ -1775,15 +1768,50 @@ body.night-mode .author-info {
 		display: none;
 	}
 
+	.header-side #main-navigation li,
+	.header-side #main-navigation li:hover,
+	.header-side #main-navigation li:focus {
+		position: inherit;
+		text-align: left;
+		/*width: auto;*/
+	}
+
+	.header-side #main-navigation li a {
+		padding: 0.25em 0;
+	}
+
 	#main-navigation ul {
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
 	}
 
-	.site-header-content {
-    	grid-template-columns: 30% 1fr;
-    }
+	.header-side #main-navigation ul ul {
+		float: none;
+		position: relative;
+		background-color: transparent;
+		display: block;
+		box-shadow: none;
+		left: 1em;
+		top: 0;
+	}
+
+	.header-side #main-navigation ul ul {
+		width: calc(100% - 1em);
+	}
+
+
+	.header-side #main-navigation ul li:hover > ul,
+	.header-side #main-navigation ul li:focus > ul
+	.header-side #main-navigation ul ul li:hover > ul,
+	.header-side #main-navigation ul ul li:focus > ul {
+		left: 1em;
+		top: 0;
+	}
+
+	.header-side #main-navigation ul ul a {
+		width: 100%;
+	}
 
 	.header-side .site-header-content {
     	grid-template-columns: none;
@@ -1867,6 +1895,7 @@ body.night-mode .author-info {
 		-webkit-transition: opacity 0.5s;
 		-moz-transition: opacity 0.5s;
 		transition: opacity 0.5s;
+		font-size: 18px;
 	}
 
 	.header-side .site-header.fade .header-right-sidebar,

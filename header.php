@@ -32,9 +32,9 @@
 				if ( true === get_theme_mod( 'night_mode', true ) ) :
 					?>
 					<div class="site-options">
-						<label class="switch">
+						<label id="night-mode-switch">
 							<input type="checkbox" id="night-mode-check">
-							<span id="night-mode-track" class="night-mode"><span class="night-mode-track-icon">🌖</span> <?php _e( 'Dark', 'velox' ); ?></span>
+							<span id="night-mode-track" class="night-mode"><?php _e( 'Dark', 'velox' ); ?><span class="night-mode-track-icon">🌖</span></span>
 						</label>
 					</div><!-- .site-options -->
 					<?php
