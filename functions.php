@@ -122,36 +122,6 @@ if ( ! function_exists( 'velox_setup' ) ) :
 					'slug'  => 'accent-color',
 					'color' => get_theme_mod( 'accent_color', '#A51323' ),
 				),
-				array(
-					'name'  => 'Ivory Black',
-					'slug'  => 'ivory-black',
-					'color' => '#1D2731',
-				),
-				array(
-					'name'  => 'Prussian Blue',
-					'slug'  => 'prussian-blue',
-					'color' => '#0B3C5D',
-				),
-				array(
-					'name'  => 'Matisse',
-					'slug'  => 'matisse',
-					'color' => '#0059a7',
-				),
-				array(
-					'name'  => 'Gold Leaf',
-					'slug'  => 'gold-leaf',
-					'color' => '#D6BB53',
-				),
-				array(
-					'name'  => 'Carbon Grey',
-					'slug'  => 'carbon-grey',
-					'color' => '#808182',
-				),
-				array(
-					'name'  => 'Bright Red',
-					'slug'  => 'bright-red',
-					'color' => '#A51323',
-				),
 			)
 		);
 
