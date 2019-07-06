@@ -9,17 +9,7 @@ jQuery(document).ready(function($) {
     // Get viewport width.
     var responsive_viewport = $(window).width();
 
-    function getPosition(element) {
-      var yPosition = 0;
-
-      while (element) {
-        yPosition += element.offsetTop - element.scrollTop + element.clientTop;
-        element = element.offsetParent;
-      }
-
-      return yPosition;
-    }
-
+    // Stick header side in sidebar.
     $(".site-header-wrap").stick_in_parent({
       offset_top: 48,
       spacer: false
@@ -54,7 +44,7 @@ jQuery(document).ready(function($) {
       });
     }
 
-    // Display article progress bar if activated
+    // Display article progress bar if activated.
     if (true == velox_options.progress_bar) {
       $("body.single").prognroll({
         color: "#" + velox_options.link_color
@@ -299,185 +289,18 @@ jQuery(document).ready(function($) {
 })();
 
 /**
- * File skip-link-focus-fix.js.
+ * Skip Link Focus Fix
  * Helps with accessibility for keyboard only users.
  * Learn more: https://git.io/vWdr2
  */
-/(trident|msie)/i.test(navigator.userAgent) &&
-  document.getElementById &&
-  window.addEventListener &&
-  window.addEventListener(
-    "hashchange",
-    function() {
-      var t,
-        e = location.hash.substring(1);
-      /^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) || (t.tabIndex = -1), t.focus());
-    },
-    !1
-  );
+/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
 
-/* PrognRoll | https://mburakerman.github.io/prognroll/ | @mburakerman | License: MIT */
-// n(document).height() has been updated to n("article").height() to only scroll content.
-!(function(n) {
-  n.fn.prognroll = function(o) {
-    var e = n.extend({ height: 5, color: "#50bcb6", custom: !1 }, o);
-    return this.each(function() {
-      if (n(this).data("prognroll")) return !1;
-      n(this).data("prognroll", !0);
-      var o = n("<span>", { class: "progress-bar" });
-      n("body").prepend(o),
-        o.css({ position: "fixed", top: 0, left: 0, width: 0, height: e.height, backgroundColor: e.color, zIndex: 9999999 }),
-        !1 === e.custom
-          ? n(window).scroll(function(o) {
-              o.preventDefault();
-              var t = n(window).scrollTop(),
-                r = n(window).outerHeight(),
-                i = (t / (n("article").height() - r)) * 100;
-              n(".progress-bar").css("width", i + "%");
-            })
-          : n(this).scroll(function(o) {
-              o.preventDefault();
-              var t = n(this).scrollTop(),
-                r = n(this).outerHeight(),
-                i = (t / (n(this).prop("scrollHeight") - r)) * 100;
-              n(".progress-bar").css("width", i + "%");
-            });
-      var t = n(window).scrollTop(),
-        r = n(window).outerHeight(),
-        i = (t / (n("body").outerHeight() - r)) * 100;
-      n(".progress-bar").css("width", i + "%");
-    });
-  };
-})(jQuery);
+/* PrognRoll | https://mburakerman.github.io/prognroll/ | @mburakerman | License: MIT
+ * n(document).height() has been updated to n("article").height() to only scroll content.
+ */
+!function(s){s.fn.prognroll=function(o){var i=s.extend({height:5,color:"#50bcb6",custom:!1},o);return this.each(function(){if(s(this).data("prognroll"))return!1;s(this).data("prognroll",!0);var o=s("<span>",{class:"progress-bar"});s("body").prepend(o),o.css({position:"fixed",top:0,left:0,width:0,height:i.height,backgroundColor:i.color,zIndex:9999999}),!1===i.custom?s(window).scroll(function(o){o.preventDefault();var r=s(window).scrollTop(),t=s(window).outerHeight(),e=r/(s("article").height()-t)*100;s(".progress-bar").css("width",e+"%")}):s(this).scroll(function(o){o.preventDefault();var r=s(this).scrollTop(),t=s(this).outerHeight(),e=r/(s(this).prop("scrollHeight")-t)*100;s(".progress-bar").css("width",e+"%")});var r=s(window).scrollTop(),t=s(window).outerHeight(),e=r/(s("body").outerHeight()-t)*100;s(".progress-bar").css("width",e+"%")})}}(jQuery);
 
 /*
- Sticky-kit v1.1.3 | MIT | Leaf Corcoran 2015 | http://leafo.net
-*/
-(function() {
-  var c, f;
-  c = window.jQuery;
-  f = c(window);
-  c.fn.stick_in_parent = function(b) {
-    var A, w, J, n, B, K, p, q, L, k, E, t;
-    null == b && (b = {});
-    t = b.sticky_class;
-    B = b.inner_scrolling;
-    E = b.recalc_every;
-    k = b.parent;
-    q = b.offset_top;
-    p = b.spacer;
-    w = b.bottoming;
-    null == q && (q = 0);
-    null == k && (k = void 0);
-    null == B && (B = !0);
-    null == t && (t = "is_stuck");
-    A = c(document);
-    null == w && (w = !0);
-    L = function(a) {
-      var b;
-      return window.getComputedStyle
-        ? ((a = window.getComputedStyle(a[0])),
-          (b = parseFloat(a.getPropertyValue("width")) + parseFloat(a.getPropertyValue("margin-left")) + parseFloat(a.getPropertyValue("margin-right"))),
-          "border-box" !== a.getPropertyValue("box-sizing") &&
-            (b += parseFloat(a.getPropertyValue("border-left-width")) + parseFloat(a.getPropertyValue("border-right-width")) + parseFloat(a.getPropertyValue("padding-left")) + parseFloat(a.getPropertyValue("padding-right"))),
-          b)
-        : a.outerWidth(!0);
-    };
-    J = function(a, b, n, C, F, u, r, G) {
-      var v, H, m, D, I, d, g, x, y, z, h, l;
-      if (!a.data("sticky_kit")) {
-        a.data("sticky_kit", !0);
-        I = A.height();
-        g = a.parent();
-        null != k && (g = g.closest(k));
-        if (!g.length) throw "failed to find stick parent";
-        v = m = !1;
-        (h = null != p ? p && a.closest(p) : c("<div />")) && h.css("position", a.css("position"));
-        x = function() {
-          var d, f, e;
-          if (
-            !G &&
-            ((I = A.height()),
-            (d = parseInt(g.css("border-top-width"), 10)),
-            (f = parseInt(g.css("padding-top"), 10)),
-            (b = parseInt(g.css("padding-bottom"), 10)),
-            (n = g.offset().top + d + f),
-            (C = g.height()),
-            m && ((v = m = !1), null == p && (a.insertAfter(h), h.detach()), a.css({ position: "", top: "", width: "", bottom: "" }).removeClass(t), (e = !0)),
-            (F = a.offset().top - (parseInt(a.css("margin-top"), 10) || 0) - q),
-            (u = a.outerHeight(!0)),
-            (r = a.css("float")),
-            h && h.css({ width: L(a), height: u, display: a.css("display"), "vertical-align": a.css("vertical-align"), float: r }),
-            e)
-          )
-            return l();
-        };
-        x();
-        if (u !== C)
-          return (
-            (D = void 0),
-            (d = q),
-            (z = E),
-            (l = function() {
-              var c, l, e, k;
-              if (
-                !G &&
-                ((e = !1),
-                null != z && (--z, 0 >= z && ((z = E), x(), (e = !0))),
-                e || A.height() === I || x(),
-                (e = f.scrollTop()),
-                null != D && (l = e - D),
-                (D = e),
-                m
-                  ? (w && ((k = e + u + d > C + n), v && !k && ((v = !1), a.css({ position: "fixed", bottom: "", top: d }).trigger("sticky_kit:unbottom"))),
-                    e < F &&
-                      ((m = !1),
-                      (d = q),
-                      null == p && (("left" !== r && "right" !== r) || a.insertAfter(h), h.detach()),
-                      (c = { position: "", width: "", top: "" }),
-                      a
-                        .css(c)
-                        .removeClass(t)
-                        .trigger("sticky_kit:unstick")),
-                    B && ((c = f.height()), u + q > c && !v && ((d -= l), (d = Math.max(c - u, d)), (d = Math.min(q, d)), m && a.css({ top: d + "px" }))))
-                  : e > F &&
-                    ((m = !0),
-                    (c = { position: "fixed", top: d }),
-                    (c.width = "border-box" === a.css("box-sizing") ? a.outerWidth() + "px" : a.width() + "px"),
-                    a.css(c).addClass(t),
-                    null == p && (a.after(h), ("left" !== r && "right" !== r) || h.append(a)),
-                    a.trigger("sticky_kit:stick")),
-                m && w && (null == k && (k = e + u + d > C + n), !v && k))
-              )
-                return (v = !0), "static" === g.css("position") && g.css({ position: "relative" }), a.css({ position: "absolute", bottom: b, top: "auto" }).trigger("sticky_kit:bottom");
-            }),
-            (y = function() {
-              x();
-              return l();
-            }),
-            (H = function() {
-              G = !0;
-              f.off("touchmove", l);
-              f.off("scroll", l);
-              f.off("resize", y);
-              c(document.body).off("sticky_kit:recalc", y);
-              a.off("sticky_kit:detach", H);
-              a.removeData("sticky_kit");
-              a.css({ position: "", bottom: "", top: "", width: "" });
-              g.position("position", "");
-              if (m) return null == p && (("left" !== r && "right" !== r) || a.insertAfter(h), h.remove()), a.removeClass(t);
-            }),
-            f.on("touchmove", l),
-            f.on("scroll", l),
-            f.on("resize", y),
-            c(document.body).on("sticky_kit:recalc", y),
-            a.on("sticky_kit:detach", H),
-            setTimeout(l, 0)
-          );
-      }
-    };
-    n = 0;
-    for (K = this.length; n < K; n++) (b = this[n]), J(c(b));
-    return this;
-  };
-}.call(this));
+ * Sticky-kit v1.1.3 | MIT | Leaf Corcoran 2015 | http://leafo.net
+ */
+(function(){var A,M;A=window.jQuery,M=A(window),A.fn.stick_in_parent=function(t){var w,_,i,o,x,e,P,V,F,C,z,I;for(null==t&&(t={}),I=t.sticky_class,x=t.inner_scrolling,z=t.recalc_every,C=t.parent,V=t.offset_top,P=t.spacer,_=t.bottoming,null==V&&(V=0),null==C&&(C=void 0),null==x&&(x=!0),null==I&&(I="is_stuck"),w=A(document),null==_&&(_=!0),F=function(t){var i;return window.getComputedStyle?(t=window.getComputedStyle(t[0]),i=parseFloat(t.getPropertyValue("width"))+parseFloat(t.getPropertyValue("margin-left"))+parseFloat(t.getPropertyValue("margin-right")),"border-box"!==t.getPropertyValue("box-sizing")&&(i+=parseFloat(t.getPropertyValue("border-left-width"))+parseFloat(t.getPropertyValue("border-right-width"))+parseFloat(t.getPropertyValue("padding-left"))+parseFloat(t.getPropertyValue("padding-right"))),i):t.outerWidth(!0)},i=function(s,r,n,l,a,c,p,u){var d,t,f,g,h,k,y,m,i,b,v,e;if(!s.data("sticky_kit")){if(s.data("sticky_kit",!0),h=w.height(),y=s.parent(),null!=C&&(y=y.closest(C)),!y.length)throw"failed to find stick parent";if(d=f=!1,(v=null!=P?P&&s.closest(P):A("<div />"))&&v.css("position",s.css("position")),(m=function(){var t,i,o;if(!u&&(h=w.height(),t=parseInt(y.css("border-top-width"),10),i=parseInt(y.css("padding-top"),10),r=parseInt(y.css("padding-bottom"),10),n=y.offset().top+t+i,l=y.height(),f&&(d=f=!1,null==P&&(s.insertAfter(v),v.detach()),s.css({position:"",top:"",width:"",bottom:""}).removeClass(I),o=!0),a=s.offset().top-(parseInt(s.css("margin-top"),10)||0)-V,c=s.outerHeight(!0),p=s.css("float"),v&&v.css({width:F(s),height:c,display:s.css("display"),"vertical-align":s.css("vertical-align"),float:p}),o))return e()})(),c!==l)return g=void 0,k=V,b=z,e=function(){var t,i,o,e;if(!u&&(o=!1,null!=b&&(--b<=0&&(b=z,m(),o=!0)),o||w.height()===h||m(),o=M.scrollTop(),null!=g&&(i=o-g),g=o,f?(_&&(e=l+n<o+c+k,d&&!e&&(d=!1,s.css({position:"fixed",bottom:"",top:k}).trigger("sticky_kit:unbottom"))),o<a&&(f=!1,k=V,null==P&&("left"!==p&&"right"!==p||s.insertAfter(v),v.detach()),t={position:"",width:"",top:""},s.css(t).removeClass(I).trigger("sticky_kit:unstick")),x&&((t=M.height())<c+V&&!d&&(k-=i,k=Math.max(t-c,k),k=Math.min(V,k),f&&s.css({top:k+"px"})))):a<o&&(f=!0,(t={position:"fixed",top:k}).width="border-box"===s.css("box-sizing")?s.outerWidth()+"px":s.width()+"px",s.css(t).addClass(I),null==P&&(s.after(v),"left"!==p&&"right"!==p||v.append(s)),s.trigger("sticky_kit:stick")),f&&_&&(null==e&&(e=l+n<o+c+k),!d&&e)))return d=!0,"static"===y.css("position")&&y.css({position:"relative"}),s.css({position:"absolute",bottom:r,top:"auto"}).trigger("sticky_kit:bottom")},i=function(){return m(),e()},t=function(){if(u=!0,M.off("touchmove",e),M.off("scroll",e),M.off("resize",i),A(document.body).off("sticky_kit:recalc",i),s.off("sticky_kit:detach",t),s.removeData("sticky_kit"),s.css({position:"",bottom:"",top:"",width:""}),y.position("position",""),f)return null==P&&("left"!==p&&"right"!==p||s.insertAfter(v),v.remove()),s.removeClass(I)},M.on("touchmove",e),M.on("scroll",e),M.on("resize",i),A(document.body).on("sticky_kit:recalc",i),s.on("sticky_kit:detach",t),setTimeout(e,0)}},o=0,e=this.length;o<e;o++)t=this[o],i(A(t));return this}}).call(this);
