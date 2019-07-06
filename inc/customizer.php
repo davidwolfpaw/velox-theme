@@ -78,25 +78,6 @@ function velox_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Header & Footer color.
-	$wp_customize->add_setting(
-		'header_footer_color',
-		array(
-			'default'   => '#0B3C5D',
-			'transport' => 'postMessage',
-		)
-	);
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'header_footer_color',
-			array(
-				'section' => 'colors',
-				'label'   => esc_html__( 'Header Menu & Footer Color', 'velox' ),
-			)
-		)
-	);
-
 	// Link Color.
 	$wp_customize->add_setting(
 		'link_color',
@@ -528,7 +509,6 @@ function velox_customizer_css() {
 		.comment-navigation, .posts-navigation, .post-navigation, .entry-footer, .author-info, hr, .wp-block-separator { border-bottom-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		.navigation .nav-previous { border-right-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		.wp-block-pullquote { border-top-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; border-bottom-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
-		.site-navigation, .site-navigation .sub-menu, .site-footer { background-color: <?php echo esc_html( get_theme_mod( 'header_footer_color', '#0B3C5D' ) ); ?>; }
 		.wp-block-quote:not(.is-large) { border-left-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		.wp-block-separator.is-style-dots:before { color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		a, a:visited { color: <?php echo esc_html( get_theme_mod( 'link_color', '#0059a7' ) ); ?>; }

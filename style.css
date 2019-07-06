@@ -677,6 +677,7 @@ textarea {
 
 .site-navigation .sub-menu {
 	opacity: 0.98;
+	background-color: #0B3C5D;
 }
 
 /*--------------------------------------------------------------
@@ -1102,6 +1103,7 @@ img.alignright,
 }
 
 .footer-sidebar a,
+.footer-sidebar a:visited,
 .site-info a,
 .site-info a:visited {
 	color: #FFFFFF;
@@ -1188,11 +1190,12 @@ img.alignright,
 }
 
 .site-footer {
+	background-color: #0B3C5D;
+	color: #FFFFFF;
 	margin: 0 auto;
 	padding-left: 32px;
 	padding-right: 32px;
 	text-align: center;
-	color: #FFFFFF;
 }
 
 .separator {
