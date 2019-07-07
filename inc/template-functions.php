@@ -21,6 +21,14 @@ function velox_body_classes( $classes ) {
 		$classes[] = 'h-entry';
 		$classes[] = 'hentry';
 	}
+	// Adds a class of single-author to blogs with only 1 published author.
+	if ( ! is_multi_author() ) {
+		$classes[] = 'single-author';
+	}
+	// Adds a class of custom-header if a header image is used.
+	if ( get_header_image() ) {
+		$classes[] = 'custom-header';
+	}
 	// Adds a class of header-top if that option is active.
 	if ( 'top' === get_theme_mod( 'header_location', 'top' ) ) {
 		$classes[] = 'header-top';
@@ -56,6 +64,10 @@ function velox_post_classes( $classes ) {
 		$classes[] = 'h-entry';
 		$classes[] = 'hentry';
 	}
+	// Adds a class of no-title if there is not a title on the page.
+	if ( ! get_the_title() ) {
+		$classes[] = 'no-title';
+	}
 
 	return array_unique( $classes );
 }
@@ -71,13 +83,23 @@ add_filter( 'post_class', 'velox_post_classes' );
  * @return array $classes Classes for the comment element.
  */
 function velox_comment_classes( $classes ) {
-
-	$classes[] = 'u-comment';
+	$classes[] = 'h-entry';
 	$classes[] = 'h-cite';
+	$classes[] = 'p-comment';
+	$classes[] = 'comment';
 
 	return array_unique( $classes );
 }
 add_filter( 'comment_class', 'velox_comment_classes', 11 );
+
+/**
+ * Adds microformats v2 support to the comment_author_link.
+ */
+function velox_author_link( $link ) {
+	// Adds a class for microformats v2
+	return preg_replace( '/(class\s*=\s*[\"|\'])/i', '${1}u-url ', $link );
+}
+add_filter( 'get_comment_author_link', 'velox_author_link' );
 
 /**
  * Adds classes to avatar.
