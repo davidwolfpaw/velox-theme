@@ -575,7 +575,6 @@ textarea {
 
 .site-header-content {
 	align-items: center;
-	background-color: #FFFFFF;
     display: grid;
     grid-gap: 0 1em;
     grid-template-columns: 360px 1fr;
@@ -588,6 +587,10 @@ textarea {
     -webkit-transition: background-color 0.5s;
     -moz-transition: background-color 0.5s;
     transition: background-color 0.5s;
+}
+
+.header-top .site-header-content {
+	background-color: #FFFFFF;
 }
 
 .site-header-content.is-hidden {
