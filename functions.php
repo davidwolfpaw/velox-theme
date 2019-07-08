@@ -85,8 +85,8 @@ if ( ! function_exists( 'velox_setup' ) ) :
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 80,
-				'width'       => 240,
+				'height'      => 200,
+				'width'       => 200,
 				'flex-width'  => true,
 				'flex-height' => true,
 				'header-text' => array(

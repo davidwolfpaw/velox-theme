@@ -14,8 +14,6 @@ function velox_customize_register( $wp_customize ) {
 	// Change some setting defaults.
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->default   = '#1D2731';
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->default   = '#FFFFFF';
 

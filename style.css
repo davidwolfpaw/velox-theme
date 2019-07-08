@@ -595,8 +595,8 @@ textarea {
 }
 
 .custom-logo-link img {
-	max-width: 300px;
-	max-height: 64px;
+	max-width: 200px;
+	max-height: 200px;
 	width: auto;
 	height: auto;
 	display: block;
@@ -1778,16 +1778,6 @@ body.night-mode .author-info {
 	.alignfull {
 		width: calc(100vw - 240px);
 		margin: 2em calc(50% - calc(50vw - 120px))
-	}
-
-	.custom-logo-link {
-		height: 100%;
-	}
-
-	.custom-logo-link img,
-	.custom-logo-link picture {
-		max-height: 75px;
-		margin-right: 0;
 	}
 
 	.site-navigation {
