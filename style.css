@@ -287,10 +287,10 @@ textarea {
 }
 
 body *::-moz-selection {
-	background: #fff2a8;
+	background: #FFF2A8;
 }
 body *::selection {
-	background: #fff2a8;
+	background: #FFF2A8;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -350,7 +350,7 @@ abbr, acronym {
 }
 
 mark, ins {
-	background: #fff9c0;
+	background: #FFF9C0;
 	text-decoration: none;
 }
 
@@ -374,7 +374,7 @@ html {
 
 body {
 	/* Fallback for when there is no custom background color defined. */
-	background: #fff;
+	background: #FFFFFF;
 }
 
 hr,
@@ -548,14 +548,9 @@ textarea {
 /*--------------------------------------------------------------
 # Site Header
 --------------------------------------------------------------*/
-.site-header {
-	-webkit-transition: transform 0.5s;
-	-moz-transition: transform 0.5s;
-	transition: transform 0.5s;
-}
-
 .site-header-content {
 	align-items: center;
+	background-color: #FFFFFF;
     display: grid;
     grid-gap: 0 1em;
     grid-template-columns: 360px 1fr;
@@ -564,10 +559,13 @@ textarea {
     justify-content: space-around;
     padding: 8px 32px;
     position: relative;
-    z-index: 2;
-    -webkit-transition: background-color 0.5s;
-    -moz-transition: background-color 0.5s;
-    transition: background-color 0.5s;
+	-webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+
+body.custom-background .site-header-content {
+	background-color: transparent;
 }
 
 .site-options {
@@ -600,7 +598,7 @@ textarea {
 	width: auto;
 	height: auto;
 	display: block;
-	margin-right: 12px;
+	margin-bottom: 16px;
 }
 
 .site-description {
@@ -621,11 +619,6 @@ textarea {
 	position: relative;
 	z-index: 1;
 	width: 100%;
-	background-color: #0B3C5D;
-	/* Force Hardware Acceleration */
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	transition: all 0.5s;
 }
 
 /*--------------------------------------------------------------
@@ -726,7 +719,7 @@ a:hover, a:active {
 	transition-duration: .15s;
 	transition-property: transform;
 	border-radius: 4px;
-	background-color: #fff;
+	background-color: #FFFFFF;
 	left: 0;
 }
 
@@ -1576,8 +1569,8 @@ body.night-mode .site-footer {
 	color: rgba(255, 255, 255, 0.9);
 }
 
-body.night-mode .site-navigation {
-	background-color: #222;
+body.night-mode.custom-background .site-header-content {
+	background-color: transparent;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -1781,19 +1774,13 @@ body.night-mode .author-info {
 	}
 
 	.site-navigation {
-		background-color: transparent;
 		padding-left: 1em;
 		padding-right: 1em;
 		text-align: center;
 	}
 
-	body.night-mode .site-navigation {
-		background: transparent;
-	}
-
 	body #main-navigation a {
 		color: #1D2731;
-		background-color: transparent;
 	}
 
 	body #main-navigation a:hover,

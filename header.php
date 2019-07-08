@@ -29,7 +29,7 @@
 		<div class="site-header-wrap">
 			<div class="site-header-content">
 				<?php
-				if ( true === get_theme_mod( 'night_mode', true ) ) :
+				if ( 'default_light' === get_theme_mod( 'night_mode', 'default_light' ) || 'default_dark' === get_theme_mod( 'night_mode', 'default_light' ) ) :
 					?>
 					<div class="site-options">
 						<label id="night-mode-switch">

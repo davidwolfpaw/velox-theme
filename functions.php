@@ -262,7 +262,7 @@ function velox_scripts() {
 
 	// Pass theme mods to Velox scripts.
 	$velox_options = array(
-		'night_mode'       => get_theme_mod( 'night_mode', true ),
+		'night_mode'       => get_theme_mod( 'night_mode', 'default_light' ),
 		'read_time'        => get_theme_mod( 'read_time', true ),
 		'progress_bar'     => get_theme_mod( 'progress_bar', true ),
 		'link_color'       => get_theme_mod( 'link_color', '0059a7' ),

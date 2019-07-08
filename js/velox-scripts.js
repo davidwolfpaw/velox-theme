@@ -51,12 +51,12 @@ jQuery(document).ready(function($) {
       });
     }
     // Allow nightmode if activated.
-    if (true == velox_options.night_mode) {
+    if ('default_light' == velox_options.night_mode || 'default_dark' == velox_options.night_mode) {
       const light = __( 'Light', 'velox' );
       const dark = __( 'Dark', 'velox' );
       // Store nightmode value in local storage.
       var localNightMode = localStorage.getItem("nightmode");
-      if ("true" == localNightMode) {
+      if ("true" == localNightMode || 'default_dark' == velox_options.night_mode) {
         $("body").addClass("night-mode");
         $('#night-mode-track').replaceWith('<span id="night-mode-track" class="night-mode">' + light + ' <span class="night-mode-track-icon">☀️</span></span>');
       } else {

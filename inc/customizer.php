@@ -118,10 +118,9 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'velox_theme_settings',
 		array(
-			'priority'    => 40,
-			'title'       => __( 'Velox Theme Settings', 'velox' ),
-			'description' => __( 'Settings specific to the Velox theme.', 'velox' ),
-			'capability'  => 'edit_theme_options',
+			'priority'   => 40,
+			'title'      => __( 'Velox Theme Settings', 'velox' ),
+			'capability' => 'edit_theme_options',
 		)
 	);
 
@@ -160,10 +159,10 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'night_mode',
 		array(
-			'default'           => true,
-			'sanitize_callback' => 'velox_sanitize_checkbox',
+			'default'           => 'default_light',
 			'transport'         => 'refresh',
 			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'velox_sanitize_select',
 		)
 	);
 
@@ -174,7 +173,12 @@ function velox_customize_register( $wp_customize ) {
 			'label'       => __( 'Night Mode', 'velox' ),
 			'description' => __( 'Allow a night mode setting to be active for visitors to your site to change to a darker page style.', 'velox' ),
 			'section'     => 'velox_theme_settings',
-			'type'        => 'checkbox',
+			'type'        => 'select',
+			'choices'     => array(
+				'default_light' => __( 'Default Light Mode', 'velox' ),
+				'default_dark'  => __( 'Default Dark Mode', 'velox' ),
+				'no_toggle'     => __( 'No Dark Mode Toggle', 'velox' ),
+			),
 		)
 	);
 
