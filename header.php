@@ -59,10 +59,10 @@
 				</div><!-- .site-branding -->
 
 				<?php
-				if ( is_active_sidebar( 'header-right' ) ) :
+				if ( is_active_sidebar( 'header' ) ) :
 					?>
-					<aside id="secondary" class="widget-area header-right-sidebar" role="complementary">
-						<?php dynamic_sidebar( 'header-right' ); ?>
+					<aside id="secondary" class="widget-area header-sidebar" role="complementary">
+						<?php dynamic_sidebar( 'header' ); ?>
 					</aside><!-- #secondary -->
 					<?php
 				endif;

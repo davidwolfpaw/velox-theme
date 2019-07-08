@@ -18,13 +18,9 @@ I have several features ready to go to make your site unique to you. Just by usi
 *  __Text Color__
 *  __Accent Text Color__ _(things like captions, citations, post meta, and entry footers)_
 *  __Accent Color__ _(things like thematic breaks, block separators, buttons, and navigation and quote borders)_
-* __Header Menu & Footer Color__ _(for the background of those sections)_
 * __Link Color__ _(also progress bar color)_
 * __Link Active/Hover/Focus Color__
 ### Theme Settings
-* __Header Location__ - You can choose to keep my head on top, or put it to the side. It won't bother me!
-* __Hide Header on Scroll__ - Make my header info disappear on scroll _(will always hide on mobile, to make content easier to read)_
-* __Hide Header Menu on Scroll__ - Ditto for the header menu _(will only hide on mobile if activated)_
 * __Font Pairing__ - I have seven default font pairings so your content always looks good!
 * __Night Mode__ - Let visitors toggle night mode to make the page darken for low-light reading
 * __Read Time__ - Display an estimate for how long an article will take to read

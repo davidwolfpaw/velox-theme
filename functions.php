@@ -159,9 +159,9 @@ add_action( 'after_setup_theme', 'velox_content_width', 0 );
 function velox_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Header Right', 'velox' ),
-			'id'            => 'header-right',
-			'description'   => esc_html__( 'Displays in the header, to the right of the site title.', 'velox' ),
+			'name'          => esc_html__( 'Header', 'velox' ),
+			'id'            => 'header',
+			'description'   => esc_html__( 'Displays in the header, below the site title.', 'velox' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h3 class="widget-title">',
@@ -262,10 +262,7 @@ function velox_scripts() {
 
 	// Pass theme mods to Velox scripts.
 	$velox_options = array(
-		'header_location'  => get_theme_mod( 'header_location', 'top' ),
 		'night_mode'       => get_theme_mod( 'night_mode', true ),
-		'hide_header'      => get_theme_mod( 'hide_header', true ),
-		'hide_header_menu' => get_theme_mod( 'hide_header_menu', true ),
 		'read_time'        => get_theme_mod( 'read_time', true ),
 		'progress_bar'     => get_theme_mod( 'progress_bar', true ),
 		'link_color'       => get_theme_mod( 'link_color', '0059a7' ),
@@ -306,12 +303,6 @@ add_filter( 'script_loader_tag', 'velox_defer_scripts', 10, 2 );
  * Custom Comment Walker template.
  */
 require get_template_directory() . '/inc/class-velox-walker-comment.php';
-
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

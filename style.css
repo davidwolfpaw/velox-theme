@@ -535,10 +535,6 @@ textarea {
 	padding: 24px 32px;
 }
 
-#primary {
-	/*margin-left: 180px;*/
-}
-
 .page-no-title #content {
 	padding-top: 0;
 	padding-bottom: 0;
@@ -553,24 +549,9 @@ textarea {
 # Site Header
 --------------------------------------------------------------*/
 .site-header {
-	position: fixed;
-	z-index: 2;
-	top: 0;
-	left: 0;
-	width: 100%;
 	-webkit-transition: transform 0.5s;
 	-moz-transition: transform 0.5s;
 	transition: transform 0.5s;
-}
-
-.site-header.is-hidden {
-  -webkit-transform: translateY(-100%);
-	  -ms-transform: translateY(-100%);
-		  transform: translateY(-100%);
-}
-
-.archive .site-header {
-	margin-bottom: 3.5em;
 }
 
 .site-header-content {
@@ -587,16 +568,6 @@ textarea {
     -webkit-transition: background-color 0.5s;
     -moz-transition: background-color 0.5s;
     transition: background-color 0.5s;
-}
-
-.header-top .site-header-content {
-	background-color: #FFFFFF;
-}
-
-.site-header-content.is-hidden {
-  -webkit-transform: translateY(-100%);
-	  -ms-transform: translateY(-100%);
-		  transform: translateY(-100%);
 }
 
 .site-options {
@@ -639,19 +610,8 @@ textarea {
 	grid-area: site-description;
 	line-height: 1;
 	margin: .375em 0 0;
-	text-align: left;
-	word-wrap: break-word;
-}
-
-.header-side .site-description {
 	text-align: center;
-}
-
-/*--------------------------------------------------------------
-## WordPress Admin Bar
---------------------------------------------------------------*/
-.admin-bar .site-header {
-	top: 46px;
+	word-wrap: break-word;
 }
 
 /*--------------------------------------------------------------
@@ -666,21 +626,6 @@ textarea {
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
-}
-
-.site-navigation.fixed {
-  position: fixed;
-}
-
-.site-navigation.is-hidden {
-  -webkit-transform: translateY(-100%);
-	  -ms-transform: translateY(-100%);
-		  transform: translateY(-100%);
-}
-
-.site-navigation .sub-menu {
-	opacity: 0.98;
-	background-color: #0B3C5D;
 }
 
 /*--------------------------------------------------------------
@@ -727,57 +672,27 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 #main-navigation ul {
-	display: none;
+	display: block;
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	text-align: left
 }
 
 #main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-}
-
-#main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-#main-navigation ul ul li:hover > ul,
-#main-navigation ul ul li:focus > ul {
+	position: relative;
 	left: 1em;
-	top: 2em;
-}
-
-#main-navigation ul ul a {
-	width: 200px;
-}
-
-#main-navigation ul li:hover > ul,
-#main-navigation ul li:focus > ul {
-	display: block;
-	left: auto;
+	width: calc(100% - 1em);
 }
 
 #main-navigation li {
-	position: relative;
 	margin-bottom: 0;
 }
 
 #main-navigation a {
 	display: block;
 	text-decoration: none;
-	color: #FFFFFF;
-	padding: 0.25em 1em;
-}
-
-#main-navigation a:hover,
-#main-navigation a:focus {
-	background-color: #0059a7;
+	padding: 0.25em 0;
 }
 
 #main-navigation li.menu-item-has-children > a:after {
@@ -786,7 +701,7 @@ a:hover, a:active {
 }
 
 /* Small menu. */
-#main-navigation .menu-toggle {
+/*#main-navigation .menu-toggle {
 	border: none;
 	background: transparent;
 	font-size: 1em;
@@ -862,7 +777,7 @@ a:hover, a:active {
 
 #main-navigation.toggled ul {
 	display: block;
-}
+}*/
 
 #footer-navigation,
 #footer-menu {
@@ -940,10 +855,6 @@ a:hover, a:active {
 	grid-area: site-title;
 	line-height: 1.2;
 	margin: 0;
-	text-align: left;
-}
-
-.header-side .site-title {
 	text-align: center;
 }
 
@@ -1088,7 +999,7 @@ img.alignright,
 /*--------------------------------------------------------------
 # Sidebars
 --------------------------------------------------------------*/
-.header-right-sidebar {
+.header-sidebar {
 	grid-area: header-sidebar;
 }
 
@@ -1128,7 +1039,7 @@ img.alignright,
 	margin: 0 0 2em;
 }
 
-.header-side .site-header-content .widget {
+.site-header-content .widget {
 	margin-bottom: 0;
 }
 
@@ -1146,20 +1057,20 @@ img.alignright,
 	margin: 0 0 0.5em 0;
 }
 
-.header-right-sidebar .widget {
+.header-sidebar .widget {
 	margin-bottom: 0;
 }
 
-.header-right-sidebar .widget-title {
+.header-sidebar .widget-title {
 	line-height: 1.5rem;
 }
 
-.header-right-sidebar .widget p:only-of-type {
+.header-sidebar .widget p:only-of-type {
 	margin: 0;
 }
 
-.header-right-sidebar .widget ul,
-.header-right-sidebar .widget ol {
+.header-sidebar .widget ul,
+.header-sidebar .widget ol {
 	margin: 0;
 	padding-left: 0;
 	list-style: none;
@@ -1731,27 +1642,10 @@ body.night-mode .author-info {
 --------------------------------------------------------------*/
 @media screen and (max-width: 600px) {
 
-	.admin-bar .site-header,
-	.admin-bar .site-header.is-hidden {
-		top: 0;
-	}
-
-	.admin-bar .site-header.top {
-		top: 46px;
-	}
-
 	.wp-block-image .alignleft,
 	.wp-block-image .alignright {
 		float: none;
 		margin: 0 auto;
-	}
-
-}
-
-@media screen and (min-width: 600px) {
-
-	.admin-bar .site-header.top {
-		top: 46px;
 	}
 
 }
@@ -1779,59 +1673,14 @@ body.night-mode .author-info {
 		display: none;
 	}
 
-	.header-side #main-navigation li,
-	.header-side #main-navigation li:hover,
-	.header-side #main-navigation li:focus {
-		position: inherit;
-		text-align: left;
-		/*width: auto;*/
-	}
-
-	.header-side #main-navigation li a {
-		padding: 0.25em 0;
-	}
-
-	#main-navigation ul {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-	}
-
-	.header-side #main-navigation ul ul {
-		float: none;
-		position: relative;
-		background-color: transparent;
-		display: block;
-		box-shadow: none;
-		left: 1em;
-		top: 0;
-	}
-
-	.header-side #main-navigation ul ul {
-		width: calc(100% - 1em);
-	}
-
-
-	.header-side #main-navigation ul li:hover > ul,
-	.header-side #main-navigation ul li:focus > ul
-	.header-side #main-navigation ul ul li:hover > ul,
-	.header-side #main-navigation ul ul li:focus > ul {
-		left: 1em;
-		top: 0;
-	}
-
-	.header-side #main-navigation ul ul a {
-		width: 100%;
-	}
-
-	.header-side .site-header-content {
+	.site-header-content {
 	    grid-template-columns: none;
 		grid-template-areas: "site-options"
 							 "site-branding"
 							 "header-sidebar";
     }
 
-    .header-side .site-options {
+    .site-options {
     	text-align: center;
     	margin-bottom: 16px;
     }
@@ -1861,39 +1710,25 @@ body.night-mode .author-info {
 		max-width: 760px;
 	}
 
-	#night-mode {
-		left: 20px;
-	}
-
 	.alignwide img,
 	.alignfull img {
 		display: block;
 		margin: 0 auto;
 	}
 
-	#page {
-		overflow: hidden;
-	}
-
-	#primary {
-		margin-left: 0;
-	}
-
 	/*--------------------------------------------------------------
 	# Header Sidebar
 	--------------------------------------------------------------*/
-	.header-side .site-wrap {
+	.site-wrap {
 		display: grid;
 		grid-template-areas:"head main"
-							"head main"
 							"head foot";
 		grid-template-columns: 240px calc(100% - 240px);
-		grid-template-rows: auto auto max-content;
+		grid-template-rows: auto max-content;
 		min-height: 100vh;
 	}
 
-	.header-side .site-header,
-	.admin-bar.header-side .site-header {
+	.site-header {
 		position: relative;
 		grid-area: head;
 		top: 0;
@@ -1902,36 +1737,31 @@ body.night-mode .author-info {
 		width: 240px;
 	}
 
-	.header-side .site-header-wrap {
+	.site-header-wrap {
 		padding-bottom: 24px;
 		position: relative;
 		width: inherit;
 	}
 
-	.header-side .site-header .header-right-sidebar,
-	.header-side .site-header .site-navigation {
-		opacity: 1;
-		-webkit-transition: opacity 0.5s;
-		-moz-transition: opacity 0.5s;
-		transition: opacity 0.5s;
+	.header-sidebar,
+	.site-navigation {
 		font-size: 18px;
 	}
 
-	.header-side .site-header.fade .header-right-sidebar,
-	.header-side .site-header.fade .site-navigation {
-		opacity: 0;
+	.header-sidebar {
+		text-align: center;
 	}
 
-	.header-side .site-header-content {
+	.site-header-content {
 		margin: 0 auto 24px;
 		padding: 0 1em;
 	}
 
-	.header-side .site-title {
+	.site-title {
 		font-size: 30px;
 	}
 
-	.header-side .site-branding {
+	.site-branding {
 		padding-bottom: 24px;
 		justify-items: center;
 		grid-template-areas:	"custom-logo-link"
@@ -1939,20 +1769,13 @@ body.night-mode .author-info {
 								"site-description";
 	}
 
-	.header-side .header-right-sidebar {
-		position: relative;
-		right: auto;
-		padding: 0;
-		text-align: center;
-	}
-
 	/* Offset the 240px of the side header */
-	.header-side .alignwide {
-	/* 100vw - 240px side header - 64/2px content padding */
+	.alignwide {
+		/* 100vw - 240px side header - 64/2px content padding */
 		width: calc(100vw - 272px);
 		margin: 2em calc(50% - calc(50vw - 136px));
 	}
-	.header-side .alignfull {
+	.alignfull {
 		width: calc(100vw - 240px);
 		margin: 2em calc(50% - calc(50vw - 120px))
 	}
@@ -1967,42 +1790,38 @@ body.night-mode .author-info {
 		margin-right: 0;
 	}
 
-	.header-side .site-navigation {
+	.site-navigation {
 		background-color: transparent;
 		padding-left: 1em;
 		padding-right: 1em;
 		text-align: center;
 	}
 
-	body.header-side.night-mode .site-navigation {
+	body.night-mode .site-navigation {
 		background: transparent;
 	}
 
-	.header-side #main-navigation ul {
-		display: block;
-	}
-
-	body.header-side #main-navigation a {
+	body #main-navigation a {
 		color: #1D2731;
 		background-color: transparent;
 	}
 
-	body.header-side #main-navigation a:hover,
-	body.header-side #main-navigation a:focus {
+	body #main-navigation a:hover,
+	body #main-navigation a:focus {
 		color: #1D2731;
 	}
 
-	body.header-side.night-mode #main-navigation a {
+	body.night-mode #main-navigation a {
 		color: #FFFFFF;
 	}
 
-	.header-side .site-content {
+	.site-content {
 		position: relative;
 		grid-area: main;
 		overflow: hidden;
 	}
 
-	.header-side .site-footer {
+	.site-footer {
 		position: relative;
 		grid-area: foot;
 		width: 100%;
@@ -2030,26 +1849,6 @@ body.night-mode .author-info {
 
 	.wp-block-pullquote {
 		padding: 1.5em 0.75em;
-	}
-
-}
-
-@media screen and (min-width: 783px) {
-
-	.admin-bar .site-header,
-	.admin-bar .site-header.top {
-		top: 32px;
-	}
-
-	.header-side .site-header,
-	.admin-bar.header-side .site-header {
-		top: 0;
-	}
-
-	.admin-bar .site-header.is-hidden {
-	  -webkit-transform: translateY( -100% );
-		  -ms-transform: translateY( -100% );
-			  transform: translateY( -100% );
 	}
 
 }

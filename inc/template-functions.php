@@ -25,18 +25,6 @@ function velox_body_classes( $classes ) {
 	if ( ! is_multi_author() ) {
 		$classes[] = 'single-author';
 	}
-	// Adds a class of custom-header if a header image is used.
-	if ( get_header_image() ) {
-		$classes[] = 'custom-header';
-	}
-	// Adds a class of header-top if that option is active.
-	if ( 'top' === get_theme_mod( 'header_location', 'top' ) ) {
-		$classes[] = 'header-top';
-	}
-	// Adds a class of header-side if that option is active.
-	if ( 'side' === get_theme_mod( 'header_location', 'top' ) ) {
-		$classes[] = 'header-side';
-	}
 	// Adds a class pf page-no-title to page-no-title.php template.
 	if ( is_page_template( 'page-no-title.php' ) ) {
 		$classes[] = 'page-no-title';

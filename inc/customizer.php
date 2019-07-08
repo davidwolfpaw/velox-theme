@@ -127,76 +127,6 @@ function velox_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Setting: Header Location.
-	$wp_customize->add_setting(
-		'header_location',
-		array(
-			'default'           => 'top',
-			'transport'         => 'refresh',
-			'capability'        => 'edit_theme_options',
-			'sanitize_callback' => 'velox_sanitize_radio',
-		)
-	);
-
-	// Control: Header Location.
-	$wp_customize->add_control(
-		'header_location',
-		array(
-			'label'       => __( 'Header Location', 'velox' ),
-			'description' => __( 'Choose whether to place the site header at the top or side of the page.<br /> <strong>Header will always display on top on mobile</strong>', 'velox' ),
-			'section'     => 'velox_theme_settings',
-			'type'        => 'radio',
-			'choices'     => array(
-				'top'  => 'Top of page',
-				'side' => 'Side of page',
-			),
-		)
-	);
-
-	// Setting: Hide Header on Scroll.
-	$wp_customize->add_setting(
-		'hide_header',
-		array(
-			'default'           => true,
-			'sanitize_callback' => 'velox_sanitize_checkbox',
-			'transport'         => 'refresh',
-			'capability'        => 'edit_theme_options',
-		)
-	);
-
-	// Control: Hide Header on Scroll.
-	$wp_customize->add_control(
-		'hide_header',
-		array(
-			'label'       => __( 'Hide Header on Scroll', 'velox' ),
-			'description' => __( 'Hide the header (logo, site title, header sidebar) on scroll.<br /> <strong>Header will always hide on mobile</strong>', 'velox' ),
-			'section'     => 'velox_theme_settings',
-			'type'        => 'checkbox',
-		)
-	);
-
-	// Setting: Hide Header Menu on Scroll.
-	$wp_customize->add_setting(
-		'hide_header_menu',
-		array(
-			'default'           => true,
-			'sanitize_callback' => 'velox_sanitize_checkbox',
-			'transport'         => 'refresh',
-			'capability'        => 'edit_theme_options',
-		)
-	);
-
-	// Control: Hide Header Menu on Scroll.
-	$wp_customize->add_control(
-		'hide_header_menu',
-		array(
-			'label'       => __( 'Hide Header Menu on Scroll', 'velox' ),
-			'description' => __( 'Hide the header menu on scroll.', 'velox' ),
-			'section'     => 'velox_theme_settings',
-			'type'        => 'checkbox',
-		)
-	);
-
 	// Setting: Font Pairing.
 	$wp_customize->add_setting(
 		'font_pairing',
@@ -501,7 +431,6 @@ add_action( 'customize_preview_init', 'velox_customize_preview_js' );
 function velox_customizer_css() {
 	?>
 	<style type="text/css">
-		.header-top .site-header-content { background-color: <?php echo esc_html( get_theme_mod( 'background_color', '#FFFFFF' ) ); ?>; }
 		body, button, input, select, optgroup, textarea, h1, h2, h3, h4, h5, h6 { color: <?php echo esc_html( get_theme_mod( 'text_color', '#1D2731' ) ); ?>; }
 		.entry-footer, .entry-meta, .wp-block-image figcaption, .wp-block-pullquote cite, .wp-block-latest-posts__post-date, .wp-caption-text { color: <?php echo esc_html( get_theme_mod( 'accent_text_color', '#808182' ) ); ?>; }
 		.wp-block-button .wp-block-button__link {	background-color: <?php echo esc_html( get_theme_mod( 'link_color', '#0059a7' ) ); ?>; }
