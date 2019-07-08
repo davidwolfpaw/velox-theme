@@ -1,5 +1,5 @@
 # Velox - A Mobile-First, WordPress Block Ready Theme
-![Velox Theme icon](screenshot.jpg)
+![Velox Theme icon](screenshots/screenshot.jpg)
 
 ## Howdy
 
@@ -31,6 +31,3 @@ I have several features ready to go to make your site unique to you. Just by usi
 
 ### Night Mode
 ![Night Mode Animation](screenshots/night-mode.gif)
-
-### Sticky Menu
-![Sticky Menu Animation](screenshots/sticky-menu.gif)
