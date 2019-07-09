@@ -694,7 +694,7 @@ a:hover, a:active {
 }
 
 /* Small menu. */
-/*#main-navigation .menu-toggle {
+#main-navigation .menu-toggle {
 	border: none;
 	background: transparent;
 	font-size: 1em;
@@ -770,7 +770,7 @@ a:hover, a:active {
 
 #main-navigation.toggled ul {
 	display: block;
-}*/
+}
 
 #footer-navigation,
 #footer-menu {
@@ -1461,6 +1461,7 @@ ul.wp-block-gallery {
 	font-style: italic;
 	font-size: 16px;
 	font-size: 0.89rem;
+	text-align: center;
 }
 
 /* Blockquotes*/

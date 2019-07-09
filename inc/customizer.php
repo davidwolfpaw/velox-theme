@@ -23,8 +23,9 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'text_color',
 		array(
-			'default'   => '#1D2731',
-			'transport' => 'postMessage',
+			'default'           => '#1D2731',
+			'sanitize_callback' => 'velox_sanitize_hex_color',
+			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -42,8 +43,9 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'accent_text_color',
 		array(
-			'default'   => '#808182',
-			'transport' => 'postMessage',
+			'default'           => '#808182',
+			'sanitize_callback' => 'velox_sanitize_hex_color',
+			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -61,8 +63,9 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'accent_color',
 		array(
-			'default'   => '#A51323',
-			'transport' => 'postMessage',
+			'default'           => '#A51323',
+			'sanitize_callback' => 'velox_sanitize_hex_color',
+			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -80,8 +83,9 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'link_color',
 		array(
-			'default'   => '#0059a7',
-			'transport' => 'postMessage',
+			'default'           => '#0059a7',
+			'sanitize_callback' => 'velox_sanitize_hex_color',
+			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -99,8 +103,9 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'link_active_color',
 		array(
-			'default'   => '#0B3C5D',
-			'transport' => 'postMessage',
+			'default'           => '#0B3C5D',
+			'sanitize_callback' => 'velox_sanitize_hex_color',
+			'transport'         => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -128,10 +133,10 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'font_pairing',
 		array(
-			'default'           => 'playfair_lato',
-			'transport'         => 'refresh',
 			'capability'        => 'edit_theme_options',
+			'default'           => 'playfair_lato',
 			'sanitize_callback' => 'velox_sanitize_select',
+			'transport'         => 'refresh',
 		)
 	);
 
@@ -159,10 +164,10 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'night_mode',
 		array(
-			'default'           => 'default_light',
-			'transport'         => 'refresh',
 			'capability'        => 'edit_theme_options',
+			'default'           => 'default_light',
 			'sanitize_callback' => 'velox_sanitize_select',
+			'transport'         => 'refresh',
 		)
 	);
 
@@ -186,10 +191,10 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'read_time',
 		array(
+			'capability'        => 'edit_theme_options',
 			'default'           => true,
 			'sanitize_callback' => 'velox_sanitize_checkbox',
 			'transport'         => 'refresh',
-			'capability'        => 'edit_theme_options',
 		)
 	);
 
@@ -208,10 +213,10 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'progress_bar',
 		array(
+			'capability'        => 'edit_theme_options',
 			'default'           => true,
 			'sanitize_callback' => 'velox_sanitize_checkbox',
 			'transport'         => 'refresh',
-			'capability'        => 'edit_theme_options',
 		)
 	);
 
@@ -230,10 +235,10 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'author_info',
 		array(
+			'capability'        => 'edit_theme_options',
 			'default'           => true,
 			'sanitize_callback' => 'velox_sanitize_checkbox',
 			'transport'         => 'refresh',
-			'capability'        => 'edit_theme_options',
 		)
 	);
 
@@ -252,10 +257,10 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'post_meta_header',
 		array(
+			'capability'        => 'edit_theme_options',
 			'default'           => 'Posted on [post_date]',
 			'sanitize_callback' => 'sanitize_text_field',
 			'transport'         => 'postMessage',
-			'capability'        => 'edit_theme_options',
 		)
 	);
 
@@ -274,10 +279,10 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'post_meta_footer',
 		array(
+			'capability'        => 'edit_theme_options',
 			'default'           => '[post_categories] [post_tags]',
 			'sanitize_callback' => 'sanitize_text_field',
 			'transport'         => 'postMessage',
-			'capability'        => 'edit_theme_options',
 		)
 	);
 
@@ -297,6 +302,7 @@ function velox_customize_register( $wp_customize ) {
 		'post_meta_message',
 		array(
 			'default' => '',
+			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 
@@ -350,6 +356,39 @@ function velox_post_meta_shortcode_message() {
 
 	return $message;
 
+}
+
+/**
+ * HEX Color sanitization callback example.
+ *
+ * - Sanitization: hex_color
+ * - Control: text, WP_Customize_Color_Control
+ *
+ * Note: sanitize_hex_color_no_hash() can also be used here, depending on whether
+ * or not the hash prefix should be stored/retrieved with the hex color value.
+ *
+ * @see sanitize_hex_color() https://developer.wordpress.org/reference/functions/sanitize_hex_color/
+ * @link sanitize_hex_color_no_hash() https://developer.wordpress.org/reference/functions/sanitize_hex_color_no_hash/
+ *
+ * @param string               $hex_color HEX color to sanitize.
+ * @param WP_Customize_Setting $setting   Setting instance.
+ * @return string The sanitized hex color if not null; otherwise, the setting default.
+ */
+/**
+ * Sanitize color callbacks
+ *
+ * @see sanitize_hex_color() https://developer.wordpress.org/reference/functions/sanitize_hex_color/
+ *
+ * @param string               $hex_color HEX color to sanitize.
+ * @param WP_Customize_Setting $setting   Setting instance.
+ * @return string The sanitized hex color if not null; otherwise, the setting default.
+ */
+function velox_sanitize_hex_color( $hex_color, $setting ) {
+	// Sanitize $input as a hex value without the hash prefix.
+	$hex_color = sanitize_hex_color( $hex_color );
+
+	// If $input is a valid hex value, return it; otherwise, return the default.
+	return ( ! is_null( $hex_color ) ? $hex_color : $setting->default );
 }
 
 /**
