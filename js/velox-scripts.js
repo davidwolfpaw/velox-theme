@@ -50,6 +50,7 @@ jQuery(document).ready(function($) {
         color: "#" + velox_options.link_color
       });
     }
+
     // Allow nightmode if activated.
     if ('default_light' == velox_options.night_mode || 'default_dark' == velox_options.night_mode) {
       const light = __( 'Light', 'velox' );
@@ -75,6 +76,7 @@ jQuery(document).ready(function($) {
           }
       });
     }
+
   })(jQuery);
 }); /* end of as page load scripts */
 
