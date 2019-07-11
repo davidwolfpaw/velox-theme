@@ -690,8 +690,9 @@ a:hover, a:active {
 }
 
 #main-navigation ul ul {
-    position: relative;
     left: 1em;
+    padding: 0;
+    position: relative;
     width: calc(100% - 1em);
 }
 
@@ -1789,6 +1790,11 @@ body.night-mode .author-info {
         padding-bottom: 24px;
         position: relative;
         width: inherit;
+    }
+
+    #main-navigation #primary-menu {
+        display: block;
+        padding: 0;
     }
 
     .header-sidebar,
