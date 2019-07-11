@@ -685,7 +685,7 @@ a:hover, a:active {
     display: block;
     list-style: none;
     margin: 0;
-    padding-left: 0;
+    padding: 0 32px;
     text-align: left
 }
 
@@ -784,11 +784,11 @@ a:hover, a:active {
     transition-delay: 0s;
 }
 
-.menu-all-pages-container {
+#main-navigation #primary-menu {
     display: none;
 }
 
-#main-navigation.toggled .menu-all-pages-container {
+#main-navigation.toggled #primary-menu {
     display: block;
 }
 
@@ -1670,7 +1670,7 @@ body.night-mode .author-info {
 
 @media screen and (max-width: 767px) {
 
-    .menu-all-pages-container {
+    #primary-menu {
         display: none;
         position: absolute;
         top: 63px;
@@ -1682,6 +1682,7 @@ body.night-mode .author-info {
     }
 
     /*.site-options,*/
+    .header-sidebar,
     .site-description,
     .menu-icon-text {
         display: none;
@@ -1712,7 +1713,7 @@ body.night-mode .author-info {
         display: none;
     }
 
-    .menu-all-pages-container {
+    #primary-menu {
         display: block;
     }
 
