@@ -554,6 +554,7 @@ textarea {
 }
 
 .site-header-wrap {
+	align-items: center;
 	display: grid;
 	grid-template-columns: auto 30px;
 	grid-template-areas: "site-header-content main-navigation";
@@ -715,7 +716,7 @@ a:hover, a:active {
 	font-size: 1em;
 	margin: 0;
 	color: #1D2731;
-	position: initial;
+	position: relative;
 	display: inline-block;
 	width: 30px;
 	height: 30px;
@@ -861,7 +862,7 @@ a:hover, a:active {
 # Headers & Titles
 --------------------------------------------------------------*/
 .site-title {
-	font-size: 1.5em;
+	font-size: 1.3em;
 	line-height: 1em;
 	font-weight: bold;
 	grid-area: site-title;
