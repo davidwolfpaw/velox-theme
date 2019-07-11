@@ -1463,6 +1463,11 @@ ul.wp-block-gallery {
 ## Block Editor Blocks
 --------------------------------------------------------------*/
 /* Cover Block */
+.entry-content .wp-block-cover,
+.entry-content .wp-block-cover-image {
+    z-index: 0;
+}
+
 .entry-content .wp-block-cover:first-child {
     margin-top: 0;
 }
@@ -1675,7 +1680,7 @@ body.night-mode .author-info {
         display: none;
         position: absolute;
         top: 63px;
-        left: calc(60px - 100vw);
+        right: -32px;
         width: 100vw;
         padding: 0 20px;
         background-color: #FFFFFF;
