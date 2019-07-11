@@ -483,6 +483,12 @@ function velox_customizer_css() {
 		.wp-block-separator.is-style-dots:before { color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		a, a:visited { color: <?php echo esc_html( get_theme_mod( 'link_color', '#0059a7' ) ); ?>; }
 		a:hover, a:focus, a:active { color: <?php echo esc_html( get_theme_mod( 'link_active_color', '#0B3C5D' ) ); ?>; }
+		.has-text-color { color: <?php echo esc_html( get_theme_mod( 'text_color', '#1D2731' ) ); ?>; }
+		.has-text-background-color { background-color: <?php echo esc_html( get_theme_mod( 'text_color', '#1D2731' ) ); ?>; }
+		.has-accent-text-color { color: <?php echo esc_html( get_theme_mod( 'accent_text_color', '#808182' ) ); ?>; }
+		.has-accent-text-background-color { background-color: <?php echo esc_html( get_theme_mod( 'accent_text_color', '#808182' ) ); ?>; }
+		.has-accent-color { color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
+		.has-accent-background-color { background-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 	</style>
 	<?php
 }

@@ -107,19 +107,19 @@ if ( ! function_exists( 'velox_setup' ) ) :
 				array(
 
 					'name'  => __( 'Text Color', 'velox' ),
-					'slug'  => 'text-color',
+					'slug'  => 'text',
 					'color' => get_theme_mod( 'text_color', '#1D2731' ),
 				),
 				array(
 
 					'name'  => __( 'Accent Text Color', 'velox' ),
-					'slug'  => 'accent-text-color',
+					'slug'  => 'accent-text',
 					'color' => get_theme_mod( 'accent_text_color', '#808182' ),
 				),
 				array(
 
 					'name'  => __( 'Accent Color', 'velox' ),
-					'slug'  => 'accent-color',
+					'slug'  => 'accent',
 					'color' => get_theme_mod( 'accent_color', '#A51323' ),
 				),
 			)
