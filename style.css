@@ -1610,9 +1610,9 @@ a, a:visited,
 .wp-block-quote footer,
 .wp-block-image figcaption,
 .site-description {
-	-webkit-transition: all 0.25s;
-	-moz-transition: all 0.25s;
-	transition: all 0.25s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
 }
 
 body.night-mode h1,
@@ -1623,13 +1623,23 @@ body.night-mode h5,
 body.night-mode h6,
 body.night-mode a,
 body.night-mode a:visited,
+body.night-mode.hentry .entry-content a,
+body.night-mode.hentry .entry-content a:visited,
 body.night-mode .site-description,
 body.night-mode .wp-block-pullquote,
 body.night-mode .wp-block-pullquote > cite,
 body.night-mode .wp-block-quote cite,
 body.night-mode .wp-block-quote footer,
-body.night-mode .wp-block-image figcaption {
+body.night-mode .wp-block-image figcaption,
+body.night-mode .wp-block-separator.is-style-dots:before {
 	color: rgba(255, 255, 255, 0.9);
+}
+
+body.night-mode .comment-content-wrap {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+body.night-mode .comment-content-wrap:after {
+	border-color: transparent rgba(0, 0, 0, 0.2);
 }
 
 .entry-footer,
