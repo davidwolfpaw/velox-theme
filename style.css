@@ -677,6 +677,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 #main-navigation {
 	grid-area: main-navigation;
+	height: 60px;
 }
 
 #main-navigation ul {
@@ -714,7 +715,7 @@ a:hover, a:active {
 	border: none;
 	background: transparent;
 	font-size: 1em;
-	margin: 0;
+	margin: 15px 0;
 	color: #1D2731;
 	position: relative;
 	display: inline-block;
@@ -1555,12 +1556,6 @@ blockquote.wp-block-quote.is-style-large cite {
 /*--------------------------------------------------------------
 # Night Mode
 --------------------------------------------------------------*/
-body {
-	-webkit-transition: background-color 0.5s, color 0.5s;
-	-moz-transition: background-color 0.5s, color 0.5s;
-	transition: background-color 0.5s, color 0.5s;
-}
-
 #night-mode-switch {
 	display: inline-block;
 	line-height: 1;
@@ -1591,8 +1586,15 @@ body {
 	color: #1D2731;
 }
 
+body {
+	-webkit-transition: background-color 0.5s, color 0.5s;
+	-moz-transition: background-color 0.5s, color 0.5s;
+	transition: background-color 0.5s, color 0.5s;
+}
+
 body.night-mode,
 body.night-mode .site-header-content,
+body.night-mode #main-navigation.toggled #primary-menu,
 body.night-mode .site-footer {
 	background-color: #1d2731;
 	color: rgba(255, 255, 255, 0.9);
@@ -1640,6 +1642,12 @@ body.night-mode .comment-content-wrap {
 }
 body.night-mode .comment-content-wrap:after {
 	border-color: transparent rgba(0, 0, 0, 0.2);
+}
+
+body.night-mode #main-navigation .menu-icon,
+body.night-mode #main-navigation .menu-icon::before,
+body.night-mode #main-navigation .menu-icon::after {
+	background-color: #FFFFFF;
 }
 
 .entry-footer,
@@ -1855,6 +1863,7 @@ body.night-mode .author-info {
 	}
 
 	.site-navigation {
+		height: auto;
 		padding-left: 1em;
 		padding-right: 1em;
 		text-align: center;
