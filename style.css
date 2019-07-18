@@ -679,7 +679,6 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 #main-navigation {
 	grid-area: main-navigation;
-	height: 60px;
 }
 
 #main-navigation ul {
@@ -1865,7 +1864,6 @@ body.night-mode .author-info {
 	}
 
 	.site-navigation {
-		height: auto;
 		padding-left: 1em;
 		padding-right: 1em;
 		text-align: center;
