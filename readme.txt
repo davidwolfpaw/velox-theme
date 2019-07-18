@@ -49,6 +49,14 @@ All of the theme settings are managed via the WordPress Customizer in the Velox 
 == Resources ==
 * PrognRoll © 2016 Mehmet Burak Erman, MIT
 * Sticky-kit © 2015 Leaf Corcoran, MIT
+* LibreFranklin-Bold.ttf: © 2015, Impallari Type, SIL Open Font License, 1.1
+* SourceSerifPro-Regular.ttf: © 2014 Adobe Systems Incorporated, SIL Open Font License, 1.1
+* Rubik-Bold.ttf: © 2015 The Rubik Project Authors, SIL Open Font License, 1.1
+* RobotoMono-Regular.ttf: © 2015 Google Inc., Apache License, version 2.0
+* Ovo-Regular.ttf: © 2011, Sorkin Type Co with Reserved Font Name "Ovo", SIL Open Font License, 1.1
+* Muli-Regular.ttf: © 2016 The Muli Project Authors, SIL Open Font License, 1.1
+* NixieOne-Regular.ttf: © 2011, Jovanny Lemonad with Reserved Font Name "Nixie", SIL Open Font License, 1.1
+* LibreBaskerville-Regular.ttf: © 2012, Pablo Impallari, © 2012, Rodrigo Fuenzalida with Reserved Font Name Libre Baskerville, SIL Open Font License, 1.1
 
 
 
@@ -79,7 +87,7 @@ I have several features ready to go to make your site unique to you. Just by usi
 * __Header Location__ - You can choose to keep my head on top, or put it to the side. It won't bother me!
 * __Hide Header on Scroll__ - Make my header info disappear on scroll
 * __Hide Header Menu on Scroll__ - Ditto for the header menu _(but it will always hide on mobile, to make content easier to read)_
-* __Font Pairing__ - I have seven default font pairings so your content always looks good!
+* __Font Pairing__ - I have four default font pairings so your content always looks good!
 * __Night Mode__ - Let visitors toggle night mode to make the page darken for low-light reading
 * __Read Time - Display__ an estimate for how long an article will take to read
 * __Article Progress Bar__ - Show a progress bar for how far you've scrolled in an article

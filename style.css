@@ -280,7 +280,7 @@ select,
 optgroup,
 textarea {
 	color: #1D2731;
-	font-family: 'Lato', Arial, Verdana, sans-serif;
+	font-family: 'Source Serif Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 	font-size: 20px;
 	font-size: 1.25rem;
 	line-height: 1.6;
@@ -296,7 +296,7 @@ body *::selection {
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	color: #1D2731;
-	font-family: 'Playfair Display', Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
+	font-family: 'Libre Franklin Bold', Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
 	margin: 0 0 0.5em 0;
 	line-height: 1.25;
 	word-wrap: break-word;
@@ -825,7 +825,7 @@ a:hover, a:active {
 }
 
 .nav-links .meta-nav {
-	font-weight: 700;
+	font-weight: bold;
 }
 
 .navigation-arrow {
@@ -1572,7 +1572,7 @@ blockquote.wp-block-quote.is-style-large cite {
 	border-radius: 16px;
 	color: #FFFFFF;
 	font-size: 1rem;
-	font-weight: 700;
+	font-weight: bold;
 	line-height: 1;
 	padding: 3px 6px;
 	text-align: center;

@@ -134,7 +134,7 @@ function velox_customize_register( $wp_customize ) {
 		'font_pairing',
 		array(
 			'capability'        => 'edit_theme_options',
-			'default'           => 'playfair_lato',
+			'default'           => 'librefranklin_sourceserifpro',
 			'sanitize_callback' => 'velox_sanitize_select',
 			'transport'         => 'refresh',
 		)
@@ -149,13 +149,10 @@ function velox_customize_register( $wp_customize ) {
 			'section'     => 'velox_theme_settings',
 			'type'        => 'select',
 			'choices'     => array(
-				'playfair_lato'             => 'Playfair Display / Lato',
-				'opensans_gentiumbasic'     => 'Open Sans / Gentium Basic',
-				'archivoblack_tenorsans'    => 'Archivo Black / Tenor Sans',
-				'rubik_robotomono'          => 'Rubik / Roboto Mono',
-				'ovo_muli'                  => 'Ovo / Muli',
-				'opensanscondensed_lora'    => 'Open Sans Condensed / Lora',
-				'nixieone_librebaskerville' => 'Nixie One / Libre Baskerville',
+				'librefranklin_sourceserifpro' => 'Libre Franklin / Source Serif Pro',
+				'rubik_robotomono'             => 'Rubik / Roboto Mono',
+				'ovo_muli'                     => 'Ovo / Muli',
+				'nixieone_librebaskerville'    => 'Nixie One / Libre Baskerville',
 			),
 		)
 	);
@@ -301,7 +298,7 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'post_meta_message',
 		array(
-			'default' => '',
+			'default'           => '',
 			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
@@ -499,40 +496,69 @@ add_action( 'wp_head', 'velox_customizer_css' );
  */
 function velox_font_families() {
 	// Get the fonts that the site uses from theme settings.
-	$font_selection = get_theme_mod( 'font_pairing', 'playfair_lato' );
+	$font_selection = get_theme_mod( 'font_pairing', 'librefranklin_sourceserifpro' );
 
-	if ( 'playfair_lato' === $font_selection ) {
-		$heading_font = 'Playfair Display';
-		$body_font    = 'Lato';
-	} elseif ( 'opensans_gentiumbasic' === $font_selection ) {
-		$heading_font = 'Open Sans';
-		$body_font    = 'Gentium Basic';
-	} elseif ( 'archivoblack_tenorsans' === $font_selection ) {
-		$heading_font = 'Archivo Black';
-		$body_font    = 'Tenor Sans';
+	if ( 'librefranklin_sourceserifpro' === $font_selection ) {
+		$heading_font   = 'Libre Franklin Bold';
+		$heading_slug   = 'libre-franklin-v3-latin-700';
+		$heading_weight = '700';
+		$body_font      = 'Source Serif Pro';
+		$body_slug      = 'source-serif-pro-v7-latin-regular';
+		$body_weight    = '400';
 	} elseif ( 'rubik_robotomono' === $font_selection ) {
-		$heading_font = 'Rubik';
-		$body_font    = 'Roboto Mono';
+		$heading_font   = 'Rubik';
+		$heading_slug   = 'rubik-v8-latin-500';
+		$heading_weight = '500';
+		$body_font      = 'Roboto Mono';
+		$body_slug      = 'roboto-mono-v6-latin-regular';
+		$body_weight    = '400';
 	} elseif ( 'ovo_muli' === $font_selection ) {
-		$heading_font = 'Ovo';
-		$body_font    = 'Muli';
-	} elseif ( 'opensanscondensed_lora' === $font_selection ) {
-		$heading_font = 'Open Sans Condensed';
-		$body_font    = 'Lora';
+		$heading_font   = 'Ovo';
+		$heading_slug   = 'ovo-v11-latin-regular';
+		$heading_weight = '400';
+		$body_font      = 'Muli';
+		$body_slug      = 'muli-v13-latin-regular';
+		$body_weight    = '400';
 	} elseif ( 'nixieone_librebaskerville' === $font_selection ) {
-		$heading_font = 'Nixie One';
-		$body_font    = 'Libre Baskerville';
+		$heading_font   = 'Nixie One';
+		$heading_slug   = 'nixie-one-v10-latin-regular';
+		$heading_weight = '400';
+		$body_font      = 'Libre Baskerville';
+		$body_slug      = 'libre-baskerville-v6-latin-regular';
+		$body_weight    = '400';
 	} else {
-		$heading_font = 'Playfair Display';
-		$body_font    = 'Lato';
+		$heading_font   = 'Libre Franklin Bold';
+		$heading_slug   = 'libre-franklin-v3-latin-700';
+		$heading_weight = '700';
+		$body_font      = 'Source Serif Pro';
+		$body_slug      = 'source-serif-pro-v7-latin-regular';
+		$body_weight    = '400';
 	}
 
-	$font_css = "body, button, input, select, optgroup, textarea {
-			font-family: {$body_font},-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
-		}
-		h1, h2, h3, h4, h5, h6 {
-			font-family: {$heading_font},-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
-		}
+	$font_dir = get_template_directory_uri() . '/fonts';
+
+	$font_css = "
+	@font-face {
+		font-family: {$heading_font};
+		src:url('{$font_dir}/{$heading_slug}/{$heading_slug}.woff2') format('woff2'),
+	    	url('{$font_dir}/{$heading_slug}/{$heading_slug}.woff') format('woff');
+		font-weight: {$heading_weight};
+
+	}
+	@font-face {
+		font-family: {$body_font};
+		src:url('{$font_dir}/{$body_slug}/{$body_slug}.woff2') format('woff2'),
+	    	url('{$font_dir}/{$body_slug}/{$body_slug}.woff') format('woff');
+		font-weight: {$body_weight};
+	}
+	body, button, input, select, optgroup, textarea {
+		font-family: '{$body_font}',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+		font-weight: {$body_weight};
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-family: '{$heading_font}',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+		font-weight: {$heading_weight};
+	}
 	";
 
 	// Add inline style to use the selected fonts.

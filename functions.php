@@ -183,60 +183,9 @@ function velox_widgets_init() {
 add_action( 'widgets_init', 'velox_widgets_init' );
 
 /**
- * Google Fonts
- */
-function velox_fonts_url() {
-	$fonts_url = '';
-	/**
-	* Translators: If there are characters in your language that are not
-	* supported by Google Fonts, translate this to 'off'. Do not translate
-	* into your own language.
-	*/
-	$font = _x( 'on', 'Theme Google Fonts: on or off', 'velox' );
-	if ( 'off' !== $font ) {
-		$font_families = array();
-		// Get the selected theme fonts or default to Playfair and Lato.
-		$font_selection = get_theme_mod( 'font_pairing', 'playfair_lato' );
-		if ( 'playfair_lato' === $font_selection ) {
-			$font_families[] = 'Playfair Display:400,700';
-			$font_families[] = 'Lato:400,700';
-		} elseif ( 'opensans_gentiumbasic' === $font_selection ) {
-			$font_families[] = 'Open Sans:400,700';
-			$font_families[] = 'Gentium Basic:400,700';
-		} elseif ( 'archivoblack_tenorsans' === $font_selection ) {
-			$font_families[] = 'Archivo Black:400';
-			$font_families[] = 'Tenor Sans:400';
-		} elseif ( 'rubik_robotomono' === $font_selection ) {
-			$font_families[] = 'Rubik:400,700';
-			$font_families[] = 'Roboto Mono:400,700';
-		} elseif ( 'ovo_muli' === $font_selection ) {
-			$font_families[] = 'Ovo:400';
-			$font_families[] = 'Muli:400,700';
-		} elseif ( 'opensanscondensed_lora' === $font_selection ) {
-			$font_families[] = 'Open Sans Condensed:300,700';
-			$font_families[] = 'Lora:400,700';
-		} elseif ( 'nixieone_librebaskerville' === $font_selection ) {
-			$font_families[] = 'Nixie One:400';
-			$font_families[] = 'Libre Baskerville:400,700';
-		} else {
-			$font_families[] = 'Playfair Display:400,700';
-			$font_families[] = 'Lato:400,700';
-		}
-		$query_args = array(
-			'family' => rawurlencode( implode( '|', $font_families ) ),
-			'subset' => rawurlencode( 'latin,latin-ext' ),
-		);
-		$fonts_url  = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
-	return esc_url_raw( $fonts_url );
-}
-
-/**
  * Gutenberg Editor Styles
  */
 function velox_editor_styles() {
-	// Fonts.
-	wp_enqueue_style( 'velox-fonts', velox_fonts_url(), array(), '1.0.0', 'all' );
 	// Editor styles.
 	wp_enqueue_style( 'velox-editor-style', get_template_directory_uri() . '/css/editor-style.css', '1.0.0', 'all' );
 }
@@ -246,11 +195,8 @@ add_action( 'enqueue_block_editor_assets', 'velox_editor_styles' );
  * Enqueue scripts and styles.
  */
 function velox_scripts() {
-	// Fonts.
-	wp_enqueue_style( 'velox-fonts', velox_fonts_url(), array(), '1.0.0', 'all' );
-
 	// Primary Styles.
-	wp_enqueue_style( 'velox-style', get_stylesheet_uri(), array( 'velox-fonts' ), '1.0.0', 'all' );
+	wp_enqueue_style( 'velox-style', get_stylesheet_uri(), array(), '1.0.0', 'all' );
 
 	// Thread comments.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

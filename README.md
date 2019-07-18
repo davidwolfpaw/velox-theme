@@ -21,7 +21,7 @@ I have several features ready to go to make your site unique to you. Just by usi
 * __Link Color__ _(also progress bar color)_
 * __Link Active/Hover/Focus Color__
 ### Theme Settings
-* __Font Pairing__ - I have seven default font pairings so your content always looks good!
+* __Font Pairing__ - I have four default font pairings so your content always looks good!
 * __Night Mode__ - Let visitors toggle night mode to make the page darken for low-light reading. You can default to light mode, dark mode, or remove the toggle altogehter.
 * __Read Time__ - Display an estimate for how long an article will take to read.
 * __Article Progress Bar__ - Show a progress bar for how far you've scrolled in an article.
@@ -31,3 +31,13 @@ I have several features ready to go to make your site unique to you. Just by usi
 
 ### Night Mode
 ![Night Mode Animation](screenshots/night-mode.gif)
+
+## Resources
+* LibreFranklin-Bold.ttf: © 2015, Impallari Type, SIL Open Font License, 1.1
+* SourceSerifPro-Regular.ttf: © 2014 Adobe Systems Incorporated, SIL Open Font License, 1.1
+* Rubik-Bold.ttf: © 2015 The Rubik Project Authors, SIL Open Font License, 1.1
+* RobotoMono-Regular.ttf: © 2015 Google Inc., Apache License, version 2.0
+* Ovo-Regular.ttf: © 2011, Sorkin Type Co with Reserved Font Name "Ovo", SIL Open Font License, 1.1
+* Muli-Regular.ttf: © 2016 The Muli Project Authors, SIL Open Font License, 1.1
+* NixieOne-Regular.ttf: © 2011, Jovanny Lemonad with Reserved Font Name "Nixie", SIL Open Font License, 1.1
+* LibreBaskerville-Regular.ttf: © 2012, Pablo Impallari, © 2012, Rodrigo Fuenzalida with Reserved Font Name Libre Baskerville, SIL Open Font License, 1.1
