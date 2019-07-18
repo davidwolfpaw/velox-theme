@@ -43,7 +43,7 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'accent_text_color',
 		array(
-			'default'           => '#808182',
+			'default'           => '#555d66',
 			'sanitize_callback' => 'velox_sanitize_hex_color',
 			'transport'         => 'postMessage',
 		)
@@ -470,7 +470,7 @@ function velox_customizer_css() {
 	?>
 	<style type="text/css">
 		body, button, input, select, optgroup, textarea, h1, h2, h3, h4, h5, h6 { color: <?php echo esc_html( get_theme_mod( 'text_color', '#1D2731' ) ); ?>; }
-		.entry-footer, .entry-meta, .wp-block-image figcaption, .wp-block-pullquote cite, .wp-block-latest-posts__post-date, .wp-caption-text { color: <?php echo esc_html( get_theme_mod( 'accent_text_color', '#808182' ) ); ?>; }
+		.entry-footer, .entry-meta, .wp-block-image figcaption, .wp-block-pullquote cite, .wp-block-latest-posts__post-date, .wp-caption-text { color: <?php echo esc_html( get_theme_mod( 'accent_text_color', '#555d66' ) ); ?>; }
 		.wp-block-button .wp-block-button__link {	background-color: <?php echo esc_html( get_theme_mod( 'link_color', '#0059a7' ) ); ?>; }
 		.wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:active, .wp-block-button .wp-block-button__link:focus {	background-color: <?php echo esc_html( get_theme_mod( 'link_active_color', '#0B3C5D' ) ); ?>; }
 		.comment-navigation, .posts-navigation, .post-navigation, .entry-footer, .author-info, hr, .wp-block-separator { border-bottom-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
@@ -482,8 +482,8 @@ function velox_customizer_css() {
 		a:hover, a:focus, a:active { color: <?php echo esc_html( get_theme_mod( 'link_active_color', '#0B3C5D' ) ); ?>; }
 		.has-text-color { color: <?php echo esc_html( get_theme_mod( 'text_color', '#1D2731' ) ); ?>; }
 		.has-text-background-color { background-color: <?php echo esc_html( get_theme_mod( 'text_color', '#1D2731' ) ); ?>; }
-		.has-accent-text-color { color: <?php echo esc_html( get_theme_mod( 'accent_text_color', '#808182' ) ); ?>; }
-		.has-accent-text-background-color { background-color: <?php echo esc_html( get_theme_mod( 'accent_text_color', '#808182' ) ); ?>; }
+		.has-accent-text-color { color: <?php echo esc_html( get_theme_mod( 'accent_text_color', '#555d66' ) ); ?>; }
+		.has-accent-text-background-color { background-color: <?php echo esc_html( get_theme_mod( 'accent_text_color', '#555d66' ) ); ?>; }
 		.has-accent-color { color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		.has-accent-background-color { background-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 	</style>
