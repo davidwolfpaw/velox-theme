@@ -491,6 +491,7 @@ textarea {
 	color: #1D2731;
 	border: 1px solid #ccc;
 	border-radius: 4px;
+	max-width: 100%;
 	padding: 4px;
 }
 
@@ -510,6 +511,7 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
+	border: 1px solid #111;
 	color: #111;
 }
 
