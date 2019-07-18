@@ -567,10 +567,10 @@ textarea {
 	background-color: #FFFFFF;
 	display: grid;
 	grid-area: site-header-content;
-	grid-gap: 0 0.75em;
+	grid-gap: 0 0.5em;
 	grid-template-areas: "site-branding site-options";
 	justify-content: space-between;
-	margin-right: 15px;
+	margin-right: 10px;
 	padding: 0;
 	position: relative;
 	-webkit-transition: background-color 0.5s;
@@ -591,7 +591,7 @@ body.custom-background .site-header-content {
 	align-items: center;
 	display: grid;
 	grid-area: site-branding;
-	grid-gap: 0 1em;
+	grid-gap: 0 0.25em;
 	grid-template-areas: "custom-logo-link site-title";
 	padding: 0;
 	text-align: center;
@@ -606,8 +606,8 @@ body.custom-background .site-header-content {
 }
 
 .custom-logo-link img {
-	max-width: 48px;
-	max-height: 48px;
+	max-width: 50px;
+	max-height: 50px;
 	margin-bottom: 0;
 	width: auto;
 	height: auto;
