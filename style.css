@@ -532,7 +532,7 @@ textarea {
 	width: 100%;
 	max-width: 100%;
 	position: relative;
-	padding: 24px 32px;
+	padding: 20px;
 }
 
 .page-no-title #content {
@@ -550,7 +550,7 @@ textarea {
 --------------------------------------------------------------*/
 .site-header {
 	box-shadow: 0 0px 3px 0px #1D2731;
-	padding: 0 32px;
+	padding: 0 20px;
 }
 
 .site-header-wrap {
@@ -565,10 +565,10 @@ textarea {
 	background-color: #FFFFFF;
 	display: grid;
 	grid-area: site-header-content;
-	grid-gap: 0 1em;
+	grid-gap: 0 0.75em;
 	grid-template-areas: "site-branding site-options";
 	justify-content: space-between;
-	margin-right: 20px;
+	margin-right: 15px;
 	padding: 0;
 	position: relative;
 	-webkit-transition: background-color 0.5s;
@@ -684,7 +684,7 @@ a:hover, a:active {
 	display: block;
 	list-style: none;
 	margin: 0;
-	padding: 0 32px;
+	padding: 0 20px;
 	text-align: left
 }
 
@@ -863,7 +863,7 @@ a:hover, a:active {
 # Headers & Titles
 --------------------------------------------------------------*/
 .site-title {
-	font-size: 1.3em;
+	font-size: 1.25em;
 	line-height: 1em;
 	font-weight: bold;
 	grid-area: site-title;
@@ -1120,8 +1120,8 @@ img.alignright,
 	background-color: #0B3C5D;
 	color: #FFFFFF;
 	margin: 0 auto;
-	padding-left: 32px;
-	padding-right: 32px;
+	padding-left: 20px;
+	padding-right: 20px;
 	text-align: center;
 }
 
@@ -1696,7 +1696,7 @@ body.night-mode .author-info {
 		display: none;
 		position: absolute;
 		top: 63px;
-		right: -32px;
+		right: -20px;
 		width: 100vw;
 		padding: 0 20px;
 		background-color: #FFFFFF;
