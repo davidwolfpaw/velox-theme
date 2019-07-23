@@ -1151,6 +1151,10 @@ img.alignright,
 	margin: 0 auto;
 }
 
+.archive .hentry {
+	margin: 0 auto 120px;
+}
+
 .hentry .entry-content a {
 	text-decoration: none;
 	border-bottom: 1px solid #00adef;
