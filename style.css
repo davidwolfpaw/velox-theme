@@ -1593,6 +1593,13 @@ body.night-mode #main-navigation .menu-icon::after {
 	transition: all 0.5s;
 }
 
+body.night-mode *::-moz-selection {
+	color: #1d2731;
+}
+body.night-mode *::selection {
+	color: #1d2731;
+}
+
 body.night-mode h1,
 body.night-mode h2,
 body.night-mode h3,
