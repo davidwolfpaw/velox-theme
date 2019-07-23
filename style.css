@@ -1283,6 +1283,11 @@ img.alignright,
 	margin-top: 0;
 }
 
+.comment-metadata,
+.comment .reply {
+	font-size: 0.75em;
+}
+
 .comment-body {
 	background: #fafbfc;
 	border: 2px solid rgba(158, 158, 158, 0.33);
@@ -1322,6 +1327,10 @@ img.alignright,
 
 .comment-content a {
 	word-wrap: break-word;
+}
+
+.comment-content p:last-of-type {
+	margin-bottom: 0;
 }
 
 .bypostauthor > .comment-body {
