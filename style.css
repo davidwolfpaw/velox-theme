@@ -685,7 +685,7 @@ a:hover, a:active {
 	display: block;
 	list-style: none;
 	margin: 0;
-	padding: 0 20px;
+	padding: 0;
 	text-align: left
 }
 
@@ -703,8 +703,18 @@ a:hover, a:active {
 #main-navigation a {
 	display: block;
 	text-decoration: none;
-	padding: 0.25em 0;
+	padding: 0.1em 20px;
 }
+
+
+
+#main-navigation a:hover,
+#main-navigation a:focus {
+	color: #FFFFFF;
+	background-color: #00adef;
+	text-decoration: none;
+}
+
 
 #main-navigation li.menu-item-has-children > a:after {
 	content: " \25BF";
@@ -1920,11 +1930,7 @@ body.night-mode .author-info {
 
 	body #main-navigation a {
 		color: #1D2731;
-	}
-
-	body #main-navigation a:hover,
-	body #main-navigation a:focus {
-		color: #1D2731;
+		padding: 0.1em 0.25em;
 	}
 
 	body.night-mode #main-navigation a {
