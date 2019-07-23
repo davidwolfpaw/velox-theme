@@ -1265,6 +1265,10 @@ img.alignright,
 	position: relative;
 }
 
+.comment.webmention {
+	margin-top: 0;
+}
+
 .comment-body {
 	background: #fafbfc;
 	border: 2px solid rgba(158, 158, 158, 0.33);
