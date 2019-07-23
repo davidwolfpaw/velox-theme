@@ -244,12 +244,6 @@ function velox_defer_scripts( $tag, $handle ) {
 }
 add_filter( 'script_loader_tag', 'velox_defer_scripts', 10, 2 );
 
-
-/**
- * Custom Comment Walker template.
- */
-require get_template_directory() . '/inc/class-velox-walker-comment.php';
-
 /**
  * Custom template tags for this theme.
  */
@@ -277,4 +271,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-

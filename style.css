@@ -1256,15 +1256,15 @@ img.alignright,
 }
 
 .comment-list .children {
-	margin-left: 40px;
+	margin-left: 30px;
+}
+
+.comment {
+	margin-top: 90px;
+	position: relative;
 }
 
 .comment-body {
-	display: grid;
-	grid-template-columns: 64px calc(100% - 64px);
-}
-
-.comment-content-wrap {
 	background: #fafbfc;
 	border: 2px solid rgba(158, 158, 158, 0.33);
 	border-radius: .5em;
@@ -1273,77 +1273,49 @@ img.alignright,
 	position: relative;
 }
 
-.comment-content-wrap:before {
-	border-width: 0 15px 15px 0;
+.comment-body:before {
+	border-width: 15px 15px 0 0 ;
 	border-color: transparent rgba(158, 158, 158, 0.33);
 	border-style: solid;
 	bottom: auto;
 	content: '';
 	display: block;
-	left: -15px;
+	left: 15px;
 	position: absolute;
-	top: 1em;
+	top: -15px;
 }
 
-.comment-content-wrap:after {
-	border-width: 0 11px 11px 0;
-	border-color: transparent #fafbfc;
+.comment-body:after {
+	border-width: 11px 11px 0 0;
+	border-color: transparent #ffffff;
 	border-style: solid;
 	bottom: auto;
 	content: '';
 	display: block;
-	left: -10px;
+	left: 17px;
 	position: absolute;
-	top: calc(1em + 2px);
+	top: calc(-15px + 5px);
 }
 
 .comment .avatar {
 	border-radius: 50%;
-	position: relative;
+	left: 0;
+	max-height: 48px;
+	max-width: 48px;
+	position: absolute;
+	top: -70px;
 	z-index: 1
-}
-
-.comment-avatar {
-	position: relative;
-	z-index: 0
-}
-
-.comment.parent .comment-avatar:after {
-	border-left: 2px dashed rgba(158, 158, 158, 0.33);
-	content: '';
-	display: block;
-	height: 100%;
-	left: 23px;
-	position: absolute;
-	top: 24px;
-	width: 2px;
-}
-
-.comment.parent .comment:not(.parent) .comment-avatar:after,
-.comment .children .comment:last-child:not(:only-child) .comment-avatar:before {
-	display: none
-}
-
-.comment .children .comment .comment-avatar:before {
-	border-top: 2px dashed rgba(158, 158, 158, 0.33);
-	content: '';
-	display: block;
-	width: 24px;
-	left: -12px;
-	position: absolute;
-	top: 24px;
-	height: 2px;
 }
 
 .comment-content a {
 	word-wrap: break-word;
 }
 
-.bypostauthor .comment-body {
+.bypostauthor > .comment-body {
 	border-color: rgba(158, 158, 158, 1);;
 }
 
-.bypostauthor .comment-body:before {
+.bypostauthor > .comment-body:before {
 	border-color: transparent rgba(158, 158, 158, 1);;
 }
 
@@ -1612,7 +1584,12 @@ a, a:visited,
 .wp-block-quote cite,
 .wp-block-quote footer,
 .wp-block-image figcaption,
-.site-description {
+.site-description,
+body.night-mode .comment-body,
+body.night-mode .comment-body:after,
+body.night-mode #main-navigation .menu-icon,
+body.night-mode #main-navigation .menu-icon::before,
+body.night-mode #main-navigation .menu-icon::after {
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
@@ -1638,11 +1615,11 @@ body.night-mode .wp-block-separator.is-style-dots:before {
 	color: rgba(255, 255, 255, 0.9);
 }
 
-body.night-mode .comment-content-wrap {
+body.night-mode .comment-body {
 	background-color: rgba(0, 0, 0, 0.2);
 }
-body.night-mode .comment-content-wrap:after {
-	border-color: transparent rgba(0, 0, 0, 0.2);
+body.night-mode .comment-body:after {
+	border-color: transparent rgba(0, 0, 0, 0.75);
 }
 
 body.night-mode #main-navigation .menu-icon,
@@ -1691,6 +1668,74 @@ body.night-mode .author-info {
 
 }
 
+@media screen and (min-width: 600px) {
+
+	.comment-list,
+	.comment-list .children {
+		margin-left: 0;
+	}
+
+	.comment {
+		margin-left: 70px;
+		margin-top: 0;
+	}
+
+	.comment-body::before {
+		border-width: 0 15px 15px 0;
+		border-color: transparent rgba(158, 158, 158, 0.33);
+		border-style: solid;
+		bottom: auto;
+		content: '';
+		display: block;
+		left: -17px;
+		position: absolute;
+		top: 35px;
+	}
+
+	.comment .avatar {
+		left: -70px;
+		top: 16px;
+	}
+
+	.comment-avatar {
+		position: relative;
+		z-index: 0
+	}
+
+	.comment.parent .comment-body::after,
+	.comment.parent .children .comment:not(:last-child)::after {
+		border-left: 2px dashed rgba(158, 158, 158, 0.33);
+		content: '';
+		display: block;
+		height: 100%;
+		left: -48px;
+		position: absolute;
+		top: 56px;
+		width: 2px;
+	}
+
+	.comment.parent .children .comment:not(:last-child)::after {
+		left: -116px;
+		top: 48px;
+	}
+
+	.comment:not(.parent) .comment-body::after {
+		display: none
+	}
+
+	.comment .children .comment .comment-meta::before {
+		border-top: 2px dashed rgba(158, 158, 158, 0.33);
+		content: '';
+		display: block;
+		width: 48px;
+		left: -114px;
+		position: absolute;
+		top: 40px;
+		height: 2px;
+	}
+
+}
+
 @media screen and (max-width: 767px) {
 
 	#primary-menu {
@@ -1704,7 +1749,6 @@ body.night-mode .author-info {
 		box-shadow: 0 8px 8px -4px #1D2731;
 	}
 
-	/*.site-options,*/
 	.header-sidebar,
 	.site-description,
 	.menu-icon-text {

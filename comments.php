@@ -53,7 +53,6 @@ if ( post_password_required() ) {
 			<?php
 				wp_list_comments(
 					array(
-						'walker'      => new Velox_Walker_Comment(),
 						'avatar_size' => 48,
 						'style'       => 'ol',
 						'short_ping'  => true,
