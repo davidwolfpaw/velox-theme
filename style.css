@@ -1282,19 +1282,7 @@ img.alignright,
 	display: block;
 	left: 15px;
 	position: absolute;
-	top: -15px;
-}
-
-.comment-body:after {
-	border-width: 11px 11px 0 0;
-	border-color: transparent #ffffff;
-	border-style: solid;
-	bottom: auto;
-	content: '';
-	display: block;
-	left: 17px;
-	position: absolute;
-	top: calc(-15px + 5px);
+	top: -17px;
 }
 
 .comment .avatar {
@@ -1586,7 +1574,6 @@ a, a:visited,
 .wp-block-image figcaption,
 .site-description,
 body.night-mode .comment-body,
-body.night-mode .comment-body:after,
 body.night-mode #main-navigation .menu-icon,
 body.night-mode #main-navigation .menu-icon::before,
 body.night-mode #main-navigation .menu-icon::after {
@@ -1617,9 +1604,6 @@ body.night-mode .wp-block-separator.is-style-dots:before {
 
 body.night-mode .comment-body {
 	background-color: rgba(0, 0, 0, 0.2);
-}
-body.night-mode .comment-body:after {
-	border-color: transparent rgba(0, 0, 0, 0.75);
 }
 
 body.night-mode #main-navigation .menu-icon,
