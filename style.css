@@ -1249,7 +1249,8 @@ img.alignright,
 ## Comments
 --------------------------------------------------------------*/
 .comment-list,
-.comment-list .children {
+.comment-list .children,
+.mention-list {
 	margin-left: 0;
 	padding-left: 0;
 	list-style: none;
@@ -1293,6 +1294,12 @@ img.alignright,
 	position: absolute;
 	top: -70px;
 	z-index: 1
+}
+
+.comment.webmention .avatar {
+	position: relative;
+	left: 0;
+	top: 0;
 }
 
 .comment-content a {
@@ -1654,7 +1661,6 @@ body.night-mode .author-info {
 
 @media screen and (min-width: 600px) {
 
-	.comment-list,
 	.comment-list .children {
 		margin-left: 0;
 	}
@@ -1681,14 +1687,9 @@ body.night-mode .author-info {
 		top: 16px;
 	}
 
-	.comment-avatar {
-		position: relative;
-		z-index: 0
-	}
-
 	.comment.parent .comment-body::after,
 	.comment.parent .children .comment:not(:last-child)::after {
-		border-left: 2px dashed rgba(158, 158, 158, 0.33);
+		border-left: 2px dashed rgba(158, 158, 158, 0.15);
 		content: '';
 		display: block;
 		height: 100%;
@@ -1708,7 +1709,7 @@ body.night-mode .author-info {
 	}
 
 	.comment .children .comment .comment-meta::before {
-		border-top: 2px dashed rgba(158, 158, 158, 0.33);
+		border-top: 2px dashed rgba(158, 158, 158, 0.15);
 		content: '';
 		display: block;
 		width: 48px;
@@ -1716,6 +1717,15 @@ body.night-mode .author-info {
 		position: absolute;
 		top: 40px;
 		height: 2px;
+	}
+
+	.comment.parent.bypostauthor .comment-body::after,
+	.comment.parent.bypostauthor .children .comment:not(:last-child)::after {
+		border-left: 2px dashed rgba(158, 158, 158, 0.5);
+	}
+
+	.comment.bypostauthor .children .comment .comment-meta::before {
+		border-top: 2px dashed rgba(158, 158, 158, 0.5);
 	}
 
 }
