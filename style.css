@@ -1607,10 +1607,16 @@ a, a:visited,
 .wp-block-quote footer,
 .wp-block-image figcaption,
 .site-description,
-body.night-mode .comment-body,
-body.night-mode #main-navigation .menu-icon,
-body.night-mode #main-navigation .menu-icon::before,
-body.night-mode #main-navigation .menu-icon::after {
+.comment-body,
+#main-navigation .menu-icon,
+#main-navigation .menu-icon::before,
+#main-navigation .menu-icon::after,
+.entry-footer,
+.entry-meta,
+.wp-block-image figcaption,
+.wp-block-pullquote cite,
+.wp-block-latest-posts__post-date,
+.wp-caption-text {
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	transition: all 0.5s;
@@ -1634,8 +1640,11 @@ body.night-mode a:visited,
 body.night-mode.hentry .entry-content a,
 body.night-mode.hentry .entry-content a:visited,
 body.night-mode .site-description,
+body.night-mode .entry-footer,
+body.night-mode .entry-meta,
+body.night-mode .wp-block-latest-posts__post-date,
+body.night-mode .wp-caption-text
 body.night-mode .wp-block-pullquote,
-body.night-mode .wp-block-pullquote > cite,
 body.night-mode .wp-block-quote cite,
 body.night-mode .wp-block-quote footer,
 body.night-mode .wp-block-image figcaption,
