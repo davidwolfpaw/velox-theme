@@ -490,6 +490,7 @@ function velox_customizer_css() {
 	<?php
 }
 add_action( 'wp_head', 'velox_customizer_css' );
+add_action( 'admin_head', 'velox_customizer_css' );
 
 /**
  * Apply customizer fonts
@@ -535,33 +536,106 @@ function velox_font_families() {
 		$body_weight    = '400';
 	}
 
-	$font_dir = get_template_directory_uri() . '/fonts';
+	$font_dir    = get_template_directory_uri() . '/fonts';
+	$heading_url = esc_url_raw( $font_dir . '/' . $heading_slug . '/' . $heading_slug );
+	$body_url    = esc_url_raw( $font_dir . '/' . $body_slug . '/' . $body_slug );
 
-	$font_css = "
-	@font-face {
-		font-family: {$heading_font};
-		src:url('{$font_dir}/{$heading_slug}/{$heading_slug}.woff2') format('woff2'),
-	    	url('{$font_dir}/{$heading_slug}/{$heading_slug}.woff') format('woff');
-		font-weight: {$heading_weight};
+	$font_styles = array(
+		'heading_font'   => $heading_font,
+		'heading_weight' => $heading_weight,
+		'heading_url'    => $heading_url,
+		'body_font'      => $body_font,
+		'body_weight'    => $body_weight,
+		'body_url'       => $body_url,
+	);
 
-	}
-	@font-face {
-		font-family: {$body_font};
-		src:url('{$font_dir}/{$body_slug}/{$body_slug}.woff2') format('woff2'),
-	    	url('{$font_dir}/{$body_slug}/{$body_slug}.woff') format('woff');
-		font-weight: {$body_weight};
-	}
-	body, button, input, select, optgroup, textarea {
-		font-family: '{$body_font}',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
-		font-weight: {$body_weight};
-	}
-	h1, h2, h3, h4, h5, h6 {
-		font-family: '{$heading_font}',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
-		font-weight: {$heading_weight};
-	}
-	";
-
-	// Add inline style to use the selected fonts.
-	wp_add_inline_style( 'velox-style', $font_css );
+	return $font_styles;
 }
-add_action( 'wp_enqueue_scripts', 'velox_font_families' );
+
+/**
+ * Apply customizer fonts to frontend
+ */
+function velox_frontend_fonts() {
+	$font_styles = velox_font_families();
+
+	if ( ! empty( $font_styles ) ) {
+		$font_css = "
+		@font-face {
+			font-family: {$font_styles['heading_font']};
+			src:url('{$font_styles['heading_url']}.woff2') format('woff2'),
+		    	url('{$font_styles['heading_url']}.woff') format('woff');
+			font-weight: {$font_styles['heading_weight']};
+
+		}
+		@font-face {
+			font-family: {$font_styles['body_font']};
+			src:url('{$font_styles['body_url']}.woff2') format('woff2'),
+		    	url('{$font_styles['body_url']}.woff') format('woff');
+			font-weight: {$font_styles['body_weight']};
+		}
+		body, button, input, select, optgroup, textarea {
+			font-family: '{$font_styles['body_font']}',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+			font-weight: {$font_styles['body_weight']};
+		}
+		h1, h2, h3, h4, h5, h6 {
+			font-family: '{$font_styles['heading_font']}',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+			font-weight: {$font_styles['heading_weight']};
+		}
+		";
+
+		// Add inline style to use the selected fonts.
+		wp_add_inline_style( 'velox-style', $font_css );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'velox_frontend_fonts' );
+
+/**
+ * Apply customizer fonts to block editor
+ */
+function velox_block_editor_fonts() {
+	$font_styles = velox_font_families();
+
+	if ( ! empty( $font_styles ) ) {
+		$font_css = "<style>
+		@font-face {
+			font-family: {$font_styles['heading_font']};
+			src:url('{$font_styles['heading_url']}.woff2') format('woff2'),
+		    	url('{$font_styles['heading_url']}.woff') format('woff');
+			font-weight: {$font_styles['heading_weight']};
+
+		}
+		@font-face {
+			font-family: {$font_styles['body_font']};
+			src:url('{$font_styles['body_url']}.woff2') format('woff2'),
+		    	url('{$font_styles['body_url']}.woff') format('woff');
+			font-weight: {$font_styles['body_weight']};
+		}
+		body.wp-admin .editor-styles-wrapper,
+		.wp-admin .editor-styles-wrapper button,
+		.wp-admin .editor-styles-wrapper input,
+		.wp-admin .editor-styles-wrapper select,
+		.wp-admin .editor-styles-wrapper optgroup,
+		.wp-admin .editor-styles-wrapper textarea {
+			font-family: '{$font_styles['body_font']}',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+			font-weight: {$font_styles['body_weight']};
+		}
+		.wp-admin .editor-styles-wrapper h1,
+		.wp-admin .editor-styles-wrapper h2,
+		.wp-admin .editor-styles-wrapper h3,
+		.wp-admin .editor-styles-wrapper h4,
+		.wp-admin .editor-styles-wrapper h5,
+		.wp-admin .editor-styles-wrapper h6,
+		.wp-admin .editor-post-title__block .editor-post-title__input {
+			font-family: '{$font_styles['heading_font']}',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+			font-weight: {$font_styles['heading_weight']};
+		}
+		</style>";
+		echo $font_css;
+	}
+}
+add_action( 'admin_head', 'velox_block_editor_fonts' );
+
+
+
+
+// add_action( 'admin_head', 'velox_editor_fonts' );
