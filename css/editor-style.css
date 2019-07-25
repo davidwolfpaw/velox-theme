@@ -217,7 +217,7 @@
 .wp-admin .editor-styles-wrapper input[type="datetime"],
 .wp-admin .editor-styles-wrapper input[type="datetime-local"],
 .wp-admin .editor-styles-wrapper input[type="color"],
-.wp-admin .editor-styles-wrapper textarea {
+.wp-admin .editor-styles-wrapper textarea:not(.editor-post-title__input) {
 	color: #1D2731;
 	border: 1px solid #ccc;
 	border-radius: 4px;
