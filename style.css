@@ -1700,6 +1700,32 @@ body.night-mode .author-info {
 		margin: 0 auto;
 	}
 
+	.nav-links {
+		display: block;
+	}
+
+	.nav-previous,
+	.nav-next {
+		margin: 0;
+		width: 100%;
+	}
+
+	.nav-previous .navigation-arrow,
+	.nav-next .navigation-arrow {
+		line-height: 1;
+	}
+
+	.navigation .nav-previous {
+		border-right: none;
+		margin-bottom: 20px;
+		padding: 0 0 0 30px;
+	}
+
+	.navigation .nav-next {
+		margin: 0;
+		padding: 0 30px 0 0;
+	}
+
 }
 
 @media screen and (min-width: 600px) {
