@@ -15,7 +15,7 @@
 
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php echo do_shortcode( get_theme_mod( 'post_meta_header', 'Posted on [post_date]' ) ); ?>
+			<?php echo velox_get_entry_meta(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -27,6 +27,6 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php echo do_shortcode( get_theme_mod( 'post_meta_footer', '[post_categories] [post_tags]' ) ); ?>
+		<?php echo velox_get_entry_footer_meta(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

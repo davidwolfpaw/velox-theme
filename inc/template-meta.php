@@ -12,27 +12,50 @@
  * @param string
  * @return string
  */
-function get_velox_entry_meta() {
+function velox_get_entry_meta() {
+
+	$entry_meta = __( 'Posted On ', 'velox' );
+	$entry_meta .= velox_get_post_date( array() );
+
+	return $entry_meta;
 
 }
 
-if ( ! function_exists( 'velox_post_date_shortcode' ) ) :
-	add_shortcode( 'post_date', 'velox_post_date_shortcode' );
-	/**
-	 * Produces the date of post publication.
-	 *
-	 * Supported shortcode attributes are:
-	 *   after (output after link, default is empty string),
-	 *   before (output before link, default is empty string),
-	 *   format (date format, default is value in date_format option field),
-	 *   modified (whether getting original or modified post date, defaults to false).
-	 *
-	 * Output passes through `velox_post_date_shortcode` filter before returning.
-	 *
-	 * @param array|string $atts Shortcode attributes. Empty string if no attributes.
-	 * @return string Output for `post_date` shortcode.
-	 */
-	function velox_post_date_shortcode( $atts ) {
+/**
+ * Get the entry footer meta for the post.
+ *
+ * @param string
+ * @return string
+ */
+function velox_get_entry_footer_meta() {
+
+	$entry_meta = '<div class="entry-meta-categories">';
+	$entry_meta .= velox_get_post_categories( array() );
+	$entry_meta .= '</div>';
+	$entry_meta .= '<div class="entry-meta-tags">';
+	$entry_meta .= velox_get_post_tags( array() );
+	$entry_meta .= '</div>';
+
+	return $entry_meta;
+
+}
+
+/**
+ * Produces the date of post publication.
+ *
+ * Supported attributes are:
+ *   after (output after link, default is empty string),
+ *   before (output before link, default is empty string),
+ *   format (date format, default is value in date_format option field),
+ *   modified (whether getting original or modified post date, defaults to false).
+ *
+ * Output passes through `velox_get_post_date` filter before returning.
+ *
+ * @param array|string $atts Meta attributes. Empty string if no attributes.
+ * @return string Output for `post_date` shortcode.
+ */
+if ( ! function_exists( 'velox_get_post_date' ) ) :
+	function velox_get_post_date( $atts ) {
 
 		$defaults = array(
 			'after'          => '',
@@ -42,7 +65,7 @@ if ( ! function_exists( 'velox_post_date_shortcode' ) ) :
 			'relative_depth' => 2,
 		);
 
-		$atts = shortcode_atts( $defaults, $atts, 'post_date' );
+		$atts = array_replace( $defaults, $atts );
 
 		// If we're getting the modified date or the original post date.
 		if ( 'true' === $atts['modified'] ) {
@@ -69,29 +92,27 @@ if ( ! function_exists( 'velox_post_date_shortcode' ) ) :
 
 		}
 
-		return apply_filters( 'velox_post_date_shortcode', $output, $atts );
+		return apply_filters( 'velox_get_post_date', $output, $atts );
 
 	}
 endif;
 
-
-if ( ! function_exists( 'velox_post_time_shortcode' ) ) :
-	add_shortcode( 'post_time', 'velox_post_time_shortcode' );
-	/**
-	 * Produces the time of post publication.
-	 *
-	 * Supported shortcode attributes are:
-	 *   after (output after link, default is empty string),
-	 *   before (output before link, default is empty string),
-	 *   format (date format, default is value in date_format option field),
-	 *   modified (whether getting original or modified post time, defaults to false).
-	 *
-	 * Output passes through `velox_post_time_shortcode` filter before returning.
-	 *
-	 * @param array|string $atts Shortcode attributes. Empty string if no attributes.
-	 * @return string Output for `post_time` shortcode`.
-	 */
-	function velox_post_time_shortcode( $atts ) {
+/**
+ * Produces the time of post publication.
+ *
+ * Supported attributes are:
+ *   after (output after link, default is empty string),
+ *   before (output before link, default is empty string),
+ *   format (date format, default is value in date_format option field),
+ *   modified (whether getting original or modified post time, defaults to false).
+ *
+ * Output passes through `velox_get_post_time` filter before returning.
+ *
+ * @param array|string $atts Meta attributes. Empty string if no attributes.
+ * @return string Output for `post_time` shortcode`.
+ */
+if ( ! function_exists( 'velox_get_post_time' ) ) :
+	function velox_get_post_time( $atts ) {
 
 		$defaults = array(
 			'after'    => '',
@@ -100,7 +121,7 @@ if ( ! function_exists( 'velox_post_time_shortcode' ) ) :
 			'modified' => false,
 		);
 
-		$atts = shortcode_atts( $defaults, $atts, 'post_time' );
+		$atts = array_replace( $defaults, $atts );
 
 		if ( true === $atts['modified'] ) {
 
@@ -112,32 +133,30 @@ if ( ! function_exists( 'velox_post_time_shortcode' ) ) :
 
 		}
 
-		return apply_filters( 'velox_post_time_shortcode', $output, $atts );
+		return apply_filters( 'velox_get_post_time', $output, $atts );
 
 	}
 endif;
 
-
-if ( ! function_exists( 'velox_post_modified_date_shortcode' ) ) :
-	add_shortcode( 'post_author', 'velox_post_author_shortcode' );
-	/**
-	 * Produces the author of the post.
-	 *
-	 * Supported shortcode attributes are:
-	 *   after (output after link, default is empty string),
-	 *   before (output before link, default is empty string),
-	 *   link (none, author page, author archives).
-	 *
-	 * Output passes through `velox_post_author_shortcode` filter before returning.
-	 *
-	 * @since 1.1.0
-	 *
-	 * @param array|string $atts Shortcode attributes. Empty string if no attributes.
-	 * @return string Return empty string if post type does not support `author` or post has no author assigned.
-	 *                Return `velox_post_author_shortcode()` if author has no URL.
-	 *                Otherwise, output for `post_author_link` shortcode.
-	 */
-	function velox_post_author_shortcode( $atts ) {
+/**
+ * Produces the author of the post.
+ *
+ * Supported attributes are:
+ *   after (output after link, default is empty string),
+ *   before (output before link, default is empty string),
+ *   link (none, author page, author archives).
+ *
+ * Output passes through `velox_get_post_author` filter before returning.
+ *
+ * @since 1.1.0
+ *
+ * @param array|string $atts Meta attributes. Empty string if no attributes.
+ * @return string Return empty string if post type does not support `author` or post has no author assigned.
+ *                Return `velox_get_post_author()` if author has no URL.
+ *                Otherwise, output for `post_author_link` shortcode.
+ */
+if ( ! function_exists( 'velox_get_post_author' ) ) :
+	function velox_get_post_author( $atts ) {
 
 		if ( ! post_type_supports( get_post_type(), 'author' ) ) {
 			return '';
@@ -149,7 +168,7 @@ if ( ! function_exists( 'velox_post_modified_date_shortcode' ) ) :
 			'url'    => 'author',
 		);
 
-		$atts = shortcode_atts( $defaults, $atts, 'post_author_link' );
+		$atts = array_replace( $defaults, $atts, 'post_author_link' );
 
 		$author         = get_the_author();
 		$author_url     = get_the_author_meta( 'user_url', get_the_author_meta( 'ID' ) );
@@ -172,34 +191,32 @@ if ( ! function_exists( 'velox_post_modified_date_shortcode' ) ) :
 		}
 		$output .= $atts['after'];
 
-		return apply_filters( 'velox_post_author_shortcode', $output, $atts );
+		return apply_filters( 'velox_get_post_author', $output, $atts );
 
 	}
 endif;
 
-
-if ( ! function_exists( 'velox_post_comments_shortcode' ) ) :
-	add_shortcode( 'post_comments', 'velox_post_comments_shortcode' );
-	/**
-	 * Produces the link to the current post comments.
-	 *
-	 * Supported shortcode attributes are:
-	 *   after (output after link, default is empty string),
-	 *   before (output before link, default is empty string),
-	 *   hide_if_off (hide link if comments are off, default is true),
-	 *   more (text when there is more than 1 comment, use % character as placeholder
-	 *     for actual number, default is '% Comments')
-	 *   one (text when there is exactly one comment, default is '1 Comment'),
-	 *   zero (text when there are no comments, default is 'Leave a Comment').
-	 *
-	 * Output passes through `velox_post_comments_shortcode` filter before returning.
-	 *
-	 * @param array|string $atts Shortcode attributes. Empty string if no attributes.
-	 * @return string Return empty string if post does not support `comments`, or `hide_if_off` is enabled and
-	 *                comments are closed or disabled in Genesis theme settings.
-	 *                Otherwise, output for `post_comments` shortcode.
-	 */
-	function velox_post_comments_shortcode( $atts ) {
+/**
+ * Produces the link to the current post comments.
+ *
+ * Supported attributes are:
+ *   after (output after link, default is empty string),
+ *   before (output before link, default is empty string),
+ *   hide_if_off (hide link if comments are off, default is true),
+ *   more (text when there is more than 1 comment, use % character as placeholder
+ *     for actual number, default is '% Comments')
+ *   one (text when there is exactly one comment, default is '1 Comment'),
+ *   zero (text when there are no comments, default is 'Leave a Comment').
+ *
+ * Output passes through `velox_get_post_comments` filter before returning.
+ *
+ * @param array|string $atts Meta attributes. Empty string if no attributes.
+ * @return string Return empty string if post does not support `comments`, or `hide_if_off` is enabled and
+ *                comments are closed or disabled in Genesis theme settings.
+ *                Otherwise, output for `post_comments` shortcode.
+ */
+if ( ! function_exists( 'velox_get_post_comments' ) ) :
+	function velox_get_post_comments( $atts ) {
 
 		if ( ! post_type_supports( get_post_type(), 'comments' ) ) {
 			return '';
@@ -214,7 +231,7 @@ if ( ! function_exists( 'velox_post_comments_shortcode' ) ) :
 			'zero'        => __( 'Leave a Comment', 'velox' ),
 		);
 
-		$atts = shortcode_atts( $defaults, $atts, 'post_comments' );
+		$atts = array_replace( $defaults, $atts );
 
 		if ( true === $atts['hide_if_off'] && ! comments_open() ) {
 			return '';
@@ -229,29 +246,27 @@ if ( ! function_exists( 'velox_post_comments_shortcode' ) ) :
 
 		$output = sprintf( '%s<span class="entry-comments-link">%s</span>%s', $atts['before'], $comments, $atts['after'] );
 
-		return apply_filters( 'velox_post_comments_shortcode', $output, $atts );
+		return apply_filters( 'velox_get_post_comments', $output, $atts );
 
 	}
 endif;
 
-
-if ( ! function_exists( 'velox_post_tags_shortcode' ) ) :
-	add_shortcode( 'post_tags', 'velox_post_tags_shortcode' );
-	/**
-	 * Produces the tag links list.
-	 *
-	 * Supported shortcode attributes are:
-	 *   after (output after link, default is empty string),
-	 *   before (output before link, default is 'Tagged With: '),
-	 *   sep (separator string between tags, default is ', ').
-	 *
-	 * Output passes through `velox_post_tags_shortcode` filter before returning.
-	 *
-	 * @param array|string $atts Shortcode attributes. Empty string if no attributes.
-	 * @return string Return empty string if the `post_tag` taxonomy is not associated with the current post type
-	 *                or if the post has no tags. Otherwise, output for `post_tags` shortcode.
-	 */
-	function velox_post_tags_shortcode( $atts ) {
+/**
+ * Produces the tag links list.
+ *
+ * Supported attributes are:
+ *   after (output after link, default is empty string),
+ *   before (output before link, default is 'Tagged With: '),
+ *   sep (separator string between tags, default is ', ').
+ *
+ * Output passes through `velox_get_post_tags` filter before returning.
+ *
+ * @param array|string $atts Meta attributes. Empty string if no attributes.
+ * @return string Return empty string if the `post_tag` taxonomy is not associated with the current post type
+ *                or if the post has no tags. Otherwise, output for `post_tags` shortcode.
+ */
+if ( ! function_exists( 'velox_get_post_tags' ) ) :
+	function velox_get_post_tags( $atts ) {
 
 		if ( ! is_object_in_taxonomy( get_post_type(), 'post_tag' ) ) {
 			return '';
@@ -263,7 +278,7 @@ if ( ! function_exists( 'velox_post_tags_shortcode' ) ) :
 			'sep'    => ', ',
 		);
 
-		$atts = shortcode_atts( $defaults, $atts, 'post_tags' );
+		$atts = array_replace( $defaults, $atts );
 
 		$tags = get_the_tag_list( $atts['before'], trim( $atts['sep'] ) . ' ', $atts['after'] );
 
@@ -274,29 +289,27 @@ if ( ! function_exists( 'velox_post_tags_shortcode' ) ) :
 
 		$output = '<span class="post-tags">' . $tags . '</span>';
 
-		return apply_filters( 'velox_post_tags_shortcode', $output, $atts );
+		return apply_filters( 'velox_get_post_tags', $output, $atts );
 
 	}
 endif;
 
-
-if ( ! function_exists( 'velox_post_categories_shortcode' ) ) :
-	add_shortcode( 'post_categories', 'velox_post_categories_shortcode' );
-	/**
-	 * Produces the category links list.
-	 *
-	 * Supported shortcode attributes are:
-	 *   after (output after link, default is empty string),
-	 *   before (output before link, default is 'Tagged With: '),
-	 *   sep (separator string between tags, default is ', ').
-	 *
-	 * Output passes through 'velox_post_categories_shortcode' filter before returning.
-	 *
-	 * @param array|string $atts Shortcode attributes. Empty string if no attributes.
-	 * @return string Return empty string if the `category` taxonomy is not associated with the current post type
-	 *                or if the post has no categories. Otherwise, output for `post_categories` shortcode.
-	 */
-	function velox_post_categories_shortcode( $atts ) {
+/**
+ * Produces the category links list.
+ *
+ * Supported attributes are:
+ *   after (output after link, default is empty string),
+ *   before (output before link, default is 'Tagged With: '),
+ *   sep (separator string between tags, default is ', ').
+ *
+ * Output passes through 'velox_get_post_categories' filter before returning.
+ *
+ * @param array|string $atts Meta attributes. Empty string if no attributes.
+ * @return string Return empty string if the `category` taxonomy is not associated with the current post type
+ *                or if the post has no categories. Otherwise, output for `post_categories` shortcode.
+ */
+if ( ! function_exists( 'velox_get_post_categories' ) ) :
+	function velox_get_post_categories( $atts ) {
 
 		if ( ! is_object_in_taxonomy( get_post_type(), 'category' ) ) {
 			return '';
@@ -308,7 +321,7 @@ if ( ! function_exists( 'velox_post_categories_shortcode' ) ) :
 			'after'  => '',
 		);
 
-		$atts = shortcode_atts( $defaults, $atts, 'post_categories' );
+		$atts = array_replace( $defaults, $atts );
 
 		$cats = get_the_category_list( trim( $atts['sep'] ) . ' ' );
 
@@ -319,7 +332,7 @@ if ( ! function_exists( 'velox_post_categories_shortcode' ) ) :
 
 		$output = $atts['before'] . '<span class="post-categories">' . $cats . '</span>' . $atts['after'];
 
-		return apply_filters( 'velox_post_categories_shortcode', $output, $atts );
+		return apply_filters( 'velox_get_post_categories', $output, $atts );
 
 	}
 endif;
