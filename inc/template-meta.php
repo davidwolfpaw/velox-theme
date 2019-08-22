@@ -9,23 +9,25 @@
 /**
  * Get the entry meta for the post.
  *
- * @param string
- * @return string
+ * Output passes through `velox_get_entry_meta` filter before returning.
+ *
+ * @return string $entry_meta
  */
 function velox_get_entry_meta() {
 
 	$entry_meta = __( 'Posted On ', 'velox' );
 	$entry_meta .= velox_get_post_date( array() );
 
-	return $entry_meta;
+	return apply_filters( 'velox_get_entry_meta', $entry_meta );
 
 }
 
 /**
  * Get the entry footer meta for the post.
  *
- * @param string
- * @return string
+ * Output passes through `velox_get_entry_footer_meta` filter before returning.
+ *
+ * @return string $entry_meta
  */
 function velox_get_entry_footer_meta() {
 
@@ -36,7 +38,7 @@ function velox_get_entry_footer_meta() {
 	$entry_meta .= velox_get_post_tags( array() );
 	$entry_meta .= '</div>';
 
-	return $entry_meta;
+	return apply_filters( 'velox_get_entry_footer_meta', $entry_meta );
 
 }
 
