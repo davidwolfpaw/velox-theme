@@ -250,71 +250,6 @@ function velox_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Setting: Post Meta Header.
-	$wp_customize->add_setting(
-		'post_meta_header',
-		array(
-			'capability'        => 'edit_theme_options',
-			'default'           => 'Posted on [post_date]',
-			'sanitize_callback' => 'sanitize_text_field',
-			'transport'         => 'postMessage',
-		)
-	);
-
-	// Control: Post Meta Header.
-	$wp_customize->add_control(
-		'post_meta_header',
-		array(
-			'label'       => __( 'Post Meta Header', 'velox' ),
-			'description' => __( 'Post meta that displays before the post content. See shortcodes below.', 'velox' ),
-			'section'     => 'velox_theme_settings',
-			'type'        => 'text',
-		)
-	);
-
-	// Setting: Post Meta Footer.
-	$wp_customize->add_setting(
-		'post_meta_footer',
-		array(
-			'capability'        => 'edit_theme_options',
-			'default'           => '[post_categories] [post_tags]',
-			'sanitize_callback' => 'sanitize_text_field',
-			'transport'         => 'postMessage',
-		)
-	);
-
-	// Control: Post Meta Footer.
-	$wp_customize->add_control(
-		'post_meta_footer',
-		array(
-			'label'       => __( 'Post Meta Footer', 'velox' ),
-			'description' => __( 'Post meta that displays after the post content. See shortcodes below.', 'velox' ),
-			'section'     => 'velox_theme_settings',
-			'type'        => 'text',
-		)
-	);
-
-	// Setting: Post Meta Message.
-	$wp_customize->add_setting(
-		'post_meta_message',
-		array(
-			'default'           => '',
-			'sanitize_callback' => 'sanitize_text_field',
-		)
-	);
-
-	// Control: Post Meta Message.
-	$wp_customize->add_control(
-		'post_meta_message_control',
-		array(
-			'label'       => __( 'Post Meta Shortcodes', 'velox' ),
-			'description' => velox_post_meta_shortcode_message(),
-			'section'     => 'velox_theme_settings',
-			'type'        => 'hidden',
-			'settings'    => 'post_meta_message',
-		)
-	);
-
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial(
 			'blogname',
@@ -335,25 +270,6 @@ function velox_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'velox_customize_register' );
 
-/**
- * Creates Post Meta Shortcode Message
- *
- * @return message
- */
-function velox_post_meta_shortcode_message() {
-
-	$message  = '<ul>';
-	$message .= __( '<li><strong>[post_date]</strong> - Displays the posted or modified date of the post</li>', 'velox' );
-	$message .= __( '<li><strong>[post_time]</strong> - Displays the posted or modified time of the post</li>', 'velox' );
-	$message .= __( '<li><strong>[post_author]</strong> - Displays the author of the post</li>', 'velox' );
-	$message .= __( '<li><strong>[post_comments]</strong> - Displays the number of comments and link to leave a comment</li>', 'velox' );
-	$message .= __( '<li><strong>[post_tags]</strong> - Displays all tags of the post</li>', 'velox' );
-	$message .= __( '<li><strong>[post_categories]</strong> - Displays all categories of the post</li>', 'velox' );
-	$message .= '</ul>';
-
-	return $message;
-
-}
 
 /**
  * HEX Color sanitization callback example.
@@ -634,8 +550,3 @@ function velox_block_editor_fonts() {
 	}
 }
 add_action( 'admin_head', 'velox_block_editor_fonts' );
-
-
-
-
-// add_action( 'admin_head', 'velox_editor_fonts' );
