@@ -32,8 +32,6 @@ I have several features ready to go to make your site unique to you. Just by usi
 * __Read Time__ - Display an estimate for how long an article will take to read.
 * __Article Progress Bar__ - Show a progress bar for how far you've scrolled in an article.
 * __Author Info__ - Choose whether to display the author picture, display name, and description at the bottom of articles.
-* __Post Meta Header__ - Display info such as author URL, comments, tags, categories, post time, and post date via shortcodes before articles.
-* __Post Meta Footer__ - Display info such as author URL, comments, tags, categories, post time, and post date via shortcodes after articles.
 
 == Frequently Asked Questions ==
 

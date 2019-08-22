@@ -54,7 +54,7 @@ function velox_get_entry_footer_meta() {
  * Output passes through `velox_get_post_date` filter before returning.
  *
  * @param array|string $atts Meta attributes. Empty string if no attributes.
- * @return string Output for `post_date` shortcode.
+ * @return string Output for `velox_get_post_date`.
  */
 if ( ! function_exists( 'velox_get_post_date' ) ) :
 	function velox_get_post_date( $atts ) {
@@ -111,7 +111,7 @@ endif;
  * Output passes through `velox_get_post_time` filter before returning.
  *
  * @param array|string $atts Meta attributes. Empty string if no attributes.
- * @return string Output for `post_time` shortcode`.
+ * @return string Output for `velox_get_post_time`
  */
 if ( ! function_exists( 'velox_get_post_time' ) ) :
 	function velox_get_post_time( $atts ) {
@@ -155,7 +155,7 @@ endif;
  * @param array|string $atts Meta attributes. Empty string if no attributes.
  * @return string Return empty string if post type does not support `author` or post has no author assigned.
  *                Return `velox_get_post_author()` if author has no URL.
- *                Otherwise, output for `post_author_link` shortcode.
+ *                Otherwise, output for `velox_get_post_author`.
  */
 if ( ! function_exists( 'velox_get_post_author' ) ) :
 	function velox_get_post_author( $atts ) {
@@ -215,7 +215,7 @@ endif;
  * @param array|string $atts Meta attributes. Empty string if no attributes.
  * @return string Return empty string if post does not support `comments`, or `hide_if_off` is enabled and
  *                comments are closed or disabled in Genesis theme settings.
- *                Otherwise, output for `post_comments` shortcode.
+ *                Otherwise, output for `velox_get_post_comments`.
  */
 if ( ! function_exists( 'velox_get_post_comments' ) ) :
 	function velox_get_post_comments( $atts ) {
@@ -265,7 +265,7 @@ endif;
  *
  * @param array|string $atts Meta attributes. Empty string if no attributes.
  * @return string Return empty string if the `post_tag` taxonomy is not associated with the current post type
- *                or if the post has no tags. Otherwise, output for `post_tags` shortcode.
+ *                or if the post has no tags. Otherwise, output for `velox_get_post_tags`.
  */
 if ( ! function_exists( 'velox_get_post_tags' ) ) :
 	function velox_get_post_tags( $atts ) {
@@ -308,7 +308,7 @@ endif;
  *
  * @param array|string $atts Meta attributes. Empty string if no attributes.
  * @return string Return empty string if the `category` taxonomy is not associated with the current post type
- *                or if the post has no categories. Otherwise, output for `post_categories` shortcode.
+ *                or if the post has no categories. Otherwise, output for `velox_get_post_categories`.
  */
 if ( ! function_exists( 'velox_get_post_categories' ) ) :
 	function velox_get_post_categories( $atts ) {
