@@ -1,11 +1,20 @@
 <?php
 /**
- * Custom template tags for this theme
- *
- * Eventually, some of the functionality here could be replaced by core features.
+ * Functions that handle entry meta and footer in theme
  *
  * @package Velox
  */
+
+
+/**
+ * Get the entry meta for the post.
+ *
+ * @param string
+ * @return string
+ */
+function get_velox_entry_meta() {
+
+}
 
 if ( ! function_exists( 'velox_post_date_shortcode' ) ) :
 	add_shortcode( 'post_date', 'velox_post_date_shortcode' );
@@ -314,4 +323,3 @@ if ( ! function_exists( 'velox_post_categories_shortcode' ) ) :
 
 	}
 endif;
-

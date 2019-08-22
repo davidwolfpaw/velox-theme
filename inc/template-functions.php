@@ -132,8 +132,6 @@ add_action( 'wp_head', 'velox_pingback_header' );
  *  - 4 days
  *  - 4 weeks and 6 days
  *
- * @since 1.7.0
- *
  * @param int      $older_date     Unix timestamp of date you want to calculate the time since for`.
  * @param int|bool $newer_date     Optional. Unix timestamp of date to compare older date to. Default false (current time).
  * @param int      $relative_depth Optional, how many units to include in relative date. Default 2.

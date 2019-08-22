@@ -254,11 +254,10 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/template-functions.php';
 
-
 /**
- * Shortcodes included in the theme.
+ * Functions which manage the entry meta.
  */
-require get_template_directory() . '/inc/template-shortcodes.php';
+require get_template_directory() . '/inc/template-meta.php';
 
 /**
  * Customizer additions.
