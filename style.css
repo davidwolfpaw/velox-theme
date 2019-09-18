@@ -1171,7 +1171,13 @@ img.alignright,
 
 .hentry .entry-content a:hover,
 .hentry .entry-content a:focus,
-.hentry .entry-content a:active {
+.hentry .entry-content a:active,
+.hentry .wp-block-image a:active,
+.hentry .wp-block-image a:focus,
+.hentry .wp-block-image a:hover,
+.hentry .wp-block-gallery a:active,
+.hentry .wp-block-gallery a:focus,
+.hentry .wp-block-gallery a:hover {
 	color: #FFFFFF;
 	background-color: #00adef;
 	text-decoration: none;
@@ -1185,7 +1191,6 @@ img.alignright,
 .hentry .wp-block-gallery a:active,
 .hentry .wp-block-gallery a:focus,
 .hentry .wp-block-gallery a:hover {
-	background-color: transparent;
 	border-bottom: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
