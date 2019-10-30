@@ -1,10 +1,10 @@
+// String translation constants.
+const { __, _x, _n, _nx } = wp.i18n;
+
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
   (function($) {
     "use strict";
-
-    // String translation constants.
-    const { __, _x, _n, _nx } = wp.i18n;
 
     // Get viewport width.
     var responsive_viewport = $(window).width();
@@ -21,10 +21,10 @@ jQuery(document).ready(function($) {
 
 // Allow nightmode if activated.
 if ('default_light' == velox_options.night_mode || 'default_dark' == velox_options.night_mode) {
-  // const light = __( 'Light', 'velox' );
-  // const dark = __( 'Dark', 'velox' );
-  const light = 'Light <span class="night-mode-track-icon">☀️</span>';
-  const dark = 'Dark <span class="night-mode-track-icon">🌖</span>';
+  const light = __( 'Light', 'velox' );
+  const dark = __( 'Dark', 'velox' );
+  const lightHTML = light + ' <span class="night-mode-track-icon">☀️</span>';
+  const darkHTML = dark + ' <span class="night-mode-track-icon">🌖</span>';
   const nightModeTrack = document.getElementById('night-mode-track');
   const nightModeCheck = document.getElementById('night-mode-check');
 
@@ -34,12 +34,12 @@ if ('default_light' == velox_options.night_mode || 'default_dark' == velox_optio
       document.body.classList.add("night-mode");
       nightModeTrack.classList.add("night-mode");
       nightModeTrack.classList.remove("day-mode");
-      nightModeTrack.innerHTML = light;
+      nightModeTrack.innerHTML = lightHTML;
   } else {
       document.body.classList.remove("night-mode");
       nightModeTrack.classList.add("day-mode");
       nightModeTrack.classList.remove("night-mode");
-      nightModeTrack.innerHTML = dark;
+      nightModeTrack.innerHTML = darkHTML;
   }
 
   // When nightmode is checked
@@ -50,13 +50,13 @@ if ('default_light' == velox_options.night_mode || 'default_dark' == velox_optio
       document.body.classList.add("night-mode");
       nightModeTrack.classList.add("night-mode");
       nightModeTrack.classList.remove("day-mode");
-      nightModeTrack.innerHTML = light;
+      nightModeTrack.innerHTML = lightHTML;
     } else {
       localStorage.setItem("nightmode", "false");
       document.body.classList.remove("night-mode");
       nightModeTrack.classList.add("day-mode");
       nightModeTrack.classList.remove("night-mode");
-      nightModeTrack.innerHTML = dark;
+      nightModeTrack.innerHTML = darkHTML;
     }
   };
 }
