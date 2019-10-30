@@ -15,63 +15,52 @@ jQuery(document).ready(function($) {
       spacer: false
     });
 
-    // Display read time on articles if activated.
-    if (true == velox_options.read_time) {
-      $.fn.readingtime = function(options) {
-        var settings = $.extend(
-          {
-            wpm: 150,
-            round: "round"
-          },
-          options
-        );
-
-        var words = $.trim(this.first().text()).split(/\s+/).length;
-        return Math[settings.round](words / settings.wpm);
-      };
-
-      // For each blog post
-      $("article.post").each(function() {
-        // Calculate Reading Time
-        var ert = $(this).readingtime();
-
-        // Append it to post header if not zero
-        if (ert > 0) {
-          $(this)
-            .find(".entry-meta")
-            .append('<div class="read-time">' + ert + " min reading time</div>");
-        }
-      });
-    }
-
-    // Allow nightmode if activated.
-    if ('default_light' == velox_options.night_mode || 'default_dark' == velox_options.night_mode) {
-      const light = __( 'Light', 'velox' );
-      const dark = __( 'Dark', 'velox' );
-      // Store nightmode value in local storage.
-      var localNightMode = localStorage.getItem("nightmode");
-      if ("true" == localNightMode || 'default_dark' == velox_options.night_mode) {
-        $("body").addClass("night-mode");
-        $('#night-mode-track').replaceWith('<span id="night-mode-track" class="night-mode">' + light + ' <span class="night-mode-track-icon">☀️</span></span>');
-      } else {
-        $("body").removeClass("night-mode");
-        $('#night-mode-track').replaceWith('<span id="night-mode-track" class="day-mode">' + dark + ' <span class="night-mode-track-icon">🌖</span></span>');
-      }
-      // If someone clicks the nightmode checkbox, toggle and store.
-      $("#night-mode-check").click(function() {
-          $("body").toggleClass("night-mode");
-          if ($("body").hasClass("night-mode")) {
-            localStorage.setItem("nightmode", "true");
-            $('#night-mode-track').replaceWith('<span id="night-mode-track" class="night-mode">' + light + ' <span class="night-mode-track-icon">☀️</span></span>');
-          } else {
-            localStorage.setItem("nightmode", "false");
-            $('#night-mode-track').replaceWith('<span id="night-mode-track" class="day-mode">' + dark + ' <span class="night-mode-track-icon">🌖</span></span>');
-          }
-      });
-    }
-
   })(jQuery);
 }); /* end of as page load scripts */
+
+
+// Allow nightmode if activated.
+if ('default_light' == velox_options.night_mode || 'default_dark' == velox_options.night_mode) {
+  // const light = __( 'Light', 'velox' );
+  // const dark = __( 'Dark', 'velox' );
+  const light = 'Light <span class="night-mode-track-icon">☀️</span>';
+  const dark = 'Dark <span class="night-mode-track-icon">🌖</span>';
+  const nightModeTrack = document.getElementById('night-mode-track');
+  const nightModeCheck = document.getElementById('night-mode-check');
+
+  // Store nightmode value in local storage.
+  var localNightMode = localStorage.getItem("nightmode");
+  if ("true" == localNightMode || 'default_dark' == velox_options.night_mode) {
+      document.body.classList.add("night-mode");
+      nightModeTrack.classList.add("night-mode");
+      nightModeTrack.classList.remove("day-mode");
+      nightModeTrack.innerHTML = light;
+  } else {
+      document.body.classList.remove("night-mode");
+      nightModeTrack.classList.add("day-mode");
+      nightModeTrack.classList.remove("night-mode");
+      nightModeTrack.innerHTML = dark;
+  }
+
+  // When nightmode is checked
+  nightModeCheck.onclick = function() {
+    document.body.classList.toggle("night-mode");
+    if (document.body.classList.contains("night-mode")) {
+      localStorage.setItem("nightmode", "true");
+      document.body.classList.add("night-mode");
+      nightModeTrack.classList.add("night-mode");
+      nightModeTrack.classList.remove("day-mode");
+      nightModeTrack.innerHTML = light;
+    } else {
+      localStorage.setItem("nightmode", "false");
+      document.body.classList.remove("night-mode");
+      nightModeTrack.classList.add("day-mode");
+      nightModeTrack.classList.remove("night-mode");
+      nightModeTrack.innerHTML = dark;
+    }
+  };
+}
+
 
 // Display article progress bar if activated.
 if (true == velox_options.progress_bar) {
@@ -94,6 +83,31 @@ if (true == velox_options.progress_bar) {
     progressBar.style.width = updatedWidth;
   }
 }
+
+
+// Display read time on articles if activated.
+// 200 words per minute is the average used for calcuation.
+if (true == velox_options.read_time) {
+  let articlePost = document.querySelector("article.post");
+  if (null !== articlePost) {
+    const articleText = articlePost.textContent;
+    // Count words, divide by 200, and round.
+    readingTime = function() {
+      var words = articleText.split(/\W+/).length;
+      return Math.round(words / 200);
+    };
+
+    // Calculate Reading Time
+    var ert = readingTime();
+
+    // Append it to post header if not zero
+    if (ert > 0) {
+      let entryMeta = document.querySelector("article.post .entry-meta");
+      entryMeta.innerHTML += "<div class='read-time'>" + ert + " min reading time</div>";
+    }
+  }
+}
+
 
 /**
  * File navigation.js.
@@ -145,12 +159,14 @@ if (true == velox_options.progress_bar) {
   }
 })();
 
+
 /**
  * Skip Link Focus Fix
  * Helps with accessibility for keyboard only users.
  * Learn more: https://git.io/vWdr2
  */
 /(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+
 
 /*
  * Sticky-kit v1.1.3 | MIT | Leaf Corcoran 2015 | http://leafo.net

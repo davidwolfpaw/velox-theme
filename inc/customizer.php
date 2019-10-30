@@ -233,7 +233,7 @@ function velox_customize_register( $wp_customize ) {
 		'progress_bar_pride',
 		array(
 			'capability'        => 'edit_theme_options',
-			'default'           => true,
+			'default'           => false,
 			'sanitize_callback' => 'velox_sanitize_checkbox',
 			'transport'         => 'refresh',
 		)
@@ -403,6 +403,7 @@ add_action( 'customize_preview_init', 'velox_customize_preview_js' );
 
 /**
  * Apply customizer colors
+ * Applies pride bar if selected
  */
 function velox_customizer_css() {
 	?>
@@ -425,6 +426,16 @@ function velox_customizer_css() {
 		.has-accent-text-background-color { background-color: <?php echo esc_html( get_theme_mod( 'accent_text_color', '#555d66' ) ); ?>; }
 		.has-accent-color { color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		.has-accent-background-color { background-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
+		<?php if ( true === get_theme_mod( 'progress_bar_pride', false ) ) { ?>
+			.progress-bar {
+			    background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(99,56,0,0.95) 14%, rgba(255,0,26,0.9) 29%, rgba(255,164,44,0.86) 43%, rgba(255,255,65,0.81) 57%, rgba(0,128,23,0.77) 71%, rgba(0,0,249,0.72) 86%, rgba(134,0,125,0.67) 100%);
+			    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,1)), color-stop(14%, rgba(99,56,0,0.95)), color-stop(29%, rgba(255,0,26,0.9)), color-stop(43%, rgba(255,164,44,0.86)), color-stop(57%, rgba(255,255,65,0.81)), color-stop(71%, rgba(0,128,23,0.77)), color-stop(86%, rgba(0,0,249,0.72)), color-stop(100%, rgba(134,0,125,0.67)));
+			    background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(99,56,0,0.95) 14%, rgba(255,0,26,0.9) 29%, rgba(255,164,44,0.86) 43%, rgba(255,255,65,0.81) 57%, rgba(0,128,23,0.77) 71%, rgba(0,0,249,0.72) 86%, rgba(134,0,125,0.67) 100%);
+			    background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(99,56,0,0.95) 14%, rgba(255,0,26,0.9) 29%, rgba(255,164,44,0.86) 43%, rgba(255,255,65,0.81) 57%, rgba(0,128,23,0.77) 71%, rgba(0,0,249,0.72) 86%, rgba(134,0,125,0.67) 100%);
+			    background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(99,56,0,0.95) 14%, rgba(255,0,26,0.9) 29%, rgba(255,164,44,0.86) 43%, rgba(255,255,65,0.81) 57%, rgba(0,128,23,0.77) 71%, rgba(0,0,249,0.72) 86%, rgba(134,0,125,0.67) 100%);
+			    background: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(99,56,0,0.95) 14%, rgba(255,0,26,0.9) 29%, rgba(255,164,44,0.86) 43%, rgba(255,255,65,0.81) 57%, rgba(0,128,23,0.77) 71%, rgba(0,0,249,0.72) 86%, rgba(134,0,125,0.67) 100%);
+			}
+		<?php } ?>
 	</style>
 	<?php
 }
