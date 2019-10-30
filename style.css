@@ -523,6 +523,16 @@ textarea {
     width: 100%;
 }
 
+.search-form {
+    margin: 20px 0 0;
+}
+
+.search-form input {
+    max-width: 200px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
@@ -605,7 +615,8 @@ body.custom-background .site-header-content {
     grid-area: custom-logo-link;
 }
 
-.custom-logo-link img {
+.custom-logo-link img,
+.custom-logo-link picture {
     max-width: 50px;
     max-height: 50px;
     margin-bottom: 0;
@@ -1232,6 +1243,10 @@ img.alignright,
     margin-bottom: 0;
 }
 
+.entry-title {
+    hyphens: auto;
+}
+
 .entry-footer span {
     margin-right: 1em;
 }
@@ -1497,7 +1512,7 @@ ul.wp-block-gallery {
 q,
 blockquote,
 .wp-block-quote {
-    margin-bottom: 2em;
+    margin: 1em 0.5em 2em 0.5em;
     border-left: 3px solid #A51323;
     padding-left: 1em;
     font-style: italic;
@@ -1571,7 +1586,7 @@ blockquote.wp-block-quote.is-style-large cite {
     border: 2px solid #1D2731;
     border-radius: 16px;
     color: #FFFFFF;
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: bold;
     line-height: 1;
     padding: 3px 6px;
@@ -1934,6 +1949,7 @@ body.night-mode .author-info {
     #main-navigation #primary-menu {
         display: block;
         padding: 0;
+        text-align: center;
     }
 
     .header-sidebar,
@@ -1963,9 +1979,10 @@ body.night-mode .author-info {
                             "site-description";
     }
 
-    .custom-logo-link img {
-        max-width: 200px;
-        max-height: 200px;
+    .custom-logo-link img,
+    .custom-logo-link picture {
+        max-width: 150px;
+        max-height: 150px;
         margin-bottom: 16px;
     }
 
