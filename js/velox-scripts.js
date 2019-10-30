@@ -44,13 +44,6 @@ jQuery(document).ready(function($) {
       });
     }
 
-    // Display article progress bar if activated.
-    if (true == velox_options.progress_bar) {
-      $("body.single").prognroll({
-        color: "#" + velox_options.link_color
-      });
-    }
-
     // Allow nightmode if activated.
     if ('default_light' == velox_options.night_mode || 'default_dark' == velox_options.night_mode) {
       const light = __( 'Light', 'velox' );
@@ -79,6 +72,28 @@ jQuery(document).ready(function($) {
 
   })(jQuery);
 }); /* end of as page load scripts */
+
+// Display article progress bar if activated.
+if (true == velox_options.progress_bar) {
+  const windowOuterHeight = window.innerHeight;
+  const articleHeight = document.querySelector( '.post' ).offsetHeight;
+
+  // Add progress bar
+  const progressBar = document.createElement( 'span' );
+  progressBar.classList.add( 'progress-bar' );
+  document.body.prepend( progressBar );
+
+  // Update upon scroll
+  window.addEventListener( 'scroll', updateProgressBar );
+
+  // Control the size of the progress bar
+  function updateProgressBar() {
+    let windowScrollTop = window.scrollY;
+    total = ( windowScrollTop / ( articleHeight - windowOuterHeight ) ) * 100,
+    updatedWidth = (total <= 100 ? total : 100) + '%';
+    progressBar.style.width = updatedWidth;
+  }
+}
 
 /**
  * File navigation.js.
@@ -136,11 +151,6 @@ jQuery(document).ready(function($) {
  * Learn more: https://git.io/vWdr2
  */
 /(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
-
-/* PrognRoll | https://mburakerman.github.io/prognroll/ | @mburakerman | License: MIT
- * n(document).height() has been updated to n("article").height() to only scroll content.
- */
-!function(s){s.fn.prognroll=function(o){var i=s.extend({height:5,color:"#50bcb6",custom:!1},o);return this.each(function(){if(s(this).data("prognroll"))return!1;s(this).data("prognroll",!0);var o=s("<span>",{class:"progress-bar"});s("body").prepend(o),o.css({position:"fixed",top:0,left:0,width:0,height:i.height,backgroundColor:i.color,zIndex:9999999}),!1===i.custom?s(window).scroll(function(o){o.preventDefault();var r=s(window).scrollTop(),t=s(window).outerHeight(),e=r/(s("article").height()-t)*100;s(".progress-bar").css("width",e+"%")}):s(this).scroll(function(o){o.preventDefault();var r=s(this).scrollTop(),t=s(this).outerHeight(),e=r/(s(this).prop("scrollHeight")-t)*100;s(".progress-bar").css("width",e+"%")});var r=s(window).scrollTop(),t=s(window).outerHeight(),e=r/(s("body").outerHeight()-t)*100;s(".progress-bar").css("width",e+"%")})}}(jQuery);
 
 /*
  * Sticky-kit v1.1.3 | MIT | Leaf Corcoran 2015 | http://leafo.net
