@@ -19,19 +19,10 @@
 		});
 	});
 
-	// Background Color.
-	wp.customize("background_color", function(value) {
-		value.bind(function(to) {
-			$("#secondary").css({
-				"background-color": to
-			});
-		});
-	});
-
 	// Text Color.
 	wp.customize("text_color", function(value) {
 		value.bind(function(to) {
-      $("body, button, input, select, optgroup, textarea, h1, h2, h3, h4, h5, h6").css({
+      $("body, button, input, select, optgroup, textarea, h1, h2, h3, h4, h5, h6, .has-text-color").css({
         "color": to
       });
       $(".has-text-background-color").css({
@@ -43,7 +34,7 @@
 	// Accent Text Color.
 	wp.customize("accent_text_color", function(value) {
 		value.bind(function(to) {
-			$(".has-accent-text-color, .entry-footer, .entry-meta, .wp-block-image figcaption, .wp-block-pullquote cite, .wp-block-latest-posts__post-date, .wp-caption-text").css({
+			$(".entry-footer, .entry-meta, .wp-block-image figcaption, .wp-block-pullquote cite, .wp-block-latest-posts__post-date, .wp-caption-text, .has-accent-text-color").css({
 				"color": to
 			});
       $(".has-accent-text-background-color").css({
@@ -55,22 +46,25 @@
 	// Accent Color.
 	wp.customize("accent_color", function(value) {
 		value.bind(function(to) {
-      $(".has-accent-color").css({
+      $(".wp-block-separator.is-style-dots:before, .has-accent-color").css({
         "color": to
       });
-      $(".has-accent-background-color, hr,  hr.wp-block-separator, .wp-block-button .wp-block-button__link").css({
+      $("hr, hr.wp-block-separator, .wp-block-button .wp-block-button__link, .progress-bar, .has-accent-background-color").css({
         "background-color": to
       });
-			$(".comment-navigation, .posts-navigation, .post-navigation, .entry-footer, .author-info, hr, .wp-block-separator").css({
-				"border-bottom-color": to
-			});
+      $(".comment-navigation, .posts-navigation, .post-navigation, .entry-footer, .author-info, hr, .wp-block-separator").css({
+        "border-bottom-color": to
+      });
 			$(".wp-block-pullquote").css({
 				"border-top-color": to,
 				"border-bottom-color": to
 			});
-			$(".wp-block-quote:not(.is-large)").css({
-				"border-left-color": to
-			});
+      $(".navigation .nav-previous").css({
+        "border-right-color": to
+      });
+      $(".wp-block-quote:not(.is-large)").css({
+        "border-left-color": to
+      });
 		});
 	});
 
@@ -86,11 +80,8 @@
 			$(".site-title a").css({
 				color: "initial"
 			});
-			$(".progress-bar, .wp-block-button .wp-block-button__link").css({
+			$(".wp-block-button .wp-block-button__link").css({
 				"background-color": to
-			});
-			$(".progress-bar").css({
-				color: to
 			});
 			$(".wp-block-button .wp-block-button__link").css({
 				color: "#FFFFFF"
@@ -113,3 +104,5 @@
 		});
 	});
 })(jQuery);
+
+
