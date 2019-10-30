@@ -228,6 +228,28 @@ function velox_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Setting: Article Progress Bar Pride Colors.
+	$wp_customize->add_setting(
+		'progress_bar_pride',
+		array(
+			'capability'        => 'edit_theme_options',
+			'default'           => true,
+			'sanitize_callback' => 'velox_sanitize_checkbox',
+			'transport'         => 'refresh',
+		)
+	);
+
+	// Control: Article Progress Bar.
+	$wp_customize->add_control(
+		'progress_bar_pride',
+		array(
+			'label'       => __( 'Pride Article Progress Bar', 'velox' ),
+			'description' => __( 'Display LGBTQIA+ pride flag as progress bar.', 'velox' ),
+			'section'     => 'velox_theme_settings',
+			'type'        => 'checkbox',
+		)
+	);
+
 	// Setting: Author Info.
 	$wp_customize->add_setting(
 		'author_info',
@@ -404,9 +426,6 @@ function velox_customizer_css() {
 		.has-accent-color { color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		.has-accent-background-color { background-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 	</style>
-      $("").css({
-        "background-color": to
-      });
 	<?php
 }
 add_action( 'wp_head', 'velox_customizer_css' );
