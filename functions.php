@@ -50,6 +50,8 @@ if ( ! function_exists( 'velox_setup' ) ) :
 				'comment-list',
 				'gallery',
 				'caption',
+				'script',
+				'style'
 			)
 		);
 
