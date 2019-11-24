@@ -63,7 +63,7 @@ if ('default_light' == velox_options.night_mode || 'default_dark' == velox_optio
 
 
 // Display article progress bar if activated.
-if (true == velox_options.progress_bar) {
+if (true == velox_options.progress_bar && document.body.classList.contains( 'single-post' )) {
   const windowOuterHeight = window.innerHeight;
   const articleHeight = document.querySelector( '.post' ).offsetHeight;
 
