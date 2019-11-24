@@ -6,8 +6,8 @@
 .wp-admin .editor-styles-wrapper {
     color: #1D2731;
     font-family: 'Source Serif Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    font-size: 20px;
-    font-size: 1.25rem;
+    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 1.6;
 }
 
@@ -60,8 +60,8 @@
 
 .wp-admin .editor-styles-wrapper pre {
     background: #F7F8F9;
-    font-size: 15px;
-    font-size: 0.9375rem;
+    font-size: 16px;
+    font-size: 1rem;
     margin-bottom: 2em;
     max-width: 100%;
     overflow: auto;
@@ -76,8 +76,8 @@
     background: #F7F8F9;
     border: 1px solid rgba(20,21,22,.3);
     color: #A51323;
-    font-size: 15px;
-    font-size: 0.9375rem;
+    font-size: 16px;
+    font-size: 1rem;
     padding: 3px;
 }
 
@@ -167,40 +167,15 @@
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-/*.wp-admin .editor-styles-wrapper button,
-.wp-admin .editor-styles-wrapper input[type="button"],
-.wp-admin .editor-styles-wrapper input[type="reset"],
-.wp-admin .editor-styles-wrapper input[type="submit"],
 .wp-admin .editor-styles-wrapper .wp-block-button .wp-block-button__link {
     border-radius: 4px;
     color: #FFFFFF;
     padding: .5em 1em;
     font-size: 1rem;
-    background-color: #A51323;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
 }
-
-.wp-admin .editor-styles-wrapper button:hover,
-.wp-admin .editor-styles-wrapper input[type="button"]:hover,
-.wp-admin .editor-styles-wrapper input[type="reset"]:hover,
-.wp-admin .editor-styles-wrapper input[type="submit"]:hover,
-.wp-admin .editor-styles-wrapper .wp-block-button .wp-block-button__link:hover {
-    background: #0B3C5D;
-}
-
-.wp-admin .editor-styles-wrapper button:active, button:focus,
-.wp-admin .editor-styles-wrapper input[type="button"]:active,
-.wp-admin .editor-styles-wrapper input[type="button"]:focus,
-.wp-admin .editor-styles-wrapper input[type="reset"]:active,
-.wp-admin .editor-styles-wrapper input[type="reset"]:focus,
-.wp-admin .editor-styles-wrapper input[type="submit"]:active,
-.wp-admin .editor-styles-wrapper input[type="submit"]:focus,
-.wp-admin .editor-styles-wrapper .wp-block-button .wp-block-button__link:active,
-.wp-admin .editor-styles-wrapper .wp-block-button .wp-block-button__link:focus {
-    background: #0B3C5D;
-}*/
 
 .wp-admin .editor-styles-wrapper input[type="text"],
 .wp-admin .editor-styles-wrapper input[type="email"],
@@ -434,17 +409,18 @@
 .wp-admin .editor-styles-wrapper .has-drop-cap:first-letter,
 .wp-admin .editor-styles-wrapper .has-drop-cap:not(:focus):first-letter {
     font-family: inherit;
-    font-size: 63px;
-    font-size: 3.5rem;
-    margin: 0 0.1em 0 0;
-    line-height: 1em;
+    font-size: 64px;
+    font-size: 4rem;
+    margin: 0px 0.5rem 0 0;
+    line-height: 1rem;
+    padding-top: 0.5rem;
 }
 
 /* Images */
 .wp-admin .editor-styles-wrapper .wp-block-image figcaption {
     font-style: italic;
     font-size: 16px;
-    font-size: 0.89rem;
+    font-size: 1rem;
     text-align: center;
 }
 
