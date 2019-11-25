@@ -49,7 +49,7 @@
       $(".wp-block-separator.is-style-dots:before, .has-accent-color").css({
         "color": to
       });
-      $("hr, hr.wp-block-separator, .wp-block-button .wp-block-button__link, .progress-bar, .has-accent-background-color").css({
+      $("hr, hr.wp-block-separator, .wp-block-button__link, .progress-bar, .has-accent-background-color").css({
         "background-color": to
       });
       $(".comment-navigation, .posts-navigation, .post-navigation, .entry-footer, .author-info, hr, .wp-block-separator").css({
@@ -80,12 +80,17 @@
 			$(".site-title a").css({
 				color: "initial"
 			});
-			$(".wp-block-button .wp-block-button__link").css({
+			$(".wp-block-button__link").css({
 				"background-color": to
 			});
-			$(".wp-block-button .wp-block-button__link").css({
-				color: "#FFFFFF"
-			});
+      $(".wp-block-button__link").css({
+        color: "#FFFFFF"
+      });
+      $(".hentry .entry-content a").css({
+        color: to,
+        "border-bottom-color": to,
+        "box-shadow": "inset 0 -2px 0" + to
+      });
 		});
 	});
 
@@ -95,10 +100,15 @@
 			$("a:hover, a:focus, a:active").css({
 				"color": to
 			});
-			$(".wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:active, .wp-block-button .wp-block-button__link:focus").css({
-				"background-color": to
-			});
-			$(".wp-block-button .wp-block-button__link:hover, .wp-block-button .wp-block-button__link:active, .wp-block-button .wp-block-button__link:focus").css({
+      $(".wp-block-button__link:hover, .wp-block-button__link:active, .wp-block-button__link:focus, .hentry .entry-content a.wp-block-button__link:hover, .hentry .entry-content a.wp-block-button__link:active, .hentry .entry-content a.wp-block-button__link:focus").css({
+        "background-color": to
+      });
+      $(".hentry .entry-content a:hover, .hentry .entry-content a:focus, .hentry .entry-content a:active, .hentry .wp-block-image a:active, .hentry .wp-block-image a:focus, .hentry .wp-block-image a:hover, .hentry .wp-block-gallery a:active, .hentry .wp-block-gallery a:focus, .hentry .wp-block-gallery a:hover").css({
+        "background-color": to,
+        "border-bottom-color": to,
+        "box-shadow": "inset 0 -2px 0" + to
+      });
+			$(".wp-block-button__link:hover, .wp-block-button__link:active, .wp-block-button__link:focus").css({
 				"color": "#FFFFFF"
 			});
 		});

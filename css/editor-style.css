@@ -281,10 +281,6 @@
     word-wrap: break-word;
 }
 
-.wp-admin .editor-styles-wrapper a:visited {
-    color: #00adef;
-}
-
 .wp-admin .editor-styles-wrapper a:hover,
 .wp-admin .editor-styles-wrapper a:focus,
 .wp-admin .editor-styles-wrapper a:active {
