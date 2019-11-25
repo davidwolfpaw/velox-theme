@@ -241,10 +241,11 @@
     color: #00adef;
 }
 
+.wp-admin .editor-styles-wrapper a:visited:hover,
 .wp-admin .editor-styles-wrapper a:hover,
 .wp-admin .editor-styles-wrapper a:focus,
 .wp-admin .editor-styles-wrapper a:active {
-    color: #0B3C5D;
+    color: #FFFFFF;
     text-decoration: underline;
 }
 

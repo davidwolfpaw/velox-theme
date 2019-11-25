@@ -415,13 +415,12 @@ function velox_customizer_css() {
 		.hentry .entry-content a { border-bottom-color: <?php echo esc_html( get_theme_mod( 'link_color', '#00adef' ) ); ?>; box-shadow: inset 0 -2px 0 <?php echo esc_html( get_theme_mod( 'link_color', '#00adef' ) ); ?>; }
 		.hentry .entry-content a:hover, .hentry .entry-content a:focus, .hentry .entry-content a:active, .hentry .wp-block-image a:active, .hentry .wp-block-image a:focus, .hentry .wp-block-image a:hover, .hentry .wp-block-gallery a:active, .hentry .wp-block-gallery a:focus, .hentry .wp-block-gallery a:hover {	background-color: <?php echo esc_html( get_theme_mod( 'link_active_color', '#0B3C5D' ) ); ?>; border-bottom: 1px solid <?php echo esc_html( get_theme_mod( 'link_active_color', '#0B3C5D' ) ); ?>; box-shadow: inset 0 -2px 0 <?php echo esc_html( get_theme_mod( 'link_active_color', '#0B3C5D' ) ); ?>; }
 		hr, hr.wp-block-separator, .progress-bar, button, input[type="button"], input[type="reset"], input[type="submit"], .wp-block-button .wp-block-button__link { background-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
+		.wp-block-separator.is-style-dots:before { color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		.comment-navigation, .posts-navigation, .post-navigation, .entry-footer, .author-info, hr, .wp-block-separator { border-bottom-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		.wp-block-pullquote { border-top-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; border-bottom-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		.navigation .nav-previous { border-right-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
-		.wp-block-quote:not(.is-large) { border-left-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
-		.wp-block-separator.is-style-dots:before { color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
+		q, blockquote, .wp-block-quote:not(.is-large) { border-left-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		a, a:visited { color: <?php echo esc_html( get_theme_mod( 'link_color', '#00adef' ) ); ?>; }
-		a:hover, a:focus, a:active { color: <?php echo esc_html( get_theme_mod( 'link_active_color', '#0B3C5D' ) ); ?>; }
 		.has-text-color { color: <?php echo esc_html( get_theme_mod( 'text_color', '#1D2731' ) ); ?>; }
 		.has-text-background-color { background-color: <?php echo esc_html( get_theme_mod( 'text_color', '#1D2731' ) ); ?>; }
 		.has-accent-text-color { color: <?php echo esc_html( get_theme_mod( 'accent_text_color', '#555d66' ) ); ?>; }
@@ -442,7 +441,30 @@ function velox_customizer_css() {
 	<?php
 }
 add_action( 'wp_head', 'velox_customizer_css' );
-add_action( 'admin_head', 'velox_customizer_css' );
+
+/**
+ * Apply customizer colors
+ * Applies pride bar if selected
+ */
+function velox_customizer_admin_css() {
+	?>
+	<style type="text/css">
+		.wp-admin .editor-styles-wrapper, .wp-admin .editor-styles-wrapper h1, .wp-admin .editor-styles-wrapper h2, .wp-admin .editor-styles-wrapper h3, .wp-admin .editor-styles-wrapper h4, .wp-admin .editor-styles-wrapper h5, .wp-admin .editor-styles-wrapper h6, .wp-admin .editor-styles-wrapper textarea { color: <?php echo esc_html( get_theme_mod( 'text_color', '#1D2731' ) ); ?>; }
+		.wp-admin .editor-styles-wrapper .wp-block-image figcaption, .wp-admin .editor-styles-wrapper .wp-block-pullquote cite, .wp-admin .editor-styles-wrapper .wp-block-latest-posts__post-date, .wp-admin .editor-styles-wrapper .wp-caption-text { color: <?php echo esc_html( get_theme_mod( 'accent_text_color', '#555d66' ) ); ?>; }
+		.wp-admin .editor-styles-wrapper .wp-block-button__link { background-color: <?php echo esc_html( get_theme_mod( 'link_color', '#00adef' ) ); ?>; }
+		.wp-admin .editor-styles-wrapper .wp-block-button__link:hover, .wp-admin .editor-styles-wrapper .wp-block-button__link:active, .wp-admin .editor-styles-wrapper .wp-block-button__link:focus, .wp-admin .editor-styles-wrapper .hentry .entry-content a.wp-block-button__link:hover, .wp-admin .editor-styles-wrapper .hentry .entry-content a.wp-block-button__link:active, .wp-admin .editor-styles-wrapper .hentry .entry-content a.wp-block-button__link:focus {	background-color: <?php echo esc_html( get_theme_mod( 'link_active_color', '#0B3C5D' ) ); ?>; }
+		.wp-admin .editor-styles-wrapper a { border-bottom-color: <?php echo esc_html( get_theme_mod( 'link_color', '#00adef' ) ); ?>; box-shadow: inset 0 -2px 0 <?php echo esc_html( get_theme_mod( 'link_color', '#00adef' ) ); ?>; }
+		.wp-admin .editor-styles-wrapper a:hover, .wp-admin .editor-styles-wrapper a:focus, .wp-admin .editor-styles-wrapper a:active, .wp-admin .editor-styles-wrapper .wp-block-image a:active, .wp-admin .editor-styles-wrapper .wp-block-image a:focus, .wp-admin .editor-styles-wrapper .wp-block-image a:hover, .wp-admin .editor-styles-wrapper .wp-block-gallery a:active, .wp-admin .editor-styles-wrapper .wp-block-gallery a:focus, .wp-admin .editor-styles-wrapper .wp-block-gallery a:hover {	background-color: <?php echo esc_html( get_theme_mod( 'link_active_color', '#0B3C5D' ) ); ?>; border-bottom: 1px solid <?php echo esc_html( get_theme_mod( 'link_active_color', '#0B3C5D' ) ); ?>; box-shadow: inset 0 -2px 0 <?php echo esc_html( get_theme_mod( 'link_active_color', '#0B3C5D' ) ); ?>; }
+		hr, hr.wp-block-separator, .progress-bar, button, input[type="button"], input[type="reset"], input[type="submit"], .wp-block-button .wp-block-button__link { background-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
+		.wp-block-separator.is-style-dots:before { color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
+		hr, .wp-admin .editor-styles-wrapper .wp-block-separator { border-bottom-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
+		.wp-admin .editor-styles-wrapper .wp-block-pullquote { border-top-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; border-bottom-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
+		.wp-admin .editor-styles-wrapper .wp-block-quote:not(.is-large) { border-left-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
+		.wp-admin .editor-styles-wrapper a, .wp-admin .editor-styles-wrapper a:visited { color: <?php echo esc_html( get_theme_mod( 'link_color', '#00adef' ) ); ?>; }
+	</style>
+	<?php
+}
+add_action( 'admin_head', 'velox_customizer_admin_css' );
 
 /**
  * Apply customizer fonts
