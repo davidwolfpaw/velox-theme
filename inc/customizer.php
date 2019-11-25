@@ -421,6 +421,7 @@ function velox_customizer_css() {
 		.navigation .nav-previous { border-right-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		q, blockquote, .wp-block-quote:not(.is-large) { border-left-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#A51323' ) ); ?>; }
 		a, a:visited { color: <?php echo esc_html( get_theme_mod( 'link_color', '#00adef' ) ); ?>; }
+		#main-navigation a:hover, #main-navigation a:focus { background-color: <?php echo esc_html( get_theme_mod( 'link_color', '#00adef' ) ); ?>; }
 		.has-text-color { color: <?php echo esc_html( get_theme_mod( 'text_color', '#1D2731' ) ); ?>; }
 		.has-text-background-color { background-color: <?php echo esc_html( get_theme_mod( 'text_color', '#1D2731' ) ); ?>; }
 		.has-accent-text-color { color: <?php echo esc_html( get_theme_mod( 'accent_text_color', '#555d66' ) ); ?>; }

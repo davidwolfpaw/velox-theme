@@ -75,13 +75,14 @@
 				color: to
 			});
 			$("#main-navigation a").css({
-				color: "#FFFFFF"
+				color: "initial"
 			});
 			$(".site-title a").css({
 				color: "initial"
 			});
-			$(".wp-block-button__link").css({
-				"background-color": to
+			$(".wp-block-button__link, #main-navigation a:hover, #main-navigation a:focus").css({
+				"background-color": to,
+        color: "#FFFFFF"
 			});
       $(".wp-block-button__link").css({
         color: "#FFFFFF"

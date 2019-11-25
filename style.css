@@ -1629,6 +1629,7 @@ body {
 }
 
 body.night-mode,
+body.custom-background.night-mode,
 body.night-mode .site-header-content,
 body.night-mode #main-navigation.toggled #primary-menu,
 body.night-mode .site-footer {
