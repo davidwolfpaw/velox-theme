@@ -232,13 +232,13 @@
 ## Links
 --------------------------------------------------------------*/
 .wp-admin .editor-styles-wrapper a {
-    color: #0059a7;
+    color: #00adef;
     text-decoration: none;
     word-break: break-word;
 }
 
 .wp-admin .editor-styles-wrapper a:visited {
-    color: #0059a7;
+    color: #00adef;
 }
 
 .wp-admin .editor-styles-wrapper a:hover,

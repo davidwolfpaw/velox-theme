@@ -432,6 +432,7 @@ table {
 td,
 th {
     padding: 0.5em;
+    border: 1px solid;
 }
 
 /*--------------------------------------------------------------
@@ -649,13 +650,13 @@ body.custom-background .site-header-content {
 ## Links
 --------------------------------------------------------------*/
 a {
-    color: #0059a7;
+    color: #00adef;
     text-decoration: none;
     word-break: break-word;
 }
 
 a:visited {
-    color: #0059a7;
+    color: #00adef;
 }
 
 a:hover, a:focus, a:active {
@@ -1725,7 +1726,7 @@ body.night-mode .author-info {
 # Misc Elements
 --------------------------------------------------------------*/
 .progress-bar {
-    background-color: #0059a7;
+    background-color: #00adef;
     position: fixed;
     top: 0px;
     left: 0px;
