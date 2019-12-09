@@ -51,7 +51,7 @@ if ( ! function_exists( 'velox_setup' ) ) :
 				'gallery',
 				'caption',
 				'script',
-				'style'
+				'style',
 			)
 		);
 
