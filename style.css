@@ -1742,7 +1742,17 @@ blockquote.wp-block-quote.is-style-large cite {
 @media screen and (max-width: 600px) {
 
 	.wp-block-image .alignleft,
-	.wp-block-image .alignright {
+	.wp-block-image .alignright,
+	.alignleft figcaption,
+	figure.alignleft,
+	.alignright figcaption,
+	figure.alignright,
+	img.alignleft,
+	.alignleft img,
+	.wp-caption.alignleft img[class*="wp-image-"],
+	img.alignright,
+	.alignright img,
+	.wp-caption.alignright img[class*="alignright wp-image-"] {
 		float: none;
 		margin: 0 auto;
 	}
