@@ -202,7 +202,6 @@ figure {
 
 hr {
 	box-sizing: content-box;
-	height: 0;
 }
 
 code,
@@ -442,6 +441,8 @@ big {
 hr,
 hr.wp-block-separator {
 	margin: 3em auto;
+	max-width: 50%;
+	width: 50%;
 }
 
 ul,
@@ -595,7 +596,7 @@ select {
 	position: relative;
 	width: 100%;
 	max-width: 100%;
-	padding: 20px;
+	padding: 40px;
 }
 
 .page-no-title #content {
@@ -919,7 +920,7 @@ img.alignright,
 	overflow-x: hidden;
 	width: auto;
 	max-width: 100vw;
-	margin: 2em calc(25% - 25vw);
+	margin: 2em -1em;
 }
 
 /*--------------------------------------------------------------
@@ -2007,10 +2008,8 @@ blockquote.wp-block-quote.is-style-large cite {
 
 	/* Offset the 240px of the side header */
 	.alignwide {
-
-		/* 100vw - 240px side header - 64/2px content padding */
-		width: calc(100vw - 272px);
-		margin: 2em calc(50% - calc(50vw - 136px));
+		margin: 2em -3em;
+		width: calc(100% + 6em);
 	}
 
 	.alignfull {
