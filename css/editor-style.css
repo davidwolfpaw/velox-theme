@@ -91,7 +91,7 @@
 .wp-admin .editor-styles-wrapper h6,
 .wp-admin .editor-post-title__block .editor-post-title__input {
 	clear: both;
-	margin: 0 0 0.5em 0;
+	margin: 2em 0 0.5em 0;
 	color: #1d2731;
 	font-family: "Libre Franklin Bold", Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
 	line-height: 1.25;
@@ -213,10 +213,15 @@
 	height: auto;
 }
 
-.wp-admin .editor-styles-wrapper figure {
+[data-type="core/image"][data-align="center"] .block-editor-block-list__block-edit figure,
+[data-type="core/image"][data-align="left"] .block-editor-block-list__block-edit figure,
+[data-type="core/image"][data-align="right"] .block-editor-block-list__block-edit figure {
+	margin: 1em auto;
+}
 
+.wp-admin .editor-styles-wrapper figure {
 	/* Extra wide images within figure tags don't overflow the content area. */
-	margin: 1em 0;
+	margin: 1em auto;
 }
 
 .wp-admin .editor-styles-wrapper table {
