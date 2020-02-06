@@ -1446,6 +1446,7 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 .post-thumbnail {
+	display: block;
 	text-align: center;
 }
 
