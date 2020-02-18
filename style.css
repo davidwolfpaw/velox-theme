@@ -1473,7 +1473,9 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 .entry-title {
+	font-size: 2em;
 	hyphens: auto;
+	margin-top: 1em;
 }
 
 .entry-footer span {
