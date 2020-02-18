@@ -23,6 +23,16 @@ get_header(); ?>
 				velox_author_info();
 			endif;
 
+
+
+			if ( is_active_sidebar( 'after-entry' ) ) {
+				?>
+				<div class="after-entry-sidebar">
+					<?php dynamic_sidebar( 'after-entry' ); ?>
+				</div>
+				<?php
+			}
+
 			// Previous/next post navigation.
 			the_post_navigation(
 				array(

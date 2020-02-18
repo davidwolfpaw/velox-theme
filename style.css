@@ -1043,6 +1043,11 @@ img.alignright,
 	text-align: left;
 }
 
+.after-entry-sidebar {
+	border-bottom: 1px solid #1d2731;
+	margin: 0 auto 20px;
+}
+
 #wp-calendar th,
 #wp-calendar td {
 	padding: 0;
@@ -1887,6 +1892,7 @@ blockquote.wp-block-quote.is-style-large cite {
 	.posts-navigation,
 	.post-navigation,
 	.author-info,
+	.after-entry-sidebar,
 	.comments-area,
 	.widget {
 		max-width: 720px;

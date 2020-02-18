@@ -181,6 +181,17 @@ function velox_widgets_init() {
 			'after_title'   => '</h3>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'After Entry', 'velox' ),
+			'id'            => 'after-entry',
+			'description'   => esc_html__( 'Displays at the end of posts, before comments.', 'velox' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 }
 add_action( 'widgets_init', 'velox_widgets_init' );
 

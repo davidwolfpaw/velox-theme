@@ -52,7 +52,7 @@
       $("hr, hr.wp-block-separator, .wp-block-button__link, .progress-bar, .has-accent-background-color").css({
         "background-color": to
       });
-      $(".comment-navigation, .posts-navigation, .post-navigation, .entry-footer, .author-info, hr, .wp-block-separator").css({
+      $(".comment-navigation, .after-entry-sidebar, .posts-navigation, .post-navigation, .entry-footer, .author-info, hr, .wp-block-separator").css({
         "border-bottom-color": to
       });
 			$(".wp-block-pullquote").css({
