@@ -1049,6 +1049,7 @@ img.alignright,
 #wp-calendar th,
 #wp-calendar td {
 	padding: 0;
+	text-align: center;
 }
 
 /*--------------------------------------------------------------
