@@ -433,7 +433,6 @@ big {
 *,
 *::before,
 *::after {
-
 	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
@@ -651,9 +650,9 @@ body.night-mode .site-footer {
 	background-color: #1d2731;
 }
 
-body.night-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n+1) th,
-body.night-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n+1) td,
-body.night-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n+1) a,
+body.night-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) th,
+body.night-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) td,
+body.night-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) a,
 body.night-mode code,
 body.night-mode pre {
 	color: #1d2731;
@@ -741,7 +740,6 @@ body.night-mode .author-info {
 	position: relative;
 	margin-right: 10px;
 	padding: 0;
-	background-color: #fff;
 	-webkit-transition: background-color 0.5s;
 	-moz-transition: background-color 0.5s;
 	transition: background-color 0.5s;
@@ -1516,7 +1514,6 @@ blockquote.wp-block-quote.is-style-large cite {
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
-
 	/* Theme Footer (when set to scrolling) */
 	display: none;
 }
@@ -1746,7 +1743,6 @@ blockquote.wp-block-quote.is-style-large cite {
 # Media Queries
 --------------------------------------------------------------*/
 @media screen and (max-width: 600px) {
-
 	.wp-block-image .alignleft,
 	.wp-block-image .alignright,
 	.alignleft figcaption,
@@ -1791,7 +1787,6 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 @media screen and (min-width: 600px) {
-
 	.comment-list .children {
 		margin-left: 0;
 	}
@@ -1861,7 +1856,6 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 @media screen and (max-width: 767px) {
-
 	#primary-menu {
 		display: none;
 		position: absolute;
@@ -1881,7 +1875,6 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 @media screen and (min-width: 768px) {
-
 	.page-header,
 	.entry-header,
 	.entry-content,
@@ -2081,7 +2074,6 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 @media screen and (min-width: 1024px) {
-
 	.footer-sidebar .widget {
 		flex: 1 0 33.33%;
 	}
