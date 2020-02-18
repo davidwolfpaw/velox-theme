@@ -14,6 +14,7 @@ jQuery(document).ready(function($) {
 			offset_top: 48,
 			spacer: false
 		});
+
 	})(jQuery);
 }); /* end of as page load scripts */
 
@@ -152,51 +153,6 @@ if (true == velox_options.read_time) {
 		for (var e = this; -1 === e.className.indexOf("nav-menu"); ) "li" === e.tagName.toLowerCase() && (-1 !== e.className.indexOf("focus") ? (e.className = e.className.replace(" focus", "")) : (e.className += " focus")), (e = e.parentElement);
 	}
 })();
-
-/**
- * Smooth scrolling.
- */
-// filter handling for a /dir/ OR /indexordefault.page
-function filterPath(string) {
-  return string
-    .replace(/^\//, '')
-    .replace(/(index|default).[a-zA-Z]{3,4}$/, '')
-    .replace(/\/$/, '');
-}
-
-var locationPath = filterPath(location.pathname);
-// Select all links with a hash
-$('a[href*="#"]')
-// Remove links that don't actually link to anything
-.not('[href="#"]')
-.not('[href="#0"]')
-// Remove WooCommerce tabs
-.not('[href*="#tab-"]')
-// Ok, now start
-.each(function () {
-  var thisPath = filterPath(this.pathname) || locationPath;
-  var hash = this.hash;
-  if ($("#" + hash.replace(/#/, '')).length) {
-    if (locationPath == thisPath && (location.hostname == this.hostname || !this.hostname) && this.hash.replace(/#/, '')) {
-      var $target = $(hash), target = this.hash;
-      if (target) {
-        $(this).click(function (event) {
-          event.preventDefault();
-          $('html, body').animate({scrollTop: $target.offset().top}, 1000, function () {
-            location.hash = target;
-            $target.focus();
-            if ($target.is(":focus")){ //checking if the target was focused
-              return false;
-            }else{
-              $target.attr('tabindex','-1'); //Adding tabindex for elements not focusable
-              $target.focus(); //Setting focus
-            };
-          });
-        });
-      }
-    }
-  }
-});
 
 /**
  * Skip Link Focus Fix
