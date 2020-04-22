@@ -17,8 +17,6 @@ function velox_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'background_color' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'background_color' )->default   = '#FFFFFF';
 
-	$wp_customize->remove_section( 'custom-header' );
-
 	// Text color.
 	$wp_customize->add_setting(
 		'text_color',
