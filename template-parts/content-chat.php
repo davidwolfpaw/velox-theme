@@ -2,7 +2,7 @@
 /**
  * Template part for displaying posts with the Chat format
  *
- * @link http://codex.wordpress.org/Post_Formats
+ * @link https://wordpress.org/support/article/post-formats/
  *
  * @package Velox
  */
