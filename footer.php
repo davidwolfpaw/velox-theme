@@ -24,10 +24,6 @@
 		endif;
 		?>
 		<div class="site-info">
-			<div id="site-publisher" itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
-				<meta itemprop="name" content="<?php echo esc_url( get_bloginfo( 'name', 'display' ) ); ?>" />
-				<meta itemprop="url" content="<?php echo esc_url( home_url( '/' ) ); ?>" />
-			</div>
 			<?php
 			$velox_blog_info = get_bloginfo( 'name' );
 			if ( ! empty( $velox_blog_info ) ) :
