@@ -31,6 +31,8 @@ I have several features ready to go to make your site unique to you. Just by usi
 ![Night Mode Animation](screenshots/night-mode.gif)
 
 ## Resources
+* PrognRoll © 2016 Mehmet Burak Erman, MIT, [https://mburakerman.com/prognroll/](https://mburakerman.com/prognroll/)
+* Sticky-kit © 2015 Leaf Corcoran, MIT, [https://leafo.net/sticky-kit/](https://leafo.net/sticky-kit/)
 * LibreFranklin-Bold.ttf: © 2015, Impallari Type, SIL Open Font License, 1.1
 * SourceSerifPro-Regular.ttf: © 2014 Adobe Systems Incorporated, SIL Open Font License, 1.1
 * Rubik-Bold.ttf: © 2015 The Rubik Project Authors, SIL Open Font License, 1.1
