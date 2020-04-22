@@ -45,8 +45,8 @@ All of the theme settings are managed via the WordPress Customizer in the Velox 
 * Initial Release
 
 == Resources ==
-* PrognRoll © 2016 Mehmet Burak Erman, MIT
-* Sticky-kit © 2015 Leaf Corcoran, MIT
+* PrognRoll © 2016 Mehmet Burak Erman, MIT, https://mburakerman.com/prognroll/
+* Sticky-kit © 2015 Leaf Corcoran, MIT, https://leafo.net/sticky-kit/
 * LibreFranklin-Bold.ttf: © 2015, Impallari Type, SIL Open Font License, 1.1
 * SourceSerifPro-Regular.ttf: © 2014 Adobe Systems Incorporated, SIL Open Font License, 1.1
 * Rubik-Bold.ttf: © 2015 The Rubik Project Authors, SIL Open Font License, 1.1
