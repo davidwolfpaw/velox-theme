@@ -112,7 +112,7 @@ if ( ! function_exists( 'velox_mf2_get_avatar_data' ) ) :
 		if ( ! isset( $args['class'] ) ) {
 			$args['class'] = array( 'u-photo' );
 		} else {
-			$args['class'][] = 'u-photo';
+			$args['class'] = 'u-photo';
 		}
 		return $args;
 	}
