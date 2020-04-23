@@ -28,7 +28,7 @@
 			$velox_blog_info = get_bloginfo( 'name' );
 			if ( ! empty( $velox_blog_info ) ) :
 				?>
-				<span class="copyright">&copy; <?php echo esc_html( date_i18n( __( 'Y', 'textdomain' ) ) ); ?></span> <a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				<span class="copyright">&copy; <?php echo esc_html( date_i18n( __( 'Y', 'velox' ) ) ); ?></span> <a class="site-name" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 			<?php endif; ?>
 			<?php if ( has_nav_menu( 'footer' ) ) : ?>
 				<span class="separator"> | </span>

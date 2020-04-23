@@ -196,7 +196,7 @@ function velox_widgets_init() {
 add_action( 'widgets_init', 'velox_widgets_init' );
 
 /**
- * Gutenberg Editor Styles
+ * Registers an editor stylesheet for the theme.
  */
 function velox_editor_styles() {
 	// Editor styles.
