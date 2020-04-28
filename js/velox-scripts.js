@@ -28,7 +28,7 @@ if ("default_light" == velox_options.night_mode || "default_dark" == velox_optio
 	const nightModeCheck = document.getElementById("night-mode-check");
 
 	// Store nightmode value in local storage.
-	var localNightMode = localStorage.getItem("nightmode");
+	let localNightMode = localStorage.getItem("nightmode");
 	if ("true" == localNightMode || "default_dark" == velox_options.night_mode) {
 		document.body.classList.add("night-mode");
 		nightModeTrack.classList.add("night-mode");
@@ -88,7 +88,7 @@ if (true == velox_options.read_time) {
 	if (null !== articlePost) {
 		const articleText = articlePost.textContent;
 		// Count words, divide by 200, and round.
-		readingTime = function() {
+		const readingTime = function() {
 			var words = articleText.split(/\W+/).length;
 			return Math.round(words / 200);
 		};
