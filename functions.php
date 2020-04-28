@@ -221,10 +221,10 @@ function velox_scripts() {
 
 	// Pass theme mods to Velox scripts.
 	$velox_options = array(
-		'night_mode'   => get_theme_mod( 'night_mode', 'default_light' ),
-		'read_time'    => get_theme_mod( 'read_time', true ),
-		'progress_bar' => get_theme_mod( 'progress_bar', true ),
-		'link_color'   => get_theme_mod( 'link_color', '00adef' ),
+		'night_mode'   => sanitize_key( get_theme_mod( 'night_mode', 'default_light' ) ),
+		'read_time'    => (bool) get_theme_mod( 'read_time', true ),
+		'progress_bar' => (bool) get_theme_mod( 'progress_bar', true ),
+		'link_color'   => sanitize_hex_color_no_hash( get_theme_mod( 'link_color', '00adef' ) ),
 	);
 	wp_localize_script( 'velox-scripts', 'velox_options', $velox_options );
 	wp_set_script_translations( 'velox-scripts', 'velox' );
