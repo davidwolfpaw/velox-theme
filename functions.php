@@ -257,6 +257,16 @@ function velox_defer_scripts( $tag, $handle ) {
 }
 add_filter( 'script_loader_tag', 'velox_defer_scripts', 10, 2 );
 
+if ( ! function_exists( 'wp_body_open' ) ) {
+
+	/**
+	 * Shim for wp_body_open, ensuring backward compatibility with versions of WordPress older than 5.2.
+	 */
+	function wp_body_open() {
+		do_action( 'wp_body_open' );
+	}
+}
+
 /**
  * Custom template tags for this theme.
  */
