@@ -70,15 +70,15 @@ if (true == velox_options.progress_bar && document.body.classList.contains("sing
 	progressBar.classList.add("progress-bar");
 	document.body.prepend(progressBar);
 
-	// Update upon scroll
-	window.addEventListener("scroll", updateProgressBar);
-
 	// Control the size of the progress bar
-	function updateProgressBar() {
+	const updateProgressBar = function() {
 		let windowScrollTop = window.scrollY;
 		(total = (windowScrollTop / (articleHeight - windowOuterHeight)) * 100), (updatedWidth = (total <= 100 ? total : 100) + "%");
 		progressBar.style.width = updatedWidth;
 	}
+
+	// Update upon scroll
+	window.addEventListener("scroll", updateProgressBar);
 }
 
 // Display read time on articles if activated.
