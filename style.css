@@ -615,6 +615,10 @@ select {
 	line-height: 1;
 }
 
+#night-mode-switch:focus-within {
+	outline: auto;
+}
+
 #night-mode-check {
 	position: absolute;
 	opacity: 0;
@@ -1589,6 +1593,10 @@ blockquote.wp-block-quote.is-style-large cite {
 	border: none;
 	color: #1d2731;
 	background: transparent;
+}
+
+#main-navigation .menu-toggle:focus {
+	outline: auto;
 }
 
 #main-navigation .menu-icon,
