@@ -10,7 +10,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main" role="main">
 
 			<article id="post-0" class="error-404 not-found">
 				<header class="entry-header">
