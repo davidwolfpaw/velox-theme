@@ -7,7 +7,7 @@ module.exports = {
 	rules: {
 		'no-descending-specificity': null,
 		'max-line-length': 255,
-
+		'selector-class-pattern': '^[a-z0-9_]+(-[a-z0-9_]+)*$',
 		//'font-family-name-quotes': 'always-unless-keyword',
 		//'function-url-quotes': 'always',
 		'declaration-block-no-duplicate-properties': [

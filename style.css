@@ -195,6 +195,7 @@ svg:not(:root) {
 }
 
 figure {
+
 	/* Extra wide images within figure tags don't overflow the content area. */
 	margin: 1em 0;
 }
@@ -432,15 +433,16 @@ big {
 *,
 *::before,
 *::after {
+
 	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
 
 hr,
 hr.wp-block-separator {
-	margin: 3em auto;
-	max-width: 50%;
 	width: 50%;
+	max-width: 50%;
+	margin: 3em auto;
 }
 
 ul,
@@ -1045,8 +1047,8 @@ img.alignright,
 }
 
 .after-entry-sidebar {
-	border-bottom: 1px solid #1d2731;
 	margin: 0 auto 20px;
+	border-bottom: 1px solid #1d2731;
 }
 
 #wp-calendar th,
@@ -1476,9 +1478,9 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 .entry-title {
+	margin-top: 1em;
 	font-size: 2em;
 	hyphens: auto;
-	margin-top: 1em;
 }
 
 .entry-footer span {
@@ -1520,6 +1522,7 @@ blockquote.wp-block-quote.is-style-large cite {
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
+
 	/* Theme Footer (when set to scrolling) */
 	display: none;
 }
@@ -1753,6 +1756,7 @@ blockquote.wp-block-quote.is-style-large cite {
 # Media Queries
 --------------------------------------------------------------*/
 @media screen and (max-width: 600px) {
+
 	.wp-block-image .alignleft,
 	.wp-block-image .alignright,
 	.alignleft figcaption,
@@ -1797,6 +1801,7 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 @media screen and (min-width: 600px) {
+
 	.comment-list .children {
 		margin-left: 0;
 	}
@@ -1866,6 +1871,7 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 @media screen and (max-width: 767px) {
+
 	#primary-menu {
 		display: none;
 		position: absolute;
@@ -1885,6 +1891,7 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 @media screen and (min-width: 768px) {
+
 	.page-header,
 	.entry-header,
 	.entry-content,
@@ -2028,8 +2035,8 @@ blockquote.wp-block-quote.is-style-large cite {
 
 	/* Offset the 240px of the side header */
 	.alignwide {
-		margin: 2em -3em;
 		width: calc(100% + 6em);
+		margin: 2em -3em;
 	}
 
 	.alignfull {
@@ -2084,6 +2091,7 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 @media screen and (min-width: 1024px) {
+
 	.footer-sidebar .widget {
 		flex: 1 0 33.33%;
 	}
