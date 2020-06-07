@@ -33,9 +33,9 @@
 				if ( 'default_light' === get_theme_mod( 'night_mode', 'default_light' ) || 'default_dark' === get_theme_mod( 'night_mode', 'default_light' ) ) :
 					?>
 					<div class="site-options">
-						<label id="night-mode-switch">
-							<input type="checkbox" id="night-mode-check">
-							<span id="night-mode-track" class="night-mode"><?php _e( 'Dark', 'velox' ); ?><span class="night-mode-track-icon">🌖</span></span>
+						<label for="night-mode-check" id="night-mode-switch">
+							<input type="checkbox" id="night-mode-check" name="night-mode-check">
+							<span id="night-mode-track" class="night-mode"><?php _e( 'Dark', 'velox' ); ?><span class="night-mode-track-icon" role="presentation">🌖</span></span>
 						</label>
 					</div><!-- .site-options -->
 					<?php

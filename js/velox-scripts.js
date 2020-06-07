@@ -22,8 +22,8 @@ jQuery(document).ready(function($) {
 if ("default_light" == velox_options.night_mode || "default_dark" == velox_options.night_mode) {
 	const light = __("Light", "velox");
 	const dark = __("Dark", "velox");
-	const lightHTML = light + ' <span class="night-mode-track-icon">☀️</span>';
-	const darkHTML = dark + ' <span class="night-mode-track-icon">🌖</span>';
+	const lightHTML = light + ' <span class="night-mode-track-icon" role="presentation">☀️</span>';
+	const darkHTML = dark + ' <span class="night-mode-track-icon" role="presentation">🌖</span>';
 	const nightModeTrack = document.getElementById("night-mode-track");
 	const nightModeCheck = document.getElementById("night-mode-check");
 
