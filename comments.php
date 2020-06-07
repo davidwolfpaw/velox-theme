@@ -46,7 +46,7 @@ if ( post_password_required() ) {
 			?>
 		</h2><!-- .comments-title -->
 
-		<h1 class="screen-reader-text section-heading"><?php esc_html_e( 'Comment navigation', 'velox' ); ?></h1>
+		<h2 class="screen-reader-text section-heading"><?php esc_html_e( 'Comment navigation', 'velox' ); ?></h2>
 		<?php the_comments_navigation(); ?>
 
 		<ol class="comment-list">
