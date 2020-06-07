@@ -612,15 +612,6 @@ select {
 /*--------------------------------------------------------------
 # Night Mode
 --------------------------------------------------------------*/
-#night-mode-switch {
-	display: inline-block;
-	line-height: 1;
-}
-
-#night-mode-switch:focus-within {
-	outline: auto;
-}
-
 #night-mode-check {
 	position: absolute;
 	opacity: 0;
@@ -638,6 +629,10 @@ select {
 	line-height: 1;
 	text-align: center;
 	transition: all 0.2s ease;
+}
+
+#night-mode-track:focus-within {
+	outline: auto;
 }
 
 #night-mode-track.night-mode {
