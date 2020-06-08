@@ -116,13 +116,13 @@ if ( ! function_exists( 'velox_setup' ) ) :
 
 					'name'  => __( 'Accent Text Color', 'velox' ),
 					'slug'  => 'accent-text',
-					'color' => get_theme_mod( 'accent_text_color', '#555d66' ),
+					'color' => get_theme_mod( 'accent_text_color', '#515962' ),
 				),
 				array(
 
 					'name'  => __( 'Accent Color', 'velox' ),
 					'slug'  => 'accent',
-					'color' => get_theme_mod( 'accent_color', '#A51323' ),
+					'color' => get_theme_mod( 'accent_color', '#c31c31' ),
 				),
 			)
 		);
@@ -224,7 +224,7 @@ function velox_scripts() {
 		'night_mode'   => sanitize_key( get_theme_mod( 'night_mode', 'default_light' ) ),
 		'read_time'    => (bool) get_theme_mod( 'read_time', true ),
 		'progress_bar' => (bool) get_theme_mod( 'progress_bar', true ),
-		'link_color'   => sanitize_hex_color_no_hash( get_theme_mod( 'link_color', '00adef' ) ),
+		'link_color'   => sanitize_hex_color_no_hash( get_theme_mod( 'link_color', '065e88' ) ),
 	);
 	wp_localize_script( 'velox-scripts', 'velox_options', $velox_options );
 	wp_set_script_translations( 'velox-scripts', 'velox' );
