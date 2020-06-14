@@ -30,9 +30,25 @@ I have several features ready to go to make your site unique to you. Just by usi
 ### Night Mode
 ![Night Mode Animation](screenshots/night-mode.gif)
 
-## Resources
-* PrognRoll © 2016 Mehmet Burak Erman, MIT, [https://mburakerman.com/prognroll/](https://mburakerman.com/prognroll/)
-* Sticky-kit © 2015 Leaf Corcoran, MIT, [https://leafo.net/sticky-kit/](https://leafo.net/sticky-kit/)
+== Copyright ==
+
+Velox Theme, Copyright 2020 DavidWolfpaw.com
+Velox is distributed under the terms of the GNU GPL.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+Velox bundles the following third-party resources:
+
+* PrognRoll © 2016 Mehmet Burak Erman, MIT, https://mburakerman.com/prognroll/
+* Sticky-kit © 2015 Leaf Corcoran, MIT, https://leafo.net/sticky-kit/
 * LibreFranklin-Bold.ttf: © 2015, Impallari Type, SIL Open Font License, 1.1
 * SourceSerifPro-Regular.ttf: © 2014 Adobe Systems Incorporated, SIL Open Font License, 1.1
 * Rubik-Bold.ttf: © 2015 The Rubik Project Authors, SIL Open Font License, 1.1
@@ -41,3 +57,6 @@ I have several features ready to go to make your site unique to you. Just by usi
 * Muli-Regular.ttf: © 2016 The Muli Project Authors, SIL Open Font License, 1.1
 * NixieOne-Regular.ttf: © 2011, Jovanny Lemonad with Reserved Font Name "Nixie", SIL Open Font License, 1.1
 * LibreBaskerville-Regular.ttf: © 2012, Pablo Impallari, © 2012, Rodrigo Fuenzalida with Reserved Font Name Libre Baskerville, SIL Open Font License, 1.1
+
+Bundled header image, Copyright David Wolfpaw
+License: CC0 1.0 Universal (CC0 1.0)
