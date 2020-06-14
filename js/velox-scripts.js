@@ -154,6 +154,17 @@ if (true == velox_options.read_time) {
 	}
 })();
 
+// Close toggle on escape key press.
+const closeOnEscape = function() {
+	document.addEventListener( 'keyup', function( event ) {
+		if ( event.key === 'Escape' ) {
+			document.querySelectorAll( 'button[aria-expanded="true"]' ).forEach( function( element ) {
+				element.click();
+			} );
+		}
+	} );
+}
+
 /**
  * Skip Link Focus Fix
  * Helps with accessibility for keyboard only users.

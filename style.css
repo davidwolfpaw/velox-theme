@@ -631,8 +631,12 @@ select {
 	transition: all 0.2s ease;
 }
 
-#night-mode-track:focus-within {
-	outline: auto;
+#night-mode-check:focus + label,
+#night-mode-check:focus,
+#night-mode-track:focus,
+#night-mode-check:active,
+#night-mode-track:active {
+	outline: thin dotted #065e88;
 }
 
 #night-mode-track.night-mode {
@@ -725,6 +729,7 @@ body.night-mode .author-info {
 .site-header {
 	padding: 0 20px;
 	box-shadow: 0 0 3px 0 #1d2731;
+	min-height: 60px;
 }
 
 .site-header-wrap {
@@ -745,8 +750,8 @@ body.night-mode .author-info {
 	align-items: center;
 	grid-area: site-header-content;
 	grid-gap: 0 0.5em;
-	grid-template-areas: "site-branding site-options";
-	justify-content: space-between;
+	grid-template-areas: "site-options site-branding";
+	justify-content: flex-start;
 }
 
 body.custom-background .site-header-content {
@@ -1980,7 +1985,6 @@ blockquote.wp-block-quote.is-style-large cite {
 	}
 
 	.site-header {
-		position: relative;
 		top: 0;
 		width: 240px;
 		margin-bottom: 0;

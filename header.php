@@ -71,7 +71,6 @@
 			</div>
 
 			<nav id="main-navigation" class="site-navigation" role="navigation">
-				<h1 class="screen-reader-text section-heading"><a href="#access" title="<?php esc_attr_e( 'Main menu', 'velox' ); ?>"><?php esc_html_e( 'Main menu', 'velox' ); ?></a></h1>
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="menu-icon"></span><span class="menu-icon-text"><?php esc_html_e( 'Menu', 'velox' ); ?></span></button>
 				<?php
 					wp_nav_menu(
