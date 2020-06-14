@@ -36,11 +36,11 @@ get_header(); ?>
 			// Previous/next post navigation.
 			the_post_navigation(
 				array(
-					'next_text' => '<span class="navigation-arrow">&rsaquo;</span><span class="meta-nav" aria-hidden="true">' . __( 'Next Post', 'velox' ) . '</span>' .
-						'<span class="screen-reader-text">' . __( 'Next post:', 'velox' ) . '</span> <br/>' .
+					'next_text' => '<span class="navigation-arrow" aria-hidden="true">&rsaquo;</span><span class="meta-nav">' . __( 'Next Post', 'velox' ) . '</span>' .
+						'<br/>' .
 						'<span class="post-title">%title</span>',
-					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous Post', 'velox' ) . '</span><span class="navigation-arrow">&lsaquo;</span>' .
-						'<span class="screen-reader-text">' . __( 'Previous post:', 'velox' ) . '</span> <br/>' .
+					'prev_text' => '<span class="meta-nav">' . __( 'Previous Post', 'velox' ) . '</span><span class="navigation-arrow" aria-hidden="true">&lsaquo;</span>' .
+						'<br/>' .
 						'<span class="post-title">%title</span>',
 				)
 			);
