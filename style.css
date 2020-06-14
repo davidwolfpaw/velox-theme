@@ -117,7 +117,7 @@ template {
 a {
 	color: #065e88;
 	background-color: transparent;
-	text-decoration: none;
+	text-decoration: underline;
 	word-break: break-word;
 }
 
@@ -1331,6 +1331,10 @@ blockquote.wp-block-quote.is-style-large cite {
 	content: "";
 }
 
+.comment-author a {
+	text-decoration: none;
+}
+
 .comment .avatar {
 	position: absolute;
 	z-index: 1;
@@ -1476,6 +1480,10 @@ blockquote.wp-block-quote.is-style-large cite {
 	margin-top: 1em;
 	font-size: 2em;
 	hyphens: auto;
+}
+
+.entry-title a {
+	text-decoration: none;
 }
 
 .entry-footer span {
