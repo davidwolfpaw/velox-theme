@@ -62,6 +62,7 @@ GNU General Public License for more details.
 Velox bundles the following third-party resources:
 
 * PrognRoll © 2016 Mehmet Burak Erman, MIT, https://mburakerman.com/prognroll/
+* MicroModal © 2020 Indrashish Ghosh, MIT, https://micromodal.now.sh/
 * Sticky-kit © 2015 Leaf Corcoran, MIT, https://leafo.net/sticky-kit/
 * LibreFranklin-Bold.ttf: © 2015, Impallari Type, SIL Open Font License, 1.1
 * SourceSerifPro-Regular.ttf: © 2014 Adobe Systems Incorporated, SIL Open Font License, 1.1
