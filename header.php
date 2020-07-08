@@ -71,15 +71,16 @@
 			</div>
 
 			<nav id="main-navigation" class="site-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="menu-icon"></span><span class="menu-icon-text"><?php esc_html_e( 'Menu', 'velox' ); ?></span></button>
+				<button class="menu-toggle" data-micromodal-trigger="header-menu"><span class="menu-icon"></span><span class="menu-icon-text"><?php esc_html_e( 'Menu', 'velox' ); ?></span></button>
+
 				<?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'primary',
-							'menu_id'        => 'primary-menu',
-						)
-					);
-					?>
+				wp_nav_menu(
+					array(
+						'theme_location' => 'primary',
+						'menu_id'        => 'primary-menu',
+					)
+				);
+				?>
 			</nav><!-- #main-navigation -->
 		</div><!-- .site-header-wrap -->
 	</header><!-- #masthead -->
