@@ -56,12 +56,12 @@
 
 
 <div class="modal micromodal-slide" id="header-menu" aria-hidden="true">
-	<div class="modal__overlay" tabindex="-1" data-micromodal-close="">
-		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="header-menu-title">
-			<header class="modal__header">
-				<button class="modal__close" aria-label="Close Menu" data-micromodal-close=""> Close Menu</button>
+	<div class="modal-overlay" tabindex="-1" data-micromodal-close="">
+		<div class="modal-container" role="dialog" aria-modal="true" aria-labelledby="header-menu-title">
+			<header class="modal-header">
+				<button class="modal-close" aria-label="Close Menu" data-micromodal-close=""> Close Menu</button>
 			</header>
-			<div class="modal__content" id="header-menu-content">
+			<div class="modal-content" id="header-menu-content">
 				<?php
 				wp_nav_menu(
 					array(
