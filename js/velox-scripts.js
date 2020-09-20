@@ -146,6 +146,5 @@ if (true == velox_options.read_time) {
 
 MicroModal.init({
   onShow: modal => 'menu-toggle', // [1]
-  onClose: modal => console.info(`${modal.id} is hidden`), // [2]
   disableScroll: true,
 });
