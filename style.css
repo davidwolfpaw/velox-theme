@@ -1742,12 +1742,25 @@ blockquote.wp-block-quote.is-style-large cite {
 	background: transparent;
 }
 
-.modal-header .modal-close::before { content: "\2715"; }
+.modal-close::before {
+	content: "\2715";
+}
+
+.modal-close:active,
+.modal-close:focus,
+.modal-close:hover {
+	color: #fff;
+}
 
 #primary-menu-modal,
 #primary-menu-modal ul {
 	margin-left: 0;
 	list-style: none;
+}
+
+#primary-menu-modal ul:first-child {
+	padding: 0;
+	margin: 0;
 }
 
 #primary-menu-modal {
