@@ -10,9 +10,9 @@ jQuery(document).ready(function($) {
 		var responsive_viewport = $(window).width();
 
 		// Stick header in sidebar.
-		$(".site-header-wrap").stick_in_parent({
-			offset_top: 48
-		});
+		// $(".site-header-wrap").stick_in_parent({
+		// 	offset_top: 48
+		// });
 
 	})(jQuery);
 }); /* end of as page load scripts */
