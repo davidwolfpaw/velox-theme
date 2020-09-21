@@ -2077,7 +2077,7 @@ blockquote.wp-block-quote.is-style-large cite {
 			"head main"
 			"head foot";
 		grid-template-columns: 240px calc(100% - 240px);
-		grid-template-rows: auto max-content;
+		grid-template-rows: max-content;
 		min-height: 100vh;
 	}
 
