@@ -11,8 +11,7 @@ jQuery(document).ready(function($) {
 
 		// Stick header in sidebar.
 		$(".site-header-wrap").stick_in_parent({
-			offset_top: 48,
-			spacer: false
+			offset_top: 48
 		});
 
 	})(jQuery);
