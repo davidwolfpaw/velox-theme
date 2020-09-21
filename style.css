@@ -1759,8 +1759,8 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 #primary-menu-modal ul:first-child {
-	padding: 0;
 	margin: 0;
+	padding: 0;
 }
 
 #primary-menu-modal {
@@ -2092,6 +2092,7 @@ blockquote.wp-block-quote.is-style-large cite {
 
 	.site-header-wrap {
 		position: relative;
+		z-index: 1;
 		width: inherit;
 		padding-bottom: 24px;
 		grid-template-columns: auto;
