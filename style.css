@@ -1132,6 +1132,13 @@ ul.wp-block-gallery {
 	display: block;
 }
 
+.hentry .entry-content .gallery-item a,
+.hentry .entry-content .gallery-item a:focus,
+.hentry .entry-content .gallery-item a:hover {
+	border-bottom: none;
+	box-shadow: none;
+}
+
 .gallery-columns-2 .gallery-item {
 	max-width: 50%;
 }
