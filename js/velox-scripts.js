@@ -67,6 +67,10 @@ if (true == velox_options.progress_bar && document.body.classList.contains("sing
 	// Add progress bar
 	const progressBar = document.createElement("span");
 	progressBar.classList.add("progress-bar");
+	// Add pride class if active
+	if (true == velox_options.progress_bar_pride) {
+		progressBar.classList.add("pride");
+	}
 	document.body.prepend(progressBar);
 
 	// Control the size of the progress bar
