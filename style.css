@@ -1501,10 +1501,6 @@ blockquote.wp-block-quote.is-style-large cite {
 	text-decoration: none;
 }
 
-.entry-footer span {
-	margin-right: 1em;
-}
-
 .entry-footer,
 .entry-meta {
 	color: #aaa;
@@ -1514,6 +1510,19 @@ blockquote.wp-block-quote.is-style-large cite {
 .entry-footer {
 	padding-bottom: 20px;
 	border-bottom: 1px solid #1d2731;
+}
+
+.entry-footer span {
+	margin-right: 1em;
+}
+
+.entry-footer a {
+	text-decoration: none;
+}
+
+.entry-footer a:focus,
+.entry-footer a:hover {
+	text-decoration: underline;
 }
 
 .author-info {
@@ -1527,6 +1536,15 @@ blockquote.wp-block-quote.is-style-large cite {
 
 .author-info p {
 	margin-bottom: 1em;
+}
+
+.author-info a {
+	text-decoration: none;
+}
+
+.author-info a:focus,
+.author-info a:hover {
+	text-decoration: underline;
 }
 
 .author-image .avatar {
@@ -1818,6 +1836,15 @@ blockquote.wp-block-quote.is-style-large cite {
 
 .nav-links .meta-nav {
 	font-weight: 700;
+}
+
+.nav-links a {
+	text-decoration: none;
+}
+
+.nav-links a:focus,
+.nav-links a:hover {
+	text-decoration: underline;
 }
 
 .navigation-arrow {
