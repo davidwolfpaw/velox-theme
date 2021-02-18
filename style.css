@@ -696,7 +696,7 @@ body.night-mode .wp-block-quote cite,
 body.night-mode .wp-block-quote footer,
 body.night-mode .wp-block-image figcaption,
 body.night-mode .wp-block-separator.is-style-dots::before {
-	color: rgba(255, 255, 255, 0.9);
+	color: #fff;
 }
 
 body.night-mode .comment-body {
@@ -843,7 +843,9 @@ body.custom-background .site-header-content {
 }
 
 .screen-reader-text:focus,
-.assistive-text:focus {
+.assistive-text:focus,
+body.night-mode a.screen-reader-text:visited,
+body.night-mode a.assistive-text:visited {
 	display: block;
 	clip: auto !important;
 	z-index: 100000;
@@ -856,13 +858,12 @@ body.custom-background .site-header-content {
 	color: #21759b;
 	background-color: #f1f1f1;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 700;
 	line-height: normal;
 	text-decoration: none;
 	clip-path: none;
-
 	/* Above WP toolbar. */
 }
 
