@@ -60,7 +60,7 @@
 		<div id="header-menu-title">Menu</div>
 		<div class="modal-container" role="dialog" aria-modal="true">
 			<header class="modal-header">
-				<button class="modal-close" aria-label="Close Menu" data-micromodal-close=""> Close Menu</button>
+				<button class="modal-close" data-micromodal-close=""> <?php _e( 'Close Menu', 'velox' ); ?></button>
 			</header>
 			<div class="modal-content" id="header-menu-content">
 				<?php
