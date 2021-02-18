@@ -29,7 +29,7 @@ get_header(); ?>
 			<header class="page-header author vcard h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
 				<h1 class="page-title">
 					<?php esc_html_e( 'Author Archives: ', 'velox' ); ?>
-					<a class="url u-url fn p-fn n p-name" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( get_the_author() ); ?>" rel="me author" itemprop="url">
+					<a class="url u-url fn p-fn n p-name" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="me author" itemprop="url">
 						<span itemprop="name"><?php echo get_the_author(); ?></span>
 					</a>
 				</h1>

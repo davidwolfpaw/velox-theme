@@ -179,7 +179,7 @@ if ( ! function_exists( 'velox_author_info' ) ) :
 			</div>
 			<div class="author-description">
 				<?php if ( ! is_archive() ) { ?>
-					<a class="url u-url fn p-fn n p-name" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo get_the_author(); ?>" rel="me author" itemprop="url">
+					<a class="url u-url fn p-fn n p-name" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="me author" itemprop="url">
 						<span itemprop="name"><?php echo get_the_author(); ?></span>
 					</a>
 				<?php } ?>

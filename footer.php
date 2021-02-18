@@ -33,7 +33,7 @@
 			<?php if ( has_nav_menu( 'footer' ) ) : ?>
 				<span class="separator"> | </span>
 				<nav id="footer-navigation" class="footer-navigation" aria-label="<?php esc_attr_e( 'Footer Menu', 'velox' ); ?>">
-					<h1 class="screen-reader-text section-heading"><a href="#access" title="<?php esc_attr_e( 'Footer Menu', 'velox' ); ?>"><?php esc_html_e( 'Footer Menu', 'velox' ); ?></a></h1>
+					<h1 class="screen-reader-text section-heading"><a href="#access"><?php esc_html_e( 'Footer Menu', 'velox' ); ?></a></h1>
 					<?php
 					if ( function_exists( 'the_privacy_policy_link' ) ) {
 						the_privacy_policy_link();
