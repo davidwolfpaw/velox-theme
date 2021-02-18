@@ -727,6 +727,22 @@ body.night-mode .author-info {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.9);
 }
 
+body.night-mode a.screen-reader-text:visited,
+body.night-mode a.assistive-text:visited {
+	color: #21759b;
+}
+
+body.night-mode #primary-menu-modal li a,
+body.night-mode #primary-menu-modal li a:visited {
+	color: #065e88;
+}
+
+body.night-mode #primary-menu-modal li a:active,
+body.night-mode #primary-menu-modal li a:focus,
+body.night-mode #primary-menu-modal li a:hover {
+	color: #fff;
+}
+
 /*--------------------------------------------------------------
 # Site Header
 --------------------------------------------------------------*/
@@ -843,9 +859,7 @@ body.custom-background .site-header-content {
 }
 
 .screen-reader-text:focus,
-.assistive-text:focus,
-body.night-mode a.screen-reader-text:visited,
-body.night-mode a.assistive-text:visited {
+.assistive-text:focus {
 	display: block;
 	clip: auto !important;
 	z-index: 100000;
