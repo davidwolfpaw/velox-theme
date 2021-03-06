@@ -1126,7 +1126,9 @@ object {
 	margin: 0.8075em 0;
 }
 
-.wp-caption-text {
+.wp-caption-text,
+.blocks-gallery-caption {
+	font-size: 0.75em;
 	text-align: center;
 }
 
