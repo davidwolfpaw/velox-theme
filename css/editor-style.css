@@ -121,8 +121,8 @@
 }
 
 .wp-admin .editor-styles-wrapper .wp-block-pullquote .wp-block-pullquote__citation {
-	text-transform: none;
 	font-size: 1em;
+	text-transform: none;
 }
 
 .wp-admin .editor-styles-wrapper address {
