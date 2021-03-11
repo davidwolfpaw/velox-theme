@@ -433,6 +433,22 @@ big {
 	font-size: 125%;
 }
 
+.has-small-font-size {
+	font-size: 16px;
+}
+
+.has-default-font-size {
+	font-size: 22px;
+}
+
+.has-large-font-size {
+	font-size: 36px;
+}
+
+.has-huge-font-size {
+	font-size: 48px;
+}
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/

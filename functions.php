@@ -101,7 +101,7 @@ if ( ! function_exists( 'velox_setup' ) ) :
 		/**
 		 * Add support for Gutenberg editor color palette.
 		 *
-		 * @link https://wordpress.org/gutenberg/
+		 * @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/
 		 */
 		add_theme_support(
 			'editor-color-palette',
@@ -126,6 +126,32 @@ if ( ! function_exists( 'velox_setup' ) ) :
 				),
 			)
 		);
+
+		/**
+		 * Add support for block editor wide images.
+		 */
+		add_theme_support( 'editor-font-sizes', array(
+			array(
+				'name' => esc_attr__( 'Small', 'velox' ),
+				'size' => 16,
+				'slug' => 'small'
+			),
+			array(
+				'name' => esc_attr__( 'Regular', 'velox' ),
+				'size' => 22,
+				'slug' => 'regular'
+			),
+			array(
+				'name' => esc_attr__( 'Large', 'velox' ),
+				'size' => 36,
+				'slug' => 'large'
+			),
+			array(
+				'name' => esc_attr__( 'Huge', 'velox' ),
+				'size' => 48,
+				'slug' => 'huge'
+			)
+		) );
 
 		/**
 		 * Add support for block editor wide images.
