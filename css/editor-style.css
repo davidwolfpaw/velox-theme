@@ -505,8 +505,8 @@
 
 /* Pullquotes */
 .wp-admin .editor-styles-wrapper .wp-block-pullquote {
-	border-top: 3px solid #c31c31;
-	border-bottom: 3px solid #c31c31;
+	border-top: 2px solid #c31c31;
+	border-bottom: 2px solid #c31c31;
 }
 
 .wp-admin .editor-styles-wrapper .wp-block-pullquote blockquote {
