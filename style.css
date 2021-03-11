@@ -1355,6 +1355,11 @@ blockquote.wp-block-quote.is-style-large cite {
 	border-left: none;
 }
 
+.wp-block-pullquote p {
+	font-size: 1.125em;
+	line-height: 1.6;
+}
+
 /* Tables */
 .wp-block-table,
 .wp-block-table.aligncenter,

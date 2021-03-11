@@ -114,9 +114,15 @@
 
 .wp-admin .editor-styles-wrapper dfn,
 .wp-admin .editor-styles-wrapper cite,
+.wp-admin .editor-styles-wrapper .wp-block-pullquote .wp-block-pullquote__citation,
 .wp-admin .editor-styles-wrapper em,
 .wp-admin .editor-styles-wrapper i {
 	font-style: italic;
+}
+
+.wp-admin .editor-styles-wrapper .wp-block-pullquote .wp-block-pullquote__citation {
+	text-transform: none;
+	font-size: 1em;
 }
 
 .wp-admin .editor-styles-wrapper address {
@@ -511,6 +517,11 @@
 
 .wp-admin .editor-styles-wrapper .wp-block-pullquote blockquote {
 	border-left: none;
+}
+
+.wp-admin .editor-styles-wrapper .wp-block-pullquote blockquote p {
+	font-size: 1.125em;
+	line-height: 1.6;
 }
 
 /* Tables */
