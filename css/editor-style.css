@@ -125,12 +125,13 @@
 
 .wp-admin .editor-styles-wrapper pre {
 	overflow: auto;
-	max-width: 100%;
 	margin-bottom: 2em;
 	padding: 1.6em;
 	background: #f7f8f9;
 	font-size: 16px;
 	font-size: 1rem;
+	border-radius: 4px;
+	border: 1px solid #e0e0e0;
 }
 
 .wp-admin .editor-styles-wrapper code,
@@ -308,57 +309,112 @@
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-.wp-admin .editor-styles-wrapper .alignleft figcaption,
-.wp-admin .editor-styles-wrapper figure.alignleft {
-	float: left;
-	clear: left;
-	margin-right: 1.5em;
-}
-
-.wp-admin .editor-styles-wrapper .alignright figcaption,
-.wp-admin .editor-styles-wrapper figure.alignright {
-	float: right;
-	clear: right;
-	margin-left: 1.5em;
-}
-
-.wp-admin .editor-styles-wrapper img.alignleft,
-.wp-admin .editor-styles-wrapper .alignleft img,
-.wp-admin .editor-styles-wrapper .wp-caption.alignleft img[class*="wp-image-"] {
-	float: left;
-	margin-right: 1.5em;
-}
-
-.wp-admin .editor-styles-wrapper img.alignright,
-.wp-admin .editor-styles-wrapper .alignright img,
-.wp-admin .editor-styles-wrapper .wp-caption.alignright img[class*="alignright wp-image-"] {
-	float: right;
-	margin-left: 1.5em;
-}
-
-.wp-admin .editor-styles-wrapper .aligncenter {
-	display: block;
-	clear: both;
+.wp-admin .editor-styles-wrapper .post-thumbnail,
+.wp-admin .editor-styles-wrapper .wp-audio-shortcode,
+.wp-admin .editor-styles-wrapper > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),
+.wp-admin .editor-styles-wrapper *[class*=inner-container] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),
+.wp-admin .editor-styles-wrapper .default-max-width {
+	margin-left: auto;
 	margin-right: auto;
+}
+
+.wp-admin .editor-styles-wrapper > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+	max-width: 45rem;
+	width: calc(100% - 4rem);
+}
+
+.wp-admin .editor-styles-wrapper [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+	max-width: 45rem;
+	width: 100%;
+}
+
+.wp-admin .editor-styles-wrapper .alignnone,
+.wp-admin .editor-styles-wrapper .aligncenter,
+.wp-admin .editor-styles-wrapper .alignleft,
+.wp-admin .editor-styles-wrapper .alignright,
+.wp-admin .editor-styles-wrapper .alignwide {
+	margin-top: 4rem;
+	margin-right: auto;
+	margin-bottom: 4rem;
 	margin-left: auto;
 }
 
-.wp-admin .editor-styles-wrapper .aligncenter img {
-	display: block;
-	margin: 0 auto;
+.wp-admin .editor-styles-wrapper [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright) {
+	margin-left: auto;
+	margin-right: auto;
 }
+
+/* Full */
 
 .wp-admin .editor-styles-wrapper .alignfull {
-	clear: both;
-	position: relative;
-	width: 100vw;
+	margin-top: 5rem;
+	margin-right: auto;
+	margin-bottom: 5rem;
+	margin-left: auto;
 	max-width: 100vw;
+	position: relative;
+	width: 100%;
 }
 
+.wp-admin .editor-styles-wrapper [class*="__inner-container"] > .alignfull {
+	max-width: 100%;
+}
+
+/* Wide */
+
 .wp-admin .editor-styles-wrapper .alignwide {
-	overflow-x: hidden;
-	width: auto;
-	max-width: 100vw;
+	max-width: 64rem;
+	position: relative;
+	width: calc(100% - 4rem);
+}
+
+.wp-admin .editor-styles-wrapper [class*="__inner-container"] > .alignwide {
+	width: 100%;
+}
+
+/* Center */
+
+.wp-admin .editor-styles-wrapper .aligncenter,
+.wp-admin .editor-styles-wrapper .aligncenter img {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Left and right */
+
+.wp-admin .editor-styles-wrapper .alignleft,
+.wp-admin .editor-styles-wrapper .alignright {
+	max-width: 50%;
+}
+
+.wp-admin .editor-styles-wrapper .alignleft {
+
+	/*rtl:ignore*/
+	float: left;
+	margin: 0.3rem 2rem 2rem 2rem;
+}
+
+.wp-admin .editor-styles-wrapper .alignright {
+
+	/*rtl:ignore*/
+	float: right;
+	margin: 0.3rem 2rem 2rem 2rem;
+}
+
+.wp-admin .editor-styles-wrapper [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .alignleft,
+.wp-admin .editor-styles-wrapper [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > p .alignleft,
+.wp-admin .editor-styles-wrapper [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignleft {
+
+	/*rtl:ignore*/
+	margin-left: 2rem;
+}
+
+.wp-admin .editor-styles-wrapper [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .alignright,
+.wp-admin .editor-styles-wrapper [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > p .alignright,
+.wp-admin .editor-styles-wrapper [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignright {
+
+	/*rtl:ignore*/
+	margin-right: 2rem;
 }
 
 /*--------------------------------------------------------------
@@ -385,12 +441,12 @@
 --------------------------------------------------------------*/
 
 /* Cover Block */
-.wp-admin .editor-styles-wrapper .entry-content .wp-block-cover,
-.wp-admin .editor-styles-wrapper .entry-content .wp-block-cover-image {
+.wp-admin .editor-styles-wrapper .wp-block-cover,
+.wp-admin .editor-styles-wrapper .wp-block-cover-image {
 	z-index: 0;
 }
 
-.wp-admin .editor-styles-wrapper .entry-content .wp-block-cover:first-child {
+.wp-admin .editor-styles-wrapper .wp-block-cover:first-child {
 	margin-top: 0;
 }
 
@@ -463,7 +519,11 @@
 .wp-admin .editor-styles-wrapper .wp-block-table.alignright {
 	display: block;
 	overflow: hidden;
-	overflow-x: scroll;
+	overflow-x: auto;
+}
+
+.wp-admin .editor-styles-wrapper .wp-block-table.is-style-stripes {
+	border-bottom: none;
 }
 
 /* Separator */
