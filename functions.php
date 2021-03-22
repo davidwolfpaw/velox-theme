@@ -99,7 +99,7 @@ if ( ! function_exists( 'velox_setup' ) ) :
 		);
 
 		/**
-		 * Add support for Gutenberg editor color palette.
+		 * Add support for Block Editor color palette.
 		 *
 		 * @link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-support/
 		 */
