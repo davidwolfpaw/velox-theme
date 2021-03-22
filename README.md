@@ -3,7 +3,7 @@
 
 ## Howdy
 
-Hello there! I'm a WordPress theme based on the _s starter theme and turned into a theme for bloggers. I'm responsive and mobile first, and I was born to be friendly to the WordPress Block/Gutenberg editor! 
+Hello there! I'm a WordPress theme based on the _s starter theme and turned into a theme for bloggers. I'm responsive and mobile first, and I was born to be friendly to the WordPress Block/Gutenberg Editor! 
 
 I was named for [Vulpes velox](https://en.wikipedia.org/wiki/Swift_fox), better known as the Swift Fox. That's because I do my best to be fast for your site!
 

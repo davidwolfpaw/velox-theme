@@ -1,4 +1,4 @@
-/* Gutenberg Editor Styles */
+/* Block Editor Styles */
 
 /*--------------------------------------------------------------
 # Forms
@@ -352,7 +352,6 @@
 }
 
 /* Full */
-
 .wp-admin .editor-styles-wrapper .alignfull {
 	position: relative;
 	width: 100%;
@@ -368,7 +367,6 @@
 }
 
 /* Wide */
-
 .wp-block[data-align="wide"] {
 	width: calc(100% - 4rem);
 	max-width: 64rem;
