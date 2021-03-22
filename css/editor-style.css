@@ -340,7 +340,7 @@
 	margin-left: auto;
 }
 
-.wp-admin .editor-styles-wrapper > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+.wp-admin .editor-styles-wrapper .is-root-container > *:not([data-align="full"]):not([data-align="wide"]) {
 	width: calc(100% - 4rem);
 	max-width: 45rem;
 }
@@ -384,59 +384,9 @@
 
 /* Wide */
 
-.wp-admin .editor-styles-wrapper .alignwide {
-	position: relative;
+.wp-block[data-align="wide"] {
 	width: calc(100% - 4rem);
 	max-width: 64rem;
-}
-
-.wp-admin .editor-styles-wrapper [class*="__inner-container"] > .alignwide {
-	width: 100%;
-}
-
-/* Center */
-
-.wp-admin .editor-styles-wrapper .aligncenter,
-.wp-admin .editor-styles-wrapper .aligncenter img {
-	margin-right: auto;
-	margin-left: auto;
-}
-
-/* Left and right */
-
-.wp-admin .editor-styles-wrapper .alignleft,
-.wp-admin .editor-styles-wrapper .alignright {
-	max-width: 50%;
-}
-
-.wp-admin .editor-styles-wrapper .alignleft {
-
-	/*rtl:ignore*/
-	float: left;
-	margin: 0.3rem 2rem 2rem 2rem;
-}
-
-.wp-admin .editor-styles-wrapper .alignright {
-
-	/*rtl:ignore*/
-	float: right;
-	margin: 0.3rem 2rem 2rem 2rem;
-}
-
-.wp-admin .editor-styles-wrapper [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .alignleft,
-.wp-admin .editor-styles-wrapper [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > p .alignleft,
-.wp-admin .editor-styles-wrapper [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignleft {
-
-	/*rtl:ignore*/
-	margin-left: 2rem;
-}
-
-.wp-admin .editor-styles-wrapper [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .alignright,
-.wp-admin .editor-styles-wrapper [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > p .alignright,
-.wp-admin .editor-styles-wrapper [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignright {
-
-	/*rtl:ignore*/
-	margin-right: 2rem;
 }
 
 /*--------------------------------------------------------------
