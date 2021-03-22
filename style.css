@@ -240,6 +240,8 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+	display: block;
+	width: auto;
 	margin-bottom: 2em;
 	border: none;
 	text-align: center;

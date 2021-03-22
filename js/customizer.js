@@ -22,7 +22,7 @@
 	// Text Color.
 	wp.customize("text_color", function(value) {
 		value.bind(function(to) {
-      $("body, button, input, select, optgroup, textarea, h1, h2, h3, h4, h5, h6, .has-text-color").css({
+      $("body, input, select, optgroup, textarea, h1, h2, h3, h4, h5, h6, .has-text-color").css({
         "color": to
       });
       $(".has-text-background-color").css({
