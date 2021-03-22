@@ -2241,6 +2241,7 @@ blockquote.wp-block-quote.is-style-large cite {
 	}
 
 	.site-header {
+		z-index: 1;
 		top: 0;
 		width: 240px;
 		margin-bottom: 0;
