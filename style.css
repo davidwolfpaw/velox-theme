@@ -41,7 +41,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Media
     ## Captions
     ## Galleries
-    ## Gutenberg Blocks
+    ## Block Editor Blocks
 # Content
     ## Comments
     ## Posts and pages
@@ -1417,6 +1417,11 @@ blockquote.wp-block-quote.is-style-large cite {
 .wp-block-button__link.is-style-outline {
 	border: 2px solid;
 	color: #c31c31;
+}
+
+/* Group */
+.wp-block-group.has-background {
+	padding: 1.25em 2.375em;
 }
 
 /*--------------------------------------------------------------
