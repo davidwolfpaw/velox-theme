@@ -648,6 +648,7 @@ select {
 	margin-left: auto;
 }
 
+
 /*--------------------------------------------------------------
 # Night Mode
 --------------------------------------------------------------*/
@@ -1617,18 +1618,6 @@ blockquote.wp-block-quote.is-style-large cite {
 .post-thumbnail {
 	display: block;
 	text-align: center;
-}
-
-.page-header,
-.entry-header,
-.entry-footer,
-.site-info,
-.post-navigation,
-.page-navigation,
-.comments-area,
-.footer-sidebar {
-	max-width: 800px;
-	margin: 20px auto;
 }
 
 .entry-header {
