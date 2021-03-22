@@ -598,7 +598,7 @@ select {
 }
 
 .search-form {
-	margin: 20px 0 0;
+	margin: 1rem 0 0;
 }
 
 .search-form input {
@@ -784,7 +784,7 @@ body.night-mode #primary-menu-modal li a:hover {
 --------------------------------------------------------------*/
 .site-header {
 	min-height: 60px;
-	padding: 0 20px;
+	padding: 0 1rem;
 	box-shadow: 0 0 3px 0 #1d2731;
 }
 
@@ -1167,7 +1167,7 @@ body.custom-background .site-header-content {
 }
 
 .after-entry-sidebar {
-	margin: 0 auto 20px;
+	margin: 0 auto 1rem;
 	border-bottom: 1px solid #1d2731;
 }
 
@@ -1435,8 +1435,8 @@ blockquote.wp-block-quote.is-style-large cite {
 
 .site-footer {
 	margin: 0 auto;
-	padding-right: 20px;
-	padding-left: 20px;
+	padding-right: 1rem;
+	padding-left: 1rem;
 	color: #fff;
 	background-color: #065e88;
 	text-align: center;
@@ -1642,7 +1642,7 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 .entry-footer {
-	padding-bottom: 20px;
+	padding-bottom: 1rem;
 	border-bottom: 1px solid #1d2731;
 }
 
@@ -1743,7 +1743,7 @@ blockquote.wp-block-quote.is-style-large cite {
 
 #main-navigation a {
 	display: block;
-	padding: 0.1em 20px;
+	padding: 0.1em 1rem;
 	text-decoration: none;
 }
 
@@ -1957,9 +1957,9 @@ blockquote.wp-block-quote.is-style-large cite {
 .post-navigation,
 .author-info {
 	overflow: hidden;
-	max-width: 720px;
-	margin: 0 auto 20px;
-	padding-bottom: 20px;
+	max-width: 45rem;
+	margin: 1rem auto;
+	padding-bottom: 1rem;
 	border-bottom: 1px solid #1d2731;
 }
 
@@ -2073,7 +2073,7 @@ blockquote.wp-block-quote.is-style-large cite {
 	}
 
 	.navigation .nav-previous {
-		margin-bottom: 20px;
+		margin-bottom: 1rem;
 		padding: 0 0 0 30px;
 		border-right: none;
 	}
@@ -2162,7 +2162,7 @@ blockquote.wp-block-quote.is-style-large cite {
 		top: 63px;
 		right: -20px;
 		width: 100vw;
-		padding: 0 20px;
+		padding: 0 1rem;
 		background-color: #fff;
 		box-shadow: 0 8px 8px -4px #1d2731;
 	}
@@ -2191,7 +2191,7 @@ blockquote.wp-block-quote.is-style-large cite {
 			"site-branding"
 			"header-sidebar";
 		margin: 0 auto 24px;
-		padding: 0 20px;
+		padding: 0 1rem;
 	}
 
 	.site-options {
