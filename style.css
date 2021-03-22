@@ -938,6 +938,7 @@ body.custom-background .site-header-content {
 .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
 	width: calc(100% - 4rem);
 	max-width: 45rem;
+	margin-bottom: 2em;
 }
 
 [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
@@ -1401,6 +1402,23 @@ blockquote.wp-block-quote.is-style-large cite {
 	max-width: 100%;
 }
 
+/* Buttons */
+.wp-block-button.is-style-squared,
+.wp-block-button__link.wp-block-button.is-style-squared {
+	border-radius: 0;
+}
+
+.wp-block-button.no-border-radius,
+.wp-block-button__link.no-border-radius {
+	border-radius: 0 !important;
+}
+
+.is-style-outline > .wp-block-button__link,
+.wp-block-button__link.is-style-outline {
+	border: 2px solid;
+	color: #c31c31;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -1523,7 +1541,7 @@ blockquote.wp-block-quote.is-style-large cite {
 	margin: 0 auto 120px;
 }
 
-.hentry .entry-content a {
+.hentry .entry-content a:not(.wp-block-button__link) {
 	border-bottom: 1px solid #065e88;
 	-webkit-box-shadow: inset 0 -2px 0 #065e88;
 	box-shadow: inset 0 -2px 0 #065e88;
@@ -1570,10 +1588,6 @@ blockquote.wp-block-quote.is-style-large cite {
 .hentry .entry-content a.wp-block-button__link:focus,
 .hentry .entry-content a.wp-block-button__link:hover,
 .hentry .entry-content a.wp-block-button__link:visited {
-	border-bottom: none;
-	color: #fff;
-	-webkit-box-shadow: none;
-	box-shadow: none;
 	text-decoration: none;
 	word-wrap: break-word;
 	word-break: break-word;

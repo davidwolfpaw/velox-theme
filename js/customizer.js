@@ -87,7 +87,7 @@
       $(".wp-block-button__link").css({
         color: "#FFFFFF"
       });
-      $(".hentry .entry-content a").css({
+      $(".hentry .entry-content a:not(.wp-block-button__link)").css({
         color: to,
         "border-bottom-color": to,
         "box-shadow": "inset 0 -2px 0" + to

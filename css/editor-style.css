@@ -13,6 +13,20 @@
 	text-transform: uppercase;
 }
 
+.wp-admin .editor-styles-wrapper .is-style-outline > .wp-block-button__link:not(.has-background),
+.wp-admin .editor-styles-wrapper .wp-block-button__link.is-style-outline:not(.has-background) {
+	border: 2px solid;
+	color: #c31c31;
+	background-color: transparent;
+}
+
+.wp-admin .editor-styles-wrapper .wp-block-button .wp-block-button__link:active,
+.wp-admin .editor-styles-wrapper .wp-block-button .wp-block-button__link:focus,
+.wp-admin .editor-styles-wrapper .wp-block-button .wp-block-button__link:hover {
+	color: #fff;
+	background-color: #065e88;
+}
+
 .wp-admin .editor-styles-wrapper textarea {
 	width: 100%;
 }
@@ -69,7 +83,8 @@
 --------------------------------------------------------------*/
 .wp-admin .editor-styles-wrapper {
 	color: #1d2731;
-	font-family: "Source Serif Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-family: "Source Serif Pro",
+		-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 22px;
 	font-size: 1.375rem;
 	line-height: 1.6;
