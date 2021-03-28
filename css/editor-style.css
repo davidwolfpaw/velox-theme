@@ -390,9 +390,9 @@
 .wp-admin .editor-styles-wrapper .wp-caption .wp-caption-text,
 .wp-admin .editor-styles-wrapper .wp-caption .wp-caption-dd {
 	margin: 0.8075em 0;
-	text-align: center;
 	color: #515962;
 	font-size: 0.75em;
+	text-align: center;
 }
 
 .wp-admin .editor-styles-wrapper .wp-caption a,
@@ -407,8 +407,8 @@
 /* Cover Block */
 .wp-admin .editor-styles-wrapper .wp-block-cover,
 .wp-admin .editor-styles-wrapper .wp-block-cover-image {
-	z-index: 0;
 	overflow: hidden;
+	z-index: 0;
 }
 
 .wp-admin .editor-styles-wrapper .wp-block-cover:first-child {

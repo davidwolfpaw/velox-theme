@@ -954,11 +954,11 @@ body.custom-background .site-header-content {
 .alignleft,
 .alignright,
 .alignwide {
+	display: block;
 	margin-top: 4rem;
 	margin-right: auto;
 	margin-bottom: 4rem;
 	margin-left: auto;
-	display: block;
 }
 
 [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright) {
