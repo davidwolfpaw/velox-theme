@@ -333,6 +333,7 @@
 --------------------------------------------------------------*/
 .wp-admin .editor-styles-wrapper .post-thumbnail,
 .wp-admin .editor-styles-wrapper .wp-audio-shortcode,
+.wp-admin .editor-styles-wrapper .wp-caption.aligncenter,
 .wp-admin .editor-styles-wrapper > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),
 .wp-admin .editor-styles-wrapper *[class*=inner-container] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),
 .wp-admin .editor-styles-wrapper .default-max-width {
@@ -386,9 +387,17 @@
 	margin-left: auto;
 }
 
-.wp-admin .editor-styles-wrapper .wp-caption .wp-caption-text {
+.wp-admin .editor-styles-wrapper .wp-caption .wp-caption-text,
+.wp-admin .editor-styles-wrapper .wp-caption .wp-caption-dd {
 	margin: 0.8075em 0;
 	text-align: center;
+	color: #515962;
+	font-size: 0.75em;
+}
+
+.wp-admin .editor-styles-wrapper .wp-caption a,
+.wp-admin .editor-styles-wrapper .wp-caption .wp-caption-dd a {
+	display: inline-block;
 }
 
 /*--------------------------------------------------------------

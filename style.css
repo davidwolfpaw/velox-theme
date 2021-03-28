@@ -958,6 +958,7 @@ body.custom-background .site-header-content {
 	margin-right: auto;
 	margin-bottom: 4rem;
 	margin-left: auto;
+	display: block;
 }
 
 [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright) {
