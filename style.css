@@ -1317,6 +1317,10 @@ ul.wp-block-gallery {
 	margin: 0;
 }
 
+.wp-block-cover__inner-container a {
+	color: #fff;
+}
+
 /* Dropcaps */
 .has-drop-cap::first-letter,
 .has-drop-cap:not(:focus)::first-letter {

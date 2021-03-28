@@ -399,6 +399,7 @@
 .wp-admin .editor-styles-wrapper .wp-block-cover,
 .wp-admin .editor-styles-wrapper .wp-block-cover-image {
 	z-index: 0;
+	overflow: hidden;
 }
 
 .wp-admin .editor-styles-wrapper .wp-block-cover:first-child {
@@ -407,6 +408,10 @@
 
 .wp-admin .editor-styles-wrapper .wp-block-cover p {
 	margin: 0;
+}
+
+.wp-admin .editor-styles-wrapper .wp-block-cover__inner-container a {
+	color: #fff;
 }
 
 /* Dropcaps */
