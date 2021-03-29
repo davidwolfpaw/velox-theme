@@ -729,7 +729,8 @@ body.night-mode .site-description,
 body.night-mode .entry-footer,
 body.night-mode .entry-meta,
 body.night-mode .wp-block-latest-posts__post-date,
-body.night-mode .wp-caption-text body.night-mode .wp-block-pullquote,
+body.night-mode .wp-caption-text,
+body.night-mode .wp-block-pullquote,
 body.night-mode .wp-block-quote cite,
 body.night-mode .wp-block-quote footer,
 body.night-mode .wp-block-image figcaption,
@@ -780,6 +781,7 @@ body.night-mode #primary-menu-modal li a:focus,
 body.night-mode #primary-menu-modal li a:hover {
 	color: #fff;
 }
+
 
 /*--------------------------------------------------------------
 # Site Header
@@ -2241,11 +2243,6 @@ blockquote.wp-block-quote.is-style-large cite {
 
 	body #main-navigation a {
 		padding: 0.1em 0.25em;
-		color: #1d2327;
-	}
-
-	body.night-mode #main-navigation a {
-		color: #fff;
 	}
 
 	.site-content {
