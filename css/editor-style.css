@@ -16,7 +16,7 @@
 .wp-admin .editor-styles-wrapper .is-style-outline > .wp-block-button__link:not(.has-background),
 .wp-admin .editor-styles-wrapper .wp-block-button__link.is-style-outline:not(.has-background) {
 	border: 2px solid;
-	color: #c31c31;
+	color: #d63638;
 	background-color: transparent;
 }
 
@@ -24,7 +24,7 @@
 .wp-admin .editor-styles-wrapper .wp-block-button .wp-block-button__link:focus,
 .wp-admin .editor-styles-wrapper .wp-block-button .wp-block-button__link:hover {
 	color: #fff;
-	background-color: #065e88;
+	background-color: #0a4b78;
 }
 
 .wp-admin .editor-styles-wrapper textarea {
@@ -51,7 +51,7 @@
 	padding: 4px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
-	color: #1d2731;
+	color: #1d2327;
 }
 
 .wp-admin .editor-styles-wrapper input[type="text"]:focus,
@@ -82,7 +82,7 @@
 # Typography
 --------------------------------------------------------------*/
 .wp-admin .editor-styles-wrapper {
-	color: #1d2731;
+	color: #1d2327;
 	font-family: "Source Serif Pro",
 		-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 22px;
@@ -107,7 +107,7 @@
 .wp-admin .editor-post-title__block .editor-post-title__input {
 	clear: both;
 	margin: 2em 0 0.5em 0;
-	color: #1d2731;
+	color: #1d2327;
 	font-family: "Libre Franklin Bold", Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
 	line-height: 1.25;
 	word-wrap: break-word;
@@ -162,7 +162,7 @@
 .wp-admin .editor-styles-wrapper var {
 	padding: 3px;
 	border: 1px solid rgba(20, 21, 22, 0.3);
-	color: #c31c31;
+	color: #d63638;
 	background: #f7f8f9;
 	font-size: 16px;
 	font-size: 1rem;
@@ -263,10 +263,10 @@
 ## Links
 --------------------------------------------------------------*/
 .wp-admin .editor-styles-wrapper a {
-	border-bottom: 1px solid #065e88;
-	color: #065e88;
-	-webkit-box-shadow: inset 0 -2px 0 #065e88;
-	box-shadow: inset 0 -2px 0 #065e88;
+	border-bottom: 1px solid #0a4b78;
+	color: #0a4b78;
+	-webkit-box-shadow: inset 0 -2px 0 #0a4b78;
+	box-shadow: inset 0 -2px 0 #0a4b78;
 	text-decoration: none;
 	word-wrap: break-word;
 	word-break: break-word;
@@ -274,7 +274,7 @@
 }
 
 .wp-admin .editor-styles-wrapper a:visited {
-	color: #065e88;
+	color: #0a4b78;
 }
 
 .wp-admin .editor-styles-wrapper a:focus {
@@ -290,7 +290,7 @@
 .wp-admin .editor-styles-wrapper a:focus,
 .wp-admin .editor-styles-wrapper a:active {
 	color: #fff;
-	background-color: #065e88;
+	background-color: #0a4b78;
 	text-decoration: none;
 }
 
@@ -310,7 +310,7 @@
 
 .wp-admin .editor-styles-wrapper a:visited:hover {
 	color: #fff;
-	background-color: #065e88;
+	background-color: #0a4b78;
 	text-decoration: none;
 }
 
@@ -390,7 +390,7 @@
 .wp-admin .editor-styles-wrapper .wp-caption .wp-caption-text,
 .wp-admin .editor-styles-wrapper .wp-caption .wp-caption-dd {
 	margin: 0.8075em 0;
-	color: #515962;
+	color: #50575e;
 	font-size: 0.75em;
 	text-align: center;
 }
@@ -448,7 +448,7 @@
 .wp-admin .editor-styles-wrapper .wp-block-quote {
 	margin-bottom: 2em;
 	padding-left: 1em;
-	border-left: 3px solid #c31c31;
+	border-left: 3px solid #d63638;
 	font-size: 1.125em;
 	font-style: italic;
 }
@@ -473,8 +473,8 @@
 
 /* Pullquotes */
 .wp-admin .editor-styles-wrapper .wp-block-pullquote {
-	border-top: 2px solid #c31c31;
-	border-bottom: 2px solid #c31c31;
+	border-top: 2px solid #d63638;
+	border-bottom: 2px solid #d63638;
 }
 
 .wp-admin .editor-styles-wrapper .wp-block-pullquote blockquote {

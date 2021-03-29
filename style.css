@@ -119,7 +119,7 @@ template {
 }
 
 a {
-	color: #065e88;
+	color: #0a4b78;
 	background-color: transparent;
 	text-decoration: underline;
 	word-break: break-word;
@@ -131,13 +131,13 @@ a:hover {
 }
 
 a:visited {
-	color: #065e88;
+	color: #0a4b78;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #c31c31;
+	color: #d63638;
 	text-decoration: underline;
 }
 
@@ -340,7 +340,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #1d2731;
+	color: #1d2327;
 	font-family: "Source Serif Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 22px;
 	font-size: 1.375rem;
@@ -363,7 +363,7 @@ h5,
 h6 {
 	clear: both;
 	margin: 2em 0 0.5em 0;
-	color: #1d2731;
+	color: #1d2327;
 	font-family: "Libre Franklin Bold", Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
 	line-height: 1.25;
 	word-wrap: break-word;
@@ -407,7 +407,7 @@ tt,
 var {
 	padding: 3px;
 	border: 1px solid rgba(20, 21, 22, 0.3);
-	color: #c31c31;
+	color: #d63638;
 	background: #f7f8f9;
 	font-size: 16px;
 	font-size: 1rem;
@@ -524,7 +524,7 @@ input[type="submit"],
 	padding: 0.5em 1em;
 	border-radius: 4px;
 	color: #fff;
-	background-color: #c31c31;
+	background-color: #d63638;
 	font-size: 1rem;
 	font-weight: 700;
 	letter-spacing: 1px;
@@ -536,7 +536,7 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 .wp-block-button .wp-block-button__link:hover {
-	background: #065e88;
+	background: #0a4b78;
 }
 
 button:active,
@@ -549,7 +549,7 @@ input[type="submit"]:active,
 input[type="submit"]:focus,
 .wp-block-button .wp-block-button__link:active,
 .wp-block-button .wp-block-button__link:focus {
-	background: #065e88;
+	background: #0a4b78;
 }
 
 input[type="text"],
@@ -572,7 +572,7 @@ textarea {
 	padding: 4px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
-	color: #1d2731;
+	color: #1d2327;
 }
 
 input[type="text"]:focus,
@@ -662,10 +662,10 @@ select {
 #night-mode-track {
 	width: 78px;
 	padding: 3px 6px;
-	border: 2px solid #1d2731;
+	border: 2px solid #1d2327;
 	border-radius: 16px;
 	color: #fff;
-	background-color: #1d2731;
+	background-color: #1d2327;
 	font-size: 0.75rem;
 	font-weight: 700;
 	line-height: 1;
@@ -678,12 +678,12 @@ select {
 #night-mode-track:focus,
 #night-mode-check:active,
 #night-mode-track:active {
-	outline: thin dotted #065e88;
+	outline: thin dotted #0a4b78;
 }
 
 #night-mode-track.night-mode {
-	border: 2px solid #1d2731;
-	color: #1d2731;
+	border: 2px solid #1d2327;
+	color: #1d2327;
 	background-color: #fff;
 }
 
@@ -692,7 +692,7 @@ body.custom-background.night-mode,
 body.night-mode #main-navigation.toggled #primary-menu,
 body.night-mode .site-footer {
 	color: rgba(255, 255, 255, 0.9);
-	background-color: #1d2731;
+	background-color: #1d2327;
 }
 
 body.night-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) th,
@@ -700,7 +700,7 @@ body.night-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) td,
 body.night-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) a,
 body.night-mode code,
 body.night-mode pre {
-	color: #1d2731;
+	color: #1d2327;
 }
 
 body.night-mode.custom-background .site-header-content {
@@ -708,11 +708,11 @@ body.night-mode.custom-background .site-header-content {
 }
 
 body.night-mode *::-moz-selection {
-	color: #1d2731;
+	color: #1d2327;
 }
 
 body.night-mode *::selection {
-	color: #1d2731;
+	color: #1d2327;
 }
 
 body.night-mode h1,
@@ -772,7 +772,7 @@ body.night-mode a.assistive-text:visited {
 
 body.night-mode #primary-menu-modal li a,
 body.night-mode #primary-menu-modal li a:visited {
-	color: #065e88;
+	color: #0a4b78;
 }
 
 body.night-mode #primary-menu-modal li a:active,
@@ -787,7 +787,7 @@ body.night-mode #primary-menu-modal li a:hover {
 .site-header {
 	min-height: 60px;
 	padding: 0 1rem;
-	box-shadow: 0 0 3px 0 #1d2731;
+	box-shadow: 0 0 3px 0 #1d2327;
 }
 
 .site-header-wrap {
@@ -851,7 +851,7 @@ body.custom-background .site-header-content {
 
 .site-description {
 	margin: 0.375em 0 0;
-	color: #1d2731;
+	color: #1d2327;
 	font-size: 1.2rem;
 	font-weight: 700;
 	line-height: 1;
@@ -873,7 +873,7 @@ body.custom-background .site-header-content {
 }
 
 .site-title a {
-	color: #1d2731;
+	color: #1d2327;
 	text-decoration: none;
 }
 
@@ -1171,7 +1171,7 @@ body.custom-background .site-header-content {
 
 .after-entry-sidebar {
 	margin: 0 auto 1rem;
-	border-bottom: 1px solid #1d2731;
+	border-bottom: 1px solid #1d2327;
 }
 
 #wp-calendar th,
@@ -1288,7 +1288,7 @@ blockquote,
 .wp-block-quote {
 	margin: 1em 0.5em 2em 0.5em;
 	padding-left: 1em;
-	border-left: 2px solid #c31c31;
+	border-left: 2px solid #d63638;
 	font-size: 1.125em;
 	font-style: italic;
 }
@@ -1313,8 +1313,8 @@ blockquote.wp-block-quote.is-style-large cite {
 
 /* Pullquotes */
 .wp-block-pullquote {
-	border-top: 2px solid #c31c31;
-	border-bottom: 2px solid #c31c31;
+	border-top: 2px solid #d63638;
+	border-bottom: 2px solid #d63638;
 }
 
 .wp-block-pullquote blockquote {
@@ -1365,7 +1365,7 @@ blockquote.wp-block-quote.is-style-large cite {
 .is-style-outline > .wp-block-button__link,
 .wp-block-button__link.is-style-outline {
 	border: 2px solid;
-	color: #c31c31;
+	color: #d63638;
 }
 
 /* Group */
@@ -1386,7 +1386,7 @@ blockquote.wp-block-quote.is-style-large cite {
 	padding-right: 1rem;
 	padding-left: 1rem;
 	color: #fff;
-	background-color: #065e88;
+	background-color: #0a4b78;
 	text-align: center;
 }
 
@@ -1496,9 +1496,9 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 .hentry .entry-content a:not(.wp-block-button__link) {
-	border-bottom: 1px solid #065e88;
-	-webkit-box-shadow: inset 0 -2px 0 #065e88;
-	box-shadow: inset 0 -2px 0 #065e88;
+	border-bottom: 1px solid #0a4b78;
+	-webkit-box-shadow: inset 0 -2px 0 #0a4b78;
+	box-shadow: inset 0 -2px 0 #0a4b78;
 	text-decoration: none;
 	word-wrap: break-word;
 	word-break: break-word;
@@ -1528,7 +1528,7 @@ blockquote.wp-block-quote.is-style-large cite {
 .hentry .wp-block-gallery a:focus,
 .hentry .wp-block-gallery a:hover {
 	color: #fff;
-	background-color: #065e88;
+	background-color: #0a4b78;
 	text-decoration: none;
 }
 
@@ -1591,7 +1591,7 @@ blockquote.wp-block-quote.is-style-large cite {
 
 .entry-footer {
 	padding-bottom: 1rem;
-	border-bottom: 1px solid #1d2731;
+	border-bottom: 1px solid #1d2327;
 }
 
 .entry-footer span {
@@ -1698,7 +1698,7 @@ blockquote.wp-block-quote.is-style-large cite {
 #main-navigation a:hover,
 #main-navigation a:focus {
 	color: #fff;
-	background-color: #065e88;
+	background-color: #0a4b78;
 	text-decoration: none;
 }
 
@@ -1716,7 +1716,7 @@ blockquote.wp-block-quote.is-style-large cite {
 	margin: 15px 0;
 	padding: 0;
 	border: none;
-	color: #1d2731;
+	color: #1d2327;
 	background: transparent;
 }
 
@@ -1732,7 +1732,7 @@ blockquote.wp-block-quote.is-style-large cite {
 	width: 30px;
 	height: 2px;
 	border-radius: 4px;
-	background-color: #1d2731;
+	background-color: #1d2327;
 	content: "";
 	transition-timing-function: ease;
 	transition-duration: 0.15s;
@@ -1894,7 +1894,7 @@ blockquote.wp-block-quote.is-style-large cite {
 #primary-menu-modal li a:focus,
 #primary-menu-modal li a:hover {
 	color: #fff;
-	background-color: #065e88;
+	background-color: #0a4b78;
 }
 
 /*--------------------------------------------------------------
@@ -1908,7 +1908,7 @@ blockquote.wp-block-quote.is-style-large cite {
 	max-width: 45rem;
 	margin: 1rem auto;
 	padding-bottom: 1rem;
-	border-bottom: 1px solid #1d2731;
+	border-bottom: 1px solid #1d2327;
 }
 
 .nav-links {
@@ -1954,7 +1954,7 @@ blockquote.wp-block-quote.is-style-large cite {
 .nav-previous {
 	margin-left: 2em;
 	padding-right: 1em;
-	border-right: 1px solid #1d2731;
+	border-right: 1px solid #1d2327;
 }
 
 .nav-next {
@@ -1972,7 +1972,7 @@ blockquote.wp-block-quote.is-style-large cite {
 	top: 0;
 	left: 0;
 	height: 5px;
-	background-color: #065e88;
+	background-color: #0a4b78;
 }
 
 .progress-bar.pride {
@@ -2112,7 +2112,7 @@ blockquote.wp-block-quote.is-style-large cite {
 		width: 100vw;
 		padding: 0 1rem;
 		background-color: #fff;
-		box-shadow: 0 8px 8px -4px #1d2731;
+		box-shadow: 0 8px 8px -4px #1d2327;
 	}
 
 	.header-sidebar,
@@ -2183,7 +2183,7 @@ blockquote.wp-block-quote.is-style-large cite {
 		width: 240px;
 		margin-bottom: 0;
 		padding: 0;
-		box-shadow: 0 0 3px #1d2731;
+		box-shadow: 0 0 3px #1d2327;
 		grid-area: head;
 	}
 
@@ -2241,7 +2241,7 @@ blockquote.wp-block-quote.is-style-large cite {
 
 	body #main-navigation a {
 		padding: 0.1em 0.25em;
-		color: #1d2731;
+		color: #1d2327;
 	}
 
 	body.night-mode #main-navigation a {
