@@ -393,6 +393,7 @@ function velox_customizer_css() {
 		@media (prefers-color-scheme: light) {
 			body, input, select, optgroup, textarea, h1, h2, h3, h4, h5, h6 { color: <?php echo esc_html( get_theme_mod( 'text_color', '#1d2327' ) ); ?>; }
 			a, a:visited { color: <?php echo esc_html( get_theme_mod( 'link_color', '#0a4b78' ) ); ?>; }
+			.comment-navigation, .after-entry-sidebar, .posts-navigation, .post-navigation, .entry-footer, .author-info, hr, .wp-block-separator { border-bottom-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#d63638' ) ); ?>; }
 		}
 		.entry-footer, .entry-meta, .wp-block-image figcaption, .wp-block-pullquote cite, .wp-block-latest-posts__post-date, .wp-caption-text { color: <?php echo esc_html( get_theme_mod( 'accent_text_color', '#515962' ) ); ?>; }
 		.wp-block-button__link { background-color: <?php echo esc_html( get_theme_mod( 'link_color', '#0a4b78' ) ); ?>; }
@@ -401,7 +402,6 @@ function velox_customizer_css() {
 		.hentry .entry-content a:not(.wp-block-button__link):hover, .hentry .entry-content a:not(.wp-block-button__link):focus, .hentry .entry-content a:not(.wp-block-button__link):active, .hentry .wp-block-image a:active, .hentry .wp-block-image a:focus, .hentry .wp-block-image a:hover, .hentry .wp-block-gallery a:active, .hentry .wp-block-gallery a:focus, .hentry .wp-block-gallery a:hover {	background-color: <?php echo esc_html( get_theme_mod( 'link_color', '#0a4b78' ) ); ?>; border-bottom: 1px solid <?php echo esc_html( get_theme_mod( 'link_color', '#0a4b78' ) ); ?>; box-shadow: inset 0 -2px 0 <?php echo esc_html( get_theme_mod( 'link_color', '#0a4b78' ) ); ?>; }
 		hr, hr.wp-block-separator, .progress-bar, button, input[type="button"], input[type="reset"], input[type="submit"], .wp-block-button .wp-block-button__link { background-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#d63638' ) ); ?>; }
 		.wp-block-separator.is-style-dots:before { color: <?php echo esc_html( get_theme_mod( 'accent_color', '#d63638' ) ); ?>; }
-		.comment-navigation, .after-entry-sidebar, .posts-navigation, .post-navigation, .entry-footer, .author-info, hr, .wp-block-separator { border-bottom-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#d63638' ) ); ?>; }
 		.wp-block-pullquote { border-top-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#d63638' ) ); ?>; border-bottom-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#d63638' ) ); ?>; }
 		.navigation .nav-previous { border-right-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#d63638' ) ); ?>; }
 		q, blockquote, .wp-block-quote:not(.is-large) { border-left-color: <?php echo esc_html( get_theme_mod( 'accent_color', '#d63638' ) ); ?>; }
