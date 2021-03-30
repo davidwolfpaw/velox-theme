@@ -1,6 +1,6 @@
 // String translation constants.
 const { __, _x, _n, _nx } = wp.i18n;
-const mode = getComputedStyle(document.documentElement).getPropertyValue('content');
+const bodyMode = getComputedStyle(document.documentElement).getPropertyValue('content');
 
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
@@ -32,11 +32,11 @@ if ("default_light" == velox_options.dark_mode || "default_dark" == velox_option
 	if ("true" == localNightMode || "default_dark" == velox_options.dark_mode) {
 		document.body.classList.add("dark-mode");
 		darkModeTrack.classList.add("dark-mode");
-		darkModeTrack.classList.remove("day-mode");
+		darkModeTrack.classList.remove("light-mode");
 		darkModeTrack.innerHTML = lightHTML;
 	} else {
 		document.body.classList.remove("dark-mode");
-		darkModeTrack.classList.add("day-mode");
+		darkModeTrack.classList.add("light-mode");
 		darkModeTrack.classList.remove("dark-mode");
 		darkModeTrack.innerHTML = darkHTML;
 	}
@@ -48,12 +48,12 @@ if ("default_light" == velox_options.dark_mode || "default_dark" == velox_option
 			localStorage.setItem("darkmode", "true");
 			document.body.classList.add("dark-mode");
 			darkModeTrack.classList.add("dark-mode");
-			darkModeTrack.classList.remove("day-mode");
+			darkModeTrack.classList.remove("light-mode");
 			darkModeTrack.innerHTML = lightHTML;
 		} else {
 			localStorage.setItem("darkmode", "false");
 			document.body.classList.remove("dark-mode");
-			darkModeTrack.classList.add("day-mode");
+			darkModeTrack.classList.add("light-mode");
 			darkModeTrack.classList.remove("dark-mode");
 			darkModeTrack.innerHTML = darkHTML;
 		}
