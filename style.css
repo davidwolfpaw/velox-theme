@@ -654,12 +654,12 @@ select {
 /*--------------------------------------------------------------
 # Night Mode
 --------------------------------------------------------------*/
-#night-mode-check {
+#dark-mode-check {
 	position: absolute;
 	opacity: 0;
 }
 
-#night-mode-track {
+#dark-mode-track {
 	width: 78px;
 	padding: 3px 6px;
 	border: 2px solid #1d2327;
@@ -673,78 +673,78 @@ select {
 	transition: all 0.2s ease;
 }
 
-#night-mode-check:focus + label,
-#night-mode-check:focus,
-#night-mode-track:focus,
-#night-mode-check:active,
-#night-mode-track:active {
+#dark-mode-check:focus + label,
+#dark-mode-check:focus,
+#dark-mode-track:focus,
+#dark-mode-check:active,
+#dark-mode-track:active {
 	outline: thin dotted #0a4b78;
 }
 
-#night-mode-track.night-mode {
+#dark-mode-track.dark-mode {
 	border: 2px solid #1d2327;
 	color: #1d2327;
 	background-color: #fff;
 }
 
-body.night-mode,
-body.custom-background.night-mode,
-body.night-mode #main-navigation.toggled #primary-menu,
-body.night-mode .site-footer {
+body.dark-mode,
+body.custom-background.dark-mode,
+body.dark-mode #main-navigation.toggled #primary-menu,
+body.dark-mode .site-footer {
 	color: rgba(255, 255, 255, 0.9);
 	background-color: #1d2327;
 }
 
-body.night-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) th,
-body.night-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) td,
-body.night-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) a,
-body.night-mode code,
-body.night-mode pre {
+body.dark-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) th,
+body.dark-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) td,
+body.dark-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) a,
+body.dark-mode code,
+body.dark-mode pre {
 	color: #1d2327;
 }
 
-body.night-mode.custom-background .site-header-content {
+body.dark-mode.custom-background .site-header-content {
 	background-color: transparent;
 }
 
-body.night-mode *::-moz-selection {
+body.dark-mode *::-moz-selection {
 	color: #1d2327;
 }
 
-body.night-mode *::selection {
+body.dark-mode *::selection {
 	color: #1d2327;
 }
 
-body.night-mode h1,
-body.night-mode h2,
-body.night-mode h3,
-body.night-mode h4,
-body.night-mode h5,
-body.night-mode h6,
-body.night-mode a,
-body.night-mode a:visited,
-body.night-mode.hentry .entry-content a,
-body.night-mode.hentry .entry-content a:visited,
-body.night-mode .site-description,
-body.night-mode .entry-footer,
-body.night-mode .entry-meta,
-body.night-mode .wp-block-latest-posts__post-date,
-body.night-mode .wp-caption-text,
-body.night-mode .wp-block-pullquote,
-body.night-mode .wp-block-quote cite,
-body.night-mode .wp-block-quote footer,
-body.night-mode .wp-block-image figcaption,
-body.night-mode .wp-block-separator.is-style-dots::before {
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode a,
+body.dark-mode a:visited,
+body.dark-mode.hentry .entry-content a,
+body.dark-mode.hentry .entry-content a:visited,
+body.dark-mode .site-description,
+body.dark-mode .entry-footer,
+body.dark-mode .entry-meta,
+body.dark-mode .wp-block-latest-posts__post-date,
+body.dark-mode .wp-caption-text,
+body.dark-mode .wp-block-pullquote,
+body.dark-mode .wp-block-quote cite,
+body.dark-mode .wp-block-quote footer,
+body.dark-mode .wp-block-image figcaption,
+body.dark-mode .wp-block-separator.is-style-dots::before {
 	color: #fff;
 }
 
-body.night-mode .comment-body {
+body.dark-mode .comment-body {
 	background-color: rgba(0, 0, 0, 0.2);
 }
 
-body.night-mode #main-navigation .menu-icon,
-body.night-mode #main-navigation .menu-icon::before,
-body.night-mode #main-navigation .menu-icon::after {
+body.dark-mode #main-navigation .menu-icon,
+body.dark-mode #main-navigation .menu-icon::before,
+body.dark-mode #main-navigation .menu-icon::after {
 	background-color: #fff;
 }
 
@@ -758,31 +758,43 @@ body.night-mode #main-navigation .menu-icon::after {
 	transition: border-color 0.5s;
 }
 
-body.night-mode .entry-footer,
-body.night-mode .comment-navigation,
-body.night-mode .posts-navigation,
-body.night-mode .post-navigation,
-body.night-mode .author-info {
+body.dark-mode .entry-footer,
+body.dark-mode .comment-navigation,
+body.dark-mode .posts-navigation,
+body.dark-mode .post-navigation,
+body.dark-mode .author-info {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.9);
 }
 
-body.night-mode a.screen-reader-text:visited,
-body.night-mode a.assistive-text:visited {
+body.dark-mode a.screen-reader-text:visited,
+body.dark-mode a.assistive-text:visited {
 	color: #21759b;
 }
 
-body.night-mode #primary-menu-modal li a,
-body.night-mode #primary-menu-modal li a:visited {
+body.dark-mode #primary-menu-modal li a,
+body.dark-mode #primary-menu-modal li a:visited {
 	color: #0a4b78;
 }
 
-body.night-mode #primary-menu-modal li a:active,
-body.night-mode #primary-menu-modal li a:focus,
-body.night-mode #primary-menu-modal li a:hover {
+body.dark-mode #primary-menu-modal li a:active,
+body.dark-mode #primary-menu-modal li a:focus,
+body.dark-mode #primary-menu-modal li a:hover {
 	color: #fff;
 }
 
+@media (prefers-color-scheme: light) {
+
+	html {
+		content: "light";
+	}
+
+}
+
 @media (prefers-color-scheme: dark) {
+
+	html {
+		content: "dark";
+	}
 
 	body,
 	body.custom-background,

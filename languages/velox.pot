@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-03-28T02:14:10+00:00\n"
+"POT-Creation-Date: 2021-03-30T18:22:28+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0-alpha-3f4c34b\n"
 "X-Domain: velox\n"
@@ -155,7 +155,7 @@ msgid "Skip to content"
 msgstr ""
 
 #: header.php:38
-#: js/velox-scripts.js:23
+#: js/velox-scripts.js:24
 msgid "Dark"
 msgstr ""
 
@@ -180,11 +180,11 @@ msgid "Pairings of fonts for headings and body content."
 msgstr ""
 
 #: inc/customizer.php:173
-msgid "Night Mode"
+msgid "Dark Mode"
 msgstr ""
 
 #: inc/customizer.php:174
-msgid "Allow a night mode setting to be active for visitors to your site to change to a darker page style."
+msgid "Allow a dark mode setting to be active for visitors to your site to change to a darker page style."
 msgstr ""
 
 #: inc/customizer.php:178
@@ -439,6 +439,6 @@ msgstr ""
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr ""
 
-#: js/velox-scripts.js:22
+#: js/velox-scripts.js:23
 msgid "Light"
 msgstr ""

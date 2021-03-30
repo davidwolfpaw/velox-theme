@@ -30,12 +30,12 @@
 		<div class="site-header-wrap">
 			<div class="site-header-content">
 				<?php
-				if ( 'default_light' === get_theme_mod( 'night_mode', 'default_light' ) || 'default_dark' === get_theme_mod( 'night_mode', 'default_light' ) ) :
+				if ( 'default_light' === get_theme_mod( 'dark_mode', 'default_light' ) || 'default_dark' === get_theme_mod( 'dark_mode', 'default_light' ) ) :
 					?>
 					<div class="site-options">
-						<input type="checkbox" id="night-mode-check" name="night-mode-check">
-						<label for="night-mode-check" id="night-mode-track">
-							<?php _e( 'Dark', 'velox' ); ?><span class="night-mode-track-icon" role="presentation">🌖</span>
+						<input type="checkbox" id="dark-mode-check" name="dark-mode-check">
+						<label for="dark-mode-check" id="dark-mode-track">
+							<?php _e( 'Dark', 'velox' ); ?><span class="dark-mode-track-icon" role="presentation">🌖</span>
 						</label>
 					</div><!-- .site-options -->
 					<?php

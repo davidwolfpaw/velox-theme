@@ -155,9 +155,9 @@ function velox_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Setting: Night Mode.
+	// Setting: Dark Mode.
 	$wp_customize->add_setting(
-		'night_mode',
+		'dark_mode',
 		array(
 			'capability'        => 'edit_theme_options',
 			'default'           => 'default_light',
@@ -166,12 +166,12 @@ function velox_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Control: Night Mode.
+	// Control: Dark Mode.
 	$wp_customize->add_control(
-		'night_mode',
+		'dark_mode',
 		array(
-			'label'       => __( 'Night Mode', 'velox' ),
-			'description' => __( 'Allow a night mode setting to be active for visitors to your site to change to a darker page style.', 'velox' ),
+			'label'       => __( 'Dark Mode', 'velox' ),
+			'description' => __( 'Allow a dark mode setting to be active for visitors to your site to change to a darker page style.', 'velox' ),
 			'section'     => 'velox_theme_settings',
 			'type'        => 'select',
 			'choices'     => array(

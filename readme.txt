@@ -28,7 +28,7 @@ I have several features ready to go to make your site unique to you. Just by usi
 * __Link Active/Hover/Focus Color__
 ### Theme Settings
 * __Font Pairing__ - I have seven default font pairings so your content always looks good!
-* __Night Mode__ - Let visitors toggle night mode to make the page darken for low-light reading. You can default to light mode, dark mode, or remove the toggle altogehter.
+* __Night Mode__ - Let visitors toggle dark mode to make the page darken for low-light reading. You can default to light mode, dark mode, or remove the toggle altogehter.
 * __Read Time__ - Display an estimate for how long an article will take to read.
 * __Article Progress Bar__ - Show a progress bar for how far you've scrolled in an article.
 * __Author Info__ - Choose whether to display the author picture, display name, and description at the bottom of articles.

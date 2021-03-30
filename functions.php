@@ -247,7 +247,7 @@ function velox_scripts() {
 
 	// Pass theme mods to Velox scripts.
 	$velox_options = array(
-		'night_mode'         => sanitize_key( get_theme_mod( 'night_mode', 'default_light' ) ),
+		'dark_mode'         => sanitize_key( get_theme_mod( 'dark_mode', 'default_light' ) ),
 		'read_time'          => (bool) get_theme_mod( 'read_time', true ),
 		'progress_bar'       => (bool) get_theme_mod( 'progress_bar', true ),
 		'progress_bar_pride' => (bool) get_theme_mod( 'progress_bar_pride', true ),
