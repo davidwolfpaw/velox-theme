@@ -642,8 +642,7 @@ select {
 .post-navigation,
 .author-info,
 .after-entry-sidebar,
-.comments-area,
-.widget {
+.comments-area {
 	width: calc(100% - 4rem);
 	max-width: 45rem;
 	margin-right: auto;
@@ -1130,11 +1129,7 @@ body.custom-background .site-header-content {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 2em;
-}
-
-.site-header-content .widget {
-	margin-bottom: 0;
+	margin: 0 auto 2em;
 }
 
 .widget select {
@@ -1172,7 +1167,6 @@ body.custom-background .site-header-content {
 
 .footer-sidebar .widget {
 	flex: 1 0 50%;
-	margin: 0 auto;
 	padding: 0 1em;
 	word-break: break-word;
 }
