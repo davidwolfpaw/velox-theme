@@ -1172,7 +1172,7 @@ body.custom-background .site-header-content {
 
 .footer-sidebar .widget {
 	flex: 1 0 50%;
-	margin-bottom: 0;
+	margin: 0 auto;
 	padding: 0 1em;
 	word-break: break-word;
 }
