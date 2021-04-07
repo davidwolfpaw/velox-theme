@@ -1384,6 +1384,11 @@ blockquote.wp-block-quote.is-style-large cite {
 	padding: 1.25em 2.375em;
 }
 
+/* Latest Posts */
+.wp-block-latest-posts.wp-block-latest-posts__list {
+	padding-left: 0;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
