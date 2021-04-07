@@ -345,6 +345,8 @@
 .wp-admin .editor-styles-wrapper .editor-post-title {
 	width: calc(100% - 4rem);
 	max-width: 45rem;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .wp-admin .editor-styles-wrapper [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
