@@ -1,6 +1,6 @@
 // String translation constants.
 const { __, _x, _n, _nx } = wp.i18n;
-const bodyMode = getComputedStyle(document.documentElement).getPropertyValue('content');
+const bodyMode = getComputedStyle(document.documentElement).getPropertyValue('content').replace(/"/g, '');
 
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
@@ -26,10 +26,13 @@ if ("default_light" == velox_options.dark_mode || "default_dark" == velox_option
 	const darkHTML = dark + ' <span class="dark-mode-track-icon" role="presentation">🌖</span>';
 	const darkModeTrack = document.getElementById("dark-mode-track");
 	const darkModeCheck = document.getElementById("dark-mode-check");
+	let preference = window.matchMedia('(prefers-color-scheme: dark)');
 
 	// Store darkmode value in local storage.
-	let localNightMode = localStorage.getItem("darkmode");
-	if ("true" == localNightMode || "default_dark" == velox_options.dark_mode) {
+	let localDarkMode = localStorage.getItem("darkmode");
+
+	// If we've set dark mode, we are default dark mode, or user prefers dark mode and we set dark mode (to avoid changing on reload)
+	if ("true" == localDarkMode || "default_dark" == velox_options.dark_mode || (preference.matches && "true" == localDarkMode)) {
 		document.body.classList.add("dark-mode");
 		darkModeTrack.classList.add("dark-mode");
 		darkModeTrack.classList.remove("light-mode");
