@@ -72,6 +72,7 @@ html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
 	scroll-behavior: smooth;
 }
 
@@ -214,6 +215,7 @@ pre,
 samp {
 	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 	font-size: 1em;
+	-moz-tab-size: 4;
 	tab-size: 4;
 }
 
@@ -808,12 +810,14 @@ body.dark-mode #primary-menu-modal li a:hover {
 
 .site-header-wrap {
 	align-items: center;
+	display: -ms-grid;
 	display: grid;
 	grid-template-columns: auto 30px;
 	grid-template-areas: "site-header-content main-navigation";
 }
 
 .site-header-content {
+	display: -ms-grid;
 	display: grid;
 	position: relative;
 	margin-right: 10px;
@@ -838,6 +842,7 @@ body.custom-background .site-header-content {
 }
 
 .site-branding {
+	display: -ms-grid;
 	display: grid;
 	width: 100%;
 	padding: 0;
@@ -948,7 +953,7 @@ body.custom-background .site-header-content {
 .post-thumbnail,
 .entry-content .wp-audio-shortcode,
 .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),
-*[class*=inner-container] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),
+*[class*="inner-container"] > *:not(.entry-content):not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce),
 .default-max-width {
 	margin-right: auto;
 	margin-left: auto;
@@ -1592,6 +1597,8 @@ blockquote.wp-block-quote.is-style-large cite {
 .entry-title {
 	margin-top: 1em;
 	font-size: 2em;
+	-webkit-hyphens: auto;
+	-ms-hyphens: auto;
 	hyphens: auto;
 }
 
@@ -1624,6 +1631,7 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 .author-info {
+	display: -ms-grid;
 	display: grid;
 	grid-gap: 24px;
 	grid-template-columns: 72px auto;
@@ -2184,6 +2192,7 @@ blockquote.wp-block-quote.is-style-large cite {
     # Header Sidebar
     --------------------------------------------------------------*/
 	.site-wrap {
+		display: -ms-grid;
 		display: grid;
 		grid-template-areas:
 			"head main"
