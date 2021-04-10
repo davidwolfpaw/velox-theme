@@ -2091,7 +2091,7 @@ body.dark-mode #primary-menu-modal li a:hover {
 		left: -48px;
 		width: 2px;
 		height: 100%;
-		border-left: 2px dashed rgba(158, 158, 158, 0.15);
+		border-left: 2px dashed rgba(158, 158, 158, 0.33);
 		content: "";
 	}
 
@@ -2111,7 +2111,7 @@ body.dark-mode #primary-menu-modal li a:hover {
 		left: -114px;
 		width: 48px;
 		height: 2px;
-		border-top: 2px dashed rgba(158, 158, 158, 0.15);
+		border-top: 2px dashed rgba(158, 158, 158, 0.33);
 		content: "";
 	}
 
