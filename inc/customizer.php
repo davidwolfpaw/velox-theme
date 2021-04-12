@@ -152,6 +152,7 @@ function velox_customize_register( $wp_customize ) {
 				'rubik_robotomono'             => 'Rubik / Roboto Mono',
 				'ovo_muli'                     => 'Ovo / Muli',
 				'nixieone_librebaskerville'    => 'Nixie One / Libre Baskerville',
+				'worksans'                     => 'Work Sans',
 			),
 		)
 	);
@@ -479,6 +480,13 @@ function velox_font_families() {
 		$heading_weight = '400';
 		$body_font      = 'Libre Baskerville';
 		$body_slug      = 'libre-baskerville-v6-latin-regular';
+		$body_weight    = '400';
+	} elseif ( 'worksans' === $font_selection ) {
+		$heading_font   = 'Work Sans';
+		$heading_slug   = 'WorkSans-Bold';
+		$heading_weight = '700';
+		$body_font      = 'Work Sans';
+		$body_slug      = 'WorkSans-Regular';
 		$body_weight    = '400';
 	} else {
 		$heading_font   = 'Libre Franklin Bold';
