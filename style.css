@@ -55,13 +55,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Misc Elements
 # Dark Mode
 # Media Queries
+	@media prefers-color-scheme: light
+	@media prefers-color-scheme: dark
+	@media print
     @media screen and (max-width: 600px)
     @media screen and (min-width: 600px)
+    @media screen and (max-width: 767px)
     @media screen and (min-width: 768px)
-    # Header Sidebar
-    @media screen and (min-width: 768px) and (min-height: 600px)
-    @media screen and (min-width: 783px)
-    @media screen and (min-width: 960px)
+    @media screen and (min-width: 1024px)
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -2070,6 +2071,10 @@ body.dark-mode #primary-menu-modal li a:hover {
 	color: #fff;
 }
 
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
 @media (prefers-color-scheme: light) {
 	html {
 		content: "light";
@@ -2082,9 +2087,44 @@ body.dark-mode #primary-menu-modal li a:hover {
 	}
 }
 
-/*--------------------------------------------------------------
-# Media Queries
---------------------------------------------------------------*/
+@media print {
+	.site-options,
+	#main-navigation,
+	.widget_calendar,
+	.widget_search,
+	.navigation,
+	#comments,
+	.site-footer,
+	.progress-bar {
+		display: none;
+	}
+	
+	.site-header {
+		box-shadow: none;
+	}
+
+	.site-header-content,
+	.site-branding {
+		display: block;
+	}
+
+	.site-header-wrap {
+		display: contents;
+	}
+
+	.site-header-content {
+		width: calc(100% - 4rem);
+    	max-width: 45rem;
+		margin: 0 auto;
+	}
+
+	.site-title,
+	.site-description {
+		text-align: center;
+		margin: 1rem auto;
+	}
+}
+
 @media screen and (max-width: 600px) {
 	.wp-block-image .alignleft,
 	.wp-block-image .alignright,
