@@ -147,6 +147,7 @@ function velox_customize_register( $wp_customize ) {
 			'section'     => 'velox_theme_settings',
 			'type'        => 'select',
 			'choices'     => array(
+				'systemfontstack'              => 'System Font Stack (faster site load)',
 				'librefranklin_sourceserifpro' => 'Libre Franklin / Source Serif Pro',
 				'rubik_robotomono'             => 'Rubik / Roboto Mono',
 				'ovo_muli'                     => 'Ovo / Muli',
@@ -449,7 +450,9 @@ function velox_font_families() {
 	// Get the fonts that the site uses from theme settings.
 	$font_selection = get_theme_mod( 'font_pairing', 'librefranklin_sourceserifpro' );
 
-	if ( 'librefranklin_sourceserifpro' === $font_selection ) {
+	if ( 'systemfontstack' === $font_selection ) {
+		return;
+	} elseif ( 'librefranklin_sourceserifpro' === $font_selection ) {
 		$heading_font   = 'Libre Franklin Bold';
 		$heading_slug   = 'libre-franklin-v3-latin-700';
 		$heading_weight = '700';
@@ -508,7 +511,7 @@ function velox_font_families() {
 function velox_frontend_fonts() {
 	$font_styles = velox_font_families();
 
-	if ( ! empty( $font_styles ) ) {
+	if ( ! empty( $font_styles ) && ( null !== $font_styles ) ) {
 		$font_css = "
 		@font-face {
 			font-family: {$font_styles['heading_font']};
@@ -545,7 +548,7 @@ add_action( 'wp_enqueue_scripts', 'velox_frontend_fonts' );
 function velox_block_editor_fonts() {
 	$font_styles = velox_font_families();
 
-	if ( ! empty( $font_styles ) ) {
+	if ( ! empty( $font_styles ) && ( null !== $font_styles ) ) {
 		$font_css = "<style>
 		@font-face {
 			font-family: {$font_styles['heading_font']};
