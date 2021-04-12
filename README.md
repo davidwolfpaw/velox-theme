@@ -50,14 +50,15 @@ Velox bundles the following third-party resources:
 * PrognRoll © 2016 Mehmet Burak Erman, MIT, https://mburakerman.com/prognroll/
 * MicroModal © 2020 Indrashish Ghosh, MIT, https://micromodal.now.sh/
 * Sticky-kit © 2015 Leaf Corcoran, MIT, https://leafo.net/sticky-kit/
-* LibreFranklin-Bold.ttf: © 2015, Impallari Type, SIL Open Font License, 1.1
-* SourceSerifPro-Regular.ttf: © 2014 Adobe Systems Incorporated, SIL Open Font License, 1.1
-* Rubik-Bold.ttf: © 2015 The Rubik Project Authors, SIL Open Font License, 1.1
-* RobotoMono-Regular.ttf: © 2015 Google Inc., Apache License, version 2.0
-* Ovo-Regular.ttf: © 2011, Sorkin Type Co with Reserved Font Name "Ovo", SIL Open Font License, 1.1
-* Muli-Regular.ttf: © 2016 The Muli Project Authors, SIL Open Font License, 1.1
-* NixieOne-Regular.ttf: © 2011, Jovanny Lemonad with Reserved Font Name "Nixie", SIL Open Font License, 1.1
-* LibreBaskerville-Regular.ttf: © 2012, Pablo Impallari, © 2012, Rodrigo Fuenzalida with Reserved Font Name Libre Baskerville, SIL Open Font License, 1.1
+* LibreFranklin-Bold: © 2015, Impallari Type, SIL Open Font License, 1.1
+* SourceSerifPro-Regular: © 2014 Adobe Systems Incorporated, SIL Open Font License, 1.1
+* Rubik-Bold: © 2015 The Rubik Project Authors, SIL Open Font License, 1.1
+* RobotoMono-Regular: © 2015 Google Inc., Apache License, version 2.0
+* Ovo-Regular: © 2011, Sorkin Type Co with Reserved Font Name "Ovo", SIL Open Font License, 1.1
+* Muli-Regular: © 2016 The Muli Project Authors, SIL Open Font License, 1.1
+* NixieOne-Regular: © 2011, Jovanny Lemonad with Reserved Font Name "Nixie", SIL Open Font License, 1.1
+* LibreBaskerville-Regular: © 2012, Pablo Impallari, © 2012, Rodrigo Fuenzalida with Reserved Font Name Libre Baskerville, SIL Open Font License, 1.1
+* Work-Sans: © 2015 Wei Huang, SIL Open Font License, 1.1
 
 Bundled header image, Copyright David Wolfpaw
 License: CC0 1.0 Universal (CC0 1.0)
