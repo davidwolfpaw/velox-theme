@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v3 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Velox 1.0.7\n"
+"Project-Id-Version: Velox 1.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/velox\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-03-30T18:22:28+00:00\n"
+"POT-Creation-Date: 2021-04-13T00:04:13+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0-alpha-3f4c34b\n"
 "X-Domain: velox\n"
@@ -179,55 +179,55 @@ msgstr ""
 msgid "Pairings of fonts for headings and body content."
 msgstr ""
 
-#: inc/customizer.php:173
+#: inc/customizer.php:175
 msgid "Dark Mode"
 msgstr ""
 
-#: inc/customizer.php:174
+#: inc/customizer.php:176
 msgid "Allow a dark mode setting to be active for visitors to your site to change to a darker page style."
 msgstr ""
 
-#: inc/customizer.php:178
+#: inc/customizer.php:180
 msgid "Default Light Mode"
 msgstr ""
 
-#: inc/customizer.php:179
+#: inc/customizer.php:181
 msgid "Default Dark Mode"
 msgstr ""
 
-#: inc/customizer.php:180
+#: inc/customizer.php:182
 msgid "No Dark Mode Toggle"
 msgstr ""
 
-#: inc/customizer.php:200
+#: inc/customizer.php:202
 msgid "Read Time"
 msgstr ""
 
-#: inc/customizer.php:201
+#: inc/customizer.php:203
 msgid "Display an estimate of time to read posts."
 msgstr ""
 
-#: inc/customizer.php:222
+#: inc/customizer.php:224
 msgid "Article Progress Bar"
 msgstr ""
 
-#: inc/customizer.php:223
+#: inc/customizer.php:225
 msgid "Display a progress bar for post length."
 msgstr ""
 
-#: inc/customizer.php:244
+#: inc/customizer.php:246
 msgid "Pride Article Progress Bar"
 msgstr ""
 
-#: inc/customizer.php:245
+#: inc/customizer.php:247
 msgid "Display LGBTQIA+ pride flag as progress bar."
 msgstr ""
 
-#: inc/customizer.php:266
+#: inc/customizer.php:268
 msgid "Author Info"
 msgstr ""
 
-#: inc/customizer.php:267
+#: inc/customizer.php:269
 msgid "Display author information on posts."
 msgstr ""
 
