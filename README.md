@@ -30,7 +30,7 @@ I have several features ready to go to make your site unique to you. Just by usi
 ### Dark Mode
 ![Dark Mode Animation](screenshots/dark-mode.gif)
 
-== Copyright ==
+## Copyright
 
 Velox Theme, Copyright 2021 DavidWolfpaw.com
 Velox is distributed under the terms of the GNU GPL.
