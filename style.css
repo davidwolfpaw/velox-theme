@@ -1265,6 +1265,11 @@ blockquote.wp-block-quote.is-style-large cite {
 	padding-left: 0;
 }
 
+/* Gallery */
+.wp-block-gallery.is-cropped .blocks-gallery-item picture {
+	height: 100%;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
