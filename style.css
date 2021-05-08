@@ -1087,10 +1087,10 @@ object {
 .mejs-controls a.mejs-horizontal-volume-slider:active,
 .mejs-controls a.mejs-horizontal-volume-slider:focus,
 .mejs-controls a.mejs-horizontal-volume-slider:hover,
-.hentry .mejs-controls a.mejs-horizontal-volume-slider,
-.hentry .mejs-controls a.mejs-horizontal-volume-slider:active,
-.hentry .mejs-controls a.mejs-horizontal-volume-slider:focus,
-.hentry .mejs-controls a.mejs-horizontal-volume-slider:hover {
+.h-entry .mejs-controls a.mejs-horizontal-volume-slider,
+.h-entry .mejs-controls a.mejs-horizontal-volume-slider:active,
+.h-entry .mejs-controls a.mejs-horizontal-volume-slider:focus,
+.h-entry .mejs-controls a.mejs-horizontal-volume-slider:hover {
 	border-bottom: none;
 	background-color: transparent;
 	-webkit-box-shadow: none;
@@ -1384,15 +1384,15 @@ blockquote.wp-block-quote.is-style-large cite {
 	display: block;
 }
 
-.hentry {
+.h-entry {
 	margin: 0 auto;
 }
 
-.archive .hentry {
-	margin: 0 auto 120px;
+.hfeed .h-entry {
+	padding: 0 0 4em;
 }
 
-.hentry .entry-content a:not(.wp-block-button__link) {
+.h-entry .entry-content a:not(.wp-block-button__link) {
 	border-bottom: 1px solid #0a4b78;
 	-webkit-box-shadow: inset 0 -2px 0 #0a4b78;
 	box-shadow: inset 0 -2px 0 #0a4b78;
@@ -1402,43 +1402,43 @@ blockquote.wp-block-quote.is-style-large cite {
 	overflow-wrap: break-word;
 }
 
-.hentry .wp-block-image a,
-.hentry .wp-block-gallery a,
-.hentry .wp-block-image a:active,
-.hentry .wp-block-image a:focus,
-.hentry .wp-block-image a:hover,
-.hentry .wp-block-gallery a:active,
-.hentry .wp-block-gallery a:focus,
-.hentry .wp-block-gallery a:hover {
+.h-entry .wp-block-image a,
+.h-entry .wp-block-gallery a,
+.h-entry .wp-block-image a:active,
+.h-entry .wp-block-image a:focus,
+.h-entry .wp-block-image a:hover,
+.h-entry .wp-block-gallery a:active,
+.h-entry .wp-block-gallery a:focus,
+.h-entry .wp-block-gallery a:hover {
 	border-bottom: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
-.hentry .entry-content a:hover,
-.hentry .entry-content a:focus,
-.hentry .entry-content a:active,
-.hentry .wp-block-image a:active,
-.hentry .wp-block-image a:focus,
-.hentry .wp-block-image a:hover,
-.hentry .wp-block-gallery a:active,
-.hentry .wp-block-gallery a:focus,
-.hentry .wp-block-gallery a:hover {
+.h-entry .entry-content a:hover,
+.h-entry .entry-content a:focus,
+.h-entry .entry-content a:active,
+.h-entry .wp-block-image a:active,
+.h-entry .wp-block-image a:focus,
+.h-entry .wp-block-image a:hover,
+.h-entry .wp-block-gallery a:active,
+.h-entry .wp-block-gallery a:focus,
+.h-entry .wp-block-gallery a:hover {
 	color: #fff;
 	background-color: #0a4b78;
 	text-decoration: none;
 }
 
-.hentry .entry-content a.button,
-.hentry .entry-content a.button:active,
-.hentry .entry-content a.button:focus,
-.hentry .entry-content a.button:hover,
-.hentry .entry-content a.button:visited,
-.hentry .entry-content a.wp-block-button__link,
-.hentry .entry-content a.wp-block-button__link:active,
-.hentry .entry-content a.wp-block-button__link:focus,
-.hentry .entry-content a.wp-block-button__link:hover,
-.hentry .entry-content a.wp-block-button__link:visited {
+.h-entry .entry-content a.button,
+.h-entry .entry-content a.button:active,
+.h-entry .entry-content a.button:focus,
+.h-entry .entry-content a.button:hover,
+.h-entry .entry-content a.button:visited,
+.h-entry .entry-content a.wp-block-button__link,
+.h-entry .entry-content a.wp-block-button__link:active,
+.h-entry .entry-content a.wp-block-button__link:focus,
+.h-entry .entry-content a.wp-block-button__link:hover,
+.h-entry .entry-content a.wp-block-button__link:visited {
 	text-decoration: none;
 	word-wrap: break-word;
 	word-break: break-word;
@@ -2023,8 +2023,8 @@ body.dark-mode h5,
 body.dark-mode h6,
 body.dark-mode a,
 body.dark-mode a:visited,
-body.dark-mode.hentry .entry-content a,
-body.dark-mode.hentry .entry-content a:visited,
+body.dark-mode.h-entry .entry-content a,
+body.dark-mode.h-entry .entry-content a:visited,
 body.dark-mode .site-description,
 body.dark-mode .entry-footer,
 body.dark-mode .entry-meta,
