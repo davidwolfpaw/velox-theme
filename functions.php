@@ -226,7 +226,7 @@ add_action( 'widgets_init', 'velox_widgets_init' );
  */
 function velox_editor_styles() {
 	// Editor styles.
-	wp_enqueue_style( 'velox-editor-style', get_template_directory_uri() . '/css/editor-style.css', '1.0.0', 'all' );
+	wp_enqueue_style( 'velox-editor-style', get_template_directory_uri() . '/css/editor-style.css', '1.2.0', 'all' );
 }
 add_action( 'enqueue_block_editor_assets', 'velox_editor_styles' );
 
@@ -235,7 +235,7 @@ add_action( 'enqueue_block_editor_assets', 'velox_editor_styles' );
  */
 function velox_scripts() {
 	// Primary Styles.
-	wp_enqueue_style( 'velox-style', get_stylesheet_uri(), array(), '1.0.0', 'all' );
+	wp_enqueue_style( 'velox-style', get_stylesheet_uri(), array(), '1.2.0', 'all' );
 
 	// Thread comments.
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -243,7 +243,7 @@ function velox_scripts() {
 	}
 
 	// Scripts for the Velox theme.
-	wp_enqueue_script( 'velox-scripts', get_template_directory_uri() . '/js/velox-scripts.js', array( 'wp-i18n', 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'velox-scripts', get_template_directory_uri() . '/js/velox-scripts.js', array( 'wp-i18n', 'jquery' ), '1.2.0', true );
 
 	// Pass theme mods to Velox scripts.
 	$velox_options = array(
