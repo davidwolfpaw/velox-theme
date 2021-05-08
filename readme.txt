@@ -41,7 +41,7 @@ All of the theme settings are managed via the WordPress Customizer in the Velox 
 
 == Changelog ==
 
-= 1.2.0 =
+= 1.2.1 =
 * Removes Sticky Kit
 * Adds Simple Sticky Sidebar (removes jQuery dependency)
 * Fixes layout of content on archive, search, and WooCommerce pages
