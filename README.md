@@ -32,7 +32,7 @@ I have several features ready to go to make your site unique to you. Just by usi
 
 == Copyright ==
 
-Velox Theme, Copyright 2020 DavidWolfpaw.com
+Velox Theme, Copyright 2021 DavidWolfpaw.com
 Velox is distributed under the terms of the GNU GPL.
 
 This program is free software: you can redistribute it and/or modify
@@ -49,7 +49,7 @@ Velox bundles the following third-party resources:
 
 * PrognRoll © 2016 Mehmet Burak Erman, MIT, https://mburakerman.com/prognroll/
 * MicroModal © 2020 Indrashish Ghosh, MIT, https://micromodal.now.sh/
-* Sticky-kit © 2015 Leaf Corcoran, MIT, https://leafo.net/sticky-kit/
+* Simple Sticky Sidebar © 2018 Ismail Farooq, MIT, https://github.com/ismailfarooq/simple-sticky-sidebar
 * LibreFranklin-Bold: © 2015, Impallari Type, SIL Open Font License, 1.1
 * SourceSerifPro-Regular: © 2014 Adobe Systems Incorporated, SIL Open Font License, 1.1
 * Rubik-Bold: © 2015 The Rubik Project Authors, SIL Open Font License, 1.1
