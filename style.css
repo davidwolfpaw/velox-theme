@@ -871,6 +871,10 @@ body.custom-background .site-header-content {
 	max-width: 100%;
 }
 
+.alignfull:first-child {
+	margin-top: 0;
+}
+
 /* Wide */
 
 .alignwide {
