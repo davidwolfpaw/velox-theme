@@ -1497,6 +1497,7 @@ blockquote.wp-block-quote.is-style-large cite {
 .entry-meta {
 	color: #aaa;
 	font-size: 0.75em;
+	margin-bottom: 0.75em;
 }
 
 .entry-footer {
