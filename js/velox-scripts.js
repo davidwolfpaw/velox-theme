@@ -157,7 +157,7 @@ MicroModal.init({
 
 
 /*
- * Two-direction-Sticky-Sidebar | MIT | https://github.com/Antosik-dev/Two-direction-Sticky-Sidebar
+ * Two direction Sticky Sidebar | MIT | https://github.com/Antosik-dev/Two-direction-Sticky-Sidebar
  */
 const aside = document.querySelector('[data-sticky="true"]'), 
 //varibles
