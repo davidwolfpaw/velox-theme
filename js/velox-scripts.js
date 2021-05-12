@@ -13,6 +13,15 @@ function getWidth() {
 	);
 }
 
+// Confirm if admin bar is visible or not
+function isAdminBar() {
+	if (document.body.classList.contains("admin-bar")) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 // Allow darkmode if activated.
 if ("default_light" == velox_options.dark_mode || "default_dark" == velox_options.dark_mode) {
 	const light = __("Light", "velox");
@@ -146,25 +155,61 @@ MicroModal.init({
   disableScroll: true,
 });
 
-/* ========================================================================
- * Simple Sticky Sidebar
- * @version 0.1
- * @author Ismail Farooq <ismail_farooq@yahoo.com>
- * @license The MIT License (MIT) (https://github.com/ismailfarooq/simple-sticky-sidebar/blob/master/LICENSE)
- * ======================================================================== */
-function setStyle(element,cssProperty){for(var property in cssProperty){element.style[property]=cssProperty[property]}}function destroySticky(element){setStyle(element,{top:'',left:'',bottom:'',width:'',position:''})}function getOffset(el){el=el.getBoundingClientRect();return{left:el.left+window.scrollX,top:el.top+window.scrollY}}function simpleStickySidebar(element,options){var sticky=document.querySelector(element);var container=document.querySelector(options.container);var topSpace=options.topSpace?options.topSpace:0;var bottomSpace=options.bottomSpace?options.bottomSpace:0;var $window=window;var stickyHeight=sticky.getBoundingClientRect().height;var stickyOffsetTop=getOffset(sticky).top;var stickyOffsetBottom=getOffset(sticky).top+sticky.getBoundingClientRect().height;var stickyOffsetLeft=getOffset(sticky).left;var topFixed=false;var bottomFixed=false;var lastScrollVal=0;var getStickyHeight=function(){return document.querySelector(element).getBoundingClientRect().height};window.addEventListener('scroll',function(event){var scrollTop=window.scrollY;if(scrollTop>stickyOffsetTop-topSpace){if(getStickyHeight()<=$window.innerHeight-topSpace){setStyle(sticky,{top:topSpace+"px",left:stickyOffsetLeft+"px",bottom:'',width:sticky.getBoundingClientRect().width+"px",position:'fixed'})}else{if(scrollTop>lastScrollVal){if(topFixed){var absoluteStickyOffsetTop=getOffset(sticky).top;setStyle(sticky,{top:absoluteStickyOffsetTop-getOffset(container).top+"px",left:'',bottom:'',width:'',position:'absolute'});topFixed=false}if(scrollTop>stickyOffsetBottom-$window.innerHeight){setStyle(sticky,{top:'',left:stickyOffsetLeft+"px",bottom:bottomSpace+"px",width:sticky.getBoundingClientRect().width+"px",position:'fixed'});bottomFixed=true}}else{var absoluteStickyOffsetTop=getOffset(sticky).top;if(bottomFixed){setStyle(sticky,{top:absoluteStickyOffsetTop-getOffset(container).top+"px",left:'',bottom:'',width:'',position:'absolute'});bottomFixed=false}if(scrollTop<absoluteStickyOffsetTop-topSpace){setStyle(sticky,{top:topSpace+"px",left:stickyOffsetLeft+"px",bottom:'',width:sticky.getBoundingClientRect().width+"px",position:'fixed'});topFixed=true}}lastScrollVal=scrollTop}}else{destroySticky(sticky)}})}
 
-// Put an offset on top if admin bar is visible
-if ( document.body.classList.contains( 'admin-bar' ) && 768 < getWidth() ) {
-	var topMargin = 32;
-} else if ( document.body.classList.contains( 'admin-bar' ) ) {
-	var topMargin = 46;
-} else {
-	var topMargin = 0;
-}
-
-simpleStickySidebar( '.site-header-wrap', {
-	container: '.site-wrap',
-	topSpace: topMargin,
-	bottomSpace: 0
-} );
+/*
+ * Two-direction-Sticky-Sidebar | MIT | https://github.com/Antosik-dev/Two-direction-Sticky-Sidebar
+ */
+const aside = document.querySelector('[data-sticky="true"]'), 
+//varibles
+startScroll = 0;
+var endScroll = window.innerHeight - aside.offsetHeight - 500,
+currPos = window.scrollY,
+screenHeight = window.innerHeight,
+asideHeight = aside.offsetHeight;
+aside.style.top = startScroll + 'px';
+//check height screen and aside on resize
+window.addEventListener('resize', ()=>{
+    screenHeight = window.innerHeight;
+    asideHeight = aside.offsetHeight;
+});
+//main function
+document.addEventListener('scroll', () => {
+	// If site is displaying header on side (over 768px)
+	if (768 <= getWidth() ) {
+		endScroll = window.innerHeight - aside.offsetHeight;
+		let asideTop = parseInt(aside.style.top.replace('px;', ''));
+		if(asideHeight>screenHeight){
+			if (window.scrollY < currPos) {
+				// Scroll up
+				if (asideTop < startScroll) {
+					aside.style.top = (asideTop + currPos - window.scrollY) + 'px';
+				} else if (asideTop >= startScroll && asideTop != startScroll) {
+					// If adminbar is active, add 32px for top
+					if (isAdminBar()) {
+						aside.style.top = (startScroll + 32) + 'px';
+					} else {
+						aside.style.top = startScroll + 'px';
+					}
+				}
+			} else {
+				// Scroll down
+				if (asideTop > endScroll) {
+					aside.style.top = (asideTop + currPos - window.scrollY) + 'px';
+				} else if (asideTop < (endScroll) && asideTop != endScroll) {
+					aside.style.top = endScroll + 'px';
+				}
+			}
+		} else {
+			// If adminbar is active, add 32px for top
+			if (isAdminBar()) {
+				aside.style.top = (startScroll + 32) + 'px';
+			} else {
+				aside.style.top = startScroll + 'px';
+			}
+		}
+	}
+    currPos = window.scrollY;
+}, {
+    capture: true,
+    passive: true
+});

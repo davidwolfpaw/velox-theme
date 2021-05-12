@@ -332,11 +332,10 @@ a:visited,
 .wp-block-pullquote cite,
 .wp-block-latest-posts__post-date,
 .wp-caption-text,
-.site-header-wrap,
-.site-header-content {
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	transition: all 0.5s;
+.site-header {
+	-webkit-transition: background-color 0.5s, color 0.5s;
+	-moz-transition: background-color 0.5s, color 0.5s;
+	transition: background-color 0.5s, color 0.5s;
 }
 
 /*--------------------------------------------------------------
@@ -666,7 +665,16 @@ select {
 # Site Header
 --------------------------------------------------------------*/
 .site-header {
+	position: -webkit-sticky;
+	position: sticky;
+	z-index: 1;
+	top: 0;
 	min-height: 60px;
+	background-color: #fff;
+}
+
+.admin-bar .site-header {
+	top: 46px;
 }
 
 .site-header-wrap {
@@ -676,7 +684,6 @@ select {
 	z-index: 2;
 	padding: 0 1rem;
 	border-bottom: 1px solid rgba(29, 35, 39, 0.5);
-	background-color: #fff;
 	align-items: center;
 	grid-template-columns: auto 30px;
 	grid-template-areas: "site-header-content main-navigation";
@@ -697,7 +704,7 @@ select {
 	grid-area: site-header-content;
 	grid-gap: 0 0.5em;
 	grid-template-areas: "site-options site-branding";
-	justify-content: flex-start;
+	justify-content: start;
 }
 
 body.custom-background .site-header-content {
@@ -1959,7 +1966,9 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 #dark-mode-track {
-	width: 78px;
+	display: block;
+	width: 4rem;
+	margin: 0 auto;
 	padding: 3px 6px;
 	border: 2px solid #1d2327;
 	border-radius: 16px;
@@ -1990,7 +1999,7 @@ body.dark-mode,
 body.custom-background.dark-mode,
 body.dark-mode #main-navigation.toggled #primary-menu,
 body.dark-mode .site-footer,
-body.dark-mode .site-header-wrap {
+body.dark-mode .site-header {
 	color: rgba(255, 255, 255, 0.9);
 	background-color: #1d2327;
 }
@@ -2294,6 +2303,10 @@ for people that prefer not to see them */
 		display: block;
 	}
 
+	#dark-mode-track {
+		margin: 1rem auto 0;
+	}
+
 	.site-header-content {
 		grid-template-columns: none;
 		grid-template-areas:
@@ -2345,18 +2358,22 @@ for people that prefer not to see them */
 		z-index: 1;
 		top: 0;
 		width: 240px;
+		height: 100%;
 		margin-bottom: 0;
 		padding: 0;
+		border-right: 1px solid rgba(29, 35, 39, 0.5);
 		grid-area: head;
 	}
 
 	.site-header-wrap {
-		position: relative;
+		position:-webkit-sticky;
+		position: sticky;
 		z-index: 1;
+		top: 0;
 		width: inherit;
 		padding-bottom: 24px;
-		border-right: 1px solid rgba(29, 35, 39, 0.5);
 		border-bottom: none;
+		background-color: transparent;
 		grid-template-columns: auto;
 		grid-template-areas:
 			"site-header-content"

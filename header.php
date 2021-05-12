@@ -27,7 +27,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'velox' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-header-wrap">
+		<div class="site-header-wrap" data-sticky="true">
 			<div class="site-header-content">
 				<?php
 				if ( 'default_light' === get_theme_mod( 'dark_mode', 'default_light' ) || 'default_dark' === get_theme_mod( 'dark_mode', 'default_light' ) ) :
