@@ -41,7 +41,7 @@ All of the theme settings are managed via the WordPress Customizer in the Velox 
 
 == Changelog ==
 
-= 1.3.0 =
+= 1.3.1 =
 * Removes Simple Sticky Sidebar
 * Adds Two-direction-Sticky-Sidebar
 * Various style updates
