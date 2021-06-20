@@ -116,7 +116,7 @@ if ( ! function_exists( 'velox_setup' ) ) :
 
 					'name'  => __( 'Accent Text Color', 'velox' ),
 					'slug'  => 'accent-text',
-					'color' => get_theme_mod( 'accent_text_color', '#50575e' ),
+					'color' => get_theme_mod( 'accent_text_color', '#515962' ),
 				),
 				array(
 

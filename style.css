@@ -23,6 +23,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
+# Variables
 # Normalize
 # Typography
 # Elements
@@ -65,6 +66,17 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     @media screen and (min-width: 1024px)
 --------------------------------------------------------------*/
 
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+	--background: #fff;
+	--text: #1d2327;
+	--accent-text: #515962;
+	--accent: #d63638;
+	--link: #0a4b78;
+	--link-active: #d63638;
+}
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -81,7 +93,7 @@ body {
 	margin: 0;
 
 	/* Fallback for when there is no custom background color defined. */
-	background: #fff;
+	background: var(--background);
 	-webkit-transition: background-color 0.5s, color 0.5s;
 	-moz-transition: background-color 0.5s, color 0.5s;
 	transition: background-color 0.5s, color 0.5s;
@@ -121,7 +133,7 @@ template {
 }
 
 a {
-	color: #0a4b78;
+	color: var(--link);
 	background-color: transparent;
 	text-decoration: underline;
 	word-break: break-word;
@@ -133,13 +145,13 @@ a:hover {
 }
 
 a:visited {
-	color: #0a4b78;
+	color: var(--link);
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: #d63638;
+	color: var(--link-active);
 	text-decoration: underline;
 }
 
@@ -347,7 +359,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #1d2327;
+	color: var(--text);
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 		Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 22px;
@@ -371,7 +383,7 @@ h5,
 h6 {
 	clear: both;
 	margin: 2em 0 0.5em 0;
-	color: #1d2327;
+	color: var(--text);
 	font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif",
 		"Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
 	line-height: 1.25;
@@ -416,7 +428,7 @@ tt,
 var {
 	padding: 3px;
 	border: 1px solid rgba(20, 21, 22, 0.3);
-	color: #d63638;
+	color: var(--accent);
 	background: #f7f8f9;
 	font-size: 16px;
 	font-size: 1rem;
@@ -429,7 +441,7 @@ pre code {
 
 abbr,
 acronym {
-	border-bottom: 1px dotted #666;
+	border-bottom: 1px dotted var(--accent);
 	text-decoration: none;
 	cursor: help;
 }
@@ -533,7 +545,7 @@ input[type="submit"],
 	padding: 0.5em 1em;
 	border-radius: 4px;
 	color: #fff;
-	background-color: #d63638;
+	background-color: var(--accent);
 	font-size: 1rem;
 	font-weight: 700;
 	letter-spacing: 1px;
@@ -545,7 +557,7 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 .wp-block-button .wp-block-button__link:hover {
-	background: #0a4b78;
+	background: var(--link);
 }
 
 button:active,
@@ -558,7 +570,7 @@ input[type="submit"]:active,
 input[type="submit"]:focus,
 .wp-block-button .wp-block-button__link:active,
 .wp-block-button .wp-block-button__link:focus {
-	background: #0a4b78;
+	background: var(--link);
 }
 
 input[type="text"],
@@ -581,7 +593,7 @@ textarea {
 	padding: 4px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
-	color: #1d2327;
+	color: var(--text);
 }
 
 input[type="text"]:focus,
@@ -600,8 +612,8 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	border: 1px solid #111;
-	color: #111;
+	border: 1px solid var(--text);
+	color: var(--text);
 }
 
 select {
@@ -670,7 +682,7 @@ select {
 	z-index: 1;
 	top: 0;
 	min-height: 60px;
-	background-color: #fff;
+	background-color: var(--body);
 }
 
 .admin-bar .site-header {
@@ -747,7 +759,7 @@ body.custom-background .site-header-content {
 
 .site-description {
 	margin: 0.375em 0 0;
-	color: #1d2327;
+	color: var(--text);
 	font-size: 1.2rem;
 	font-weight: 700;
 	line-height: 1;
@@ -769,7 +781,7 @@ body.custom-background .site-header-content {
 }
 
 .site-title a {
-	color: #1d2327;
+	color: var(--text);
 	text-decoration: none;
 }
 
@@ -1062,7 +1074,7 @@ body.custom-background .site-header-content {
 
 .after-entry-sidebar {
 	margin: 0 auto 1rem;
-	border-bottom: 1px solid #1d2327;
+	border-bottom: 1px solid var(--text);
 }
 
 #wp-calendar th,
@@ -1120,6 +1132,7 @@ object {
 
 .wp-caption .wp-caption-text {
 	margin: 0.8075em 0;
+	color: var(--accent);
 }
 
 .wp-caption-text,
@@ -1170,6 +1183,7 @@ object {
 
 /* Images */
 .wp-block-image figcaption {
+	color: var(--accent);
 	font-size: 16px;
 	font-size: 1rem;
 	font-style: italic;
@@ -1182,7 +1196,7 @@ blockquote,
 .wp-block-quote {
 	margin: 1em 0.5em 2em 0.5em;
 	padding-left: 1em;
-	border-left: 2px solid #d63638;
+	border-left: 2px solid var(--accent);
 	font-size: 1.125em;
 	font-style: italic;
 }
@@ -1207,8 +1221,8 @@ blockquote.wp-block-quote.is-style-large cite {
 
 /* Pullquotes */
 .wp-block-pullquote {
-	border-top: 2px solid #d63638;
-	border-bottom: 2px solid #d63638;
+	border-top: 2px solid var(--accent);
+	border-bottom: 2px solid var(--accent);
 }
 
 .wp-block-pullquote blockquote {
@@ -1259,7 +1273,7 @@ blockquote.wp-block-quote.is-style-large cite {
 .is-style-outline > .wp-block-button__link,
 .wp-block-button__link.is-style-outline {
 	border: 2px solid;
-	color: #d63638;
+	color: var(--link-accent);
 }
 
 /* Group */
@@ -1404,9 +1418,9 @@ blockquote.wp-block-quote.is-style-large cite {
 }
 
 .h-entry .entry-content a:not(.wp-block-button__link) {
-	border-bottom: 1px solid #0a4b78;
-	-webkit-box-shadow: inset 0 -2px 0 #0a4b78;
-	box-shadow: inset 0 -2px 0 #0a4b78;
+	border-bottom: 1px solid var(--link);
+	-webkit-box-shadow: inset 0 -2px 0 var(--link);
+	box-shadow: inset 0 -2px 0 var(--link);
 	text-decoration: none;
 	word-wrap: break-word;
 	word-break: break-word;
@@ -1436,7 +1450,7 @@ blockquote.wp-block-quote.is-style-large cite {
 .h-entry .wp-block-gallery a:focus,
 .h-entry .wp-block-gallery a:hover {
 	color: #fff;
-	background-color: #0a4b78;
+	background-color: var(--link);
 	text-decoration: none;
 }
 
@@ -1496,13 +1510,13 @@ blockquote.wp-block-quote.is-style-large cite {
 .entry-footer,
 .entry-meta {
 	margin-bottom: 0.75em;
-	color: #aaa;
+	color: var(--accent-text);
 	font-size: 0.75em;
 }
 
 .entry-footer {
 	padding-bottom: 1rem;
-	border-bottom: 1px solid #1d2327;
+	border-bottom: 1px solid var(--accent);
 }
 
 .entry-footer span {
@@ -1610,7 +1624,7 @@ blockquote.wp-block-quote.is-style-large cite {
 #main-navigation a:hover,
 #main-navigation a:focus {
 	color: #fff;
-	background-color: #0a4b78;
+	background-color: var(--link);
 	text-decoration: none;
 }
 
@@ -1631,7 +1645,7 @@ blockquote.wp-block-quote.is-style-large cite {
 	margin: 15px 0;
 	padding: 0;
 	border: none;
-	color: #1d2327;
+	color: var(--text);
 	background: transparent;
 }
 
@@ -1647,7 +1661,7 @@ blockquote.wp-block-quote.is-style-large cite {
 	width: 30px;
 	height: 2px;
 	border-radius: 4px;
-	background-color: #1d2327;
+	background-color: var(--text);
 	content: "";
 	transition-timing-function: ease;
 	transition-duration: 0.15s;
@@ -1755,7 +1769,7 @@ blockquote.wp-block-quote.is-style-large cite {
 	max-height: 70vh;
 	margin-top: 2em;
 	border-radius: 0.25em;
-	background-color: #fff;
+	background-color: var(--body);
 }
 
 .modal-title {
@@ -1811,7 +1825,7 @@ blockquote.wp-block-quote.is-style-large cite {
 #primary-menu-modal li a:focus,
 #primary-menu-modal li a:hover {
 	color: #fff;
-	background-color: #0a4b78;
+	background-color: var(--link);
 }
 
 /*--------------------------------------------------------------
@@ -1825,7 +1839,7 @@ blockquote.wp-block-quote.is-style-large cite {
 	max-width: 45rem;
 	margin: 1rem auto;
 	padding-bottom: 1rem;
-	border-bottom: 1px solid #1d2327;
+	border-bottom: 1px solid var(--accent);
 }
 
 .nav-links {
@@ -1871,7 +1885,7 @@ blockquote.wp-block-quote.is-style-large cite {
 .nav-previous {
 	margin-left: 2em;
 	padding-right: 1em;
-	border-right: 1px solid #1d2327;
+	border-right: 1px solid var(--text);
 }
 
 .nav-next {
@@ -1889,7 +1903,7 @@ blockquote.wp-block-quote.is-style-large cite {
 	top: 0;
 	left: 0;
 	height: 5px;
-	background-color: #0a4b78;
+	background-color: var(--accent);
 }
 
 .progress-bar.pride {
@@ -1975,10 +1989,10 @@ blockquote.wp-block-quote.is-style-large cite {
 	width: 4rem;
 	margin: 0 auto;
 	padding: 3px 6px;
-	border: 2px solid #1d2327;
+	border: 2px solid var(--text);
 	border-radius: 16px;
 	color: #fff;
-	background-color: #1d2327;
+	background-color: var(--text);
 	font-size: 0.75rem;
 	font-weight: 700;
 	line-height: 1;
@@ -1991,12 +2005,12 @@ blockquote.wp-block-quote.is-style-large cite {
 #dark-mode-track:focus,
 #dark-mode-check:active,
 #dark-mode-track:active {
-	outline: thin dotted #0a4b78;
+	outline: thin dotted var(--link);
 }
 
 #dark-mode-track.dark-mode {
-	border: 2px solid #1d2327;
-	color: #1d2327;
+	border: 2px solid var(--text);
+	color: var(--text);
 	background-color: #fff;
 }
 
@@ -2006,7 +2020,7 @@ body.dark-mode #main-navigation.toggled #primary-menu,
 body.dark-mode .site-footer,
 body.dark-mode .site-header {
 	color: rgba(255, 255, 255, 0.9);
-	background-color: #1d2327;
+	background-color: var(--text);
 }
 
 body.dark-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) th,
@@ -2014,7 +2028,7 @@ body.dark-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) td,
 body.dark-mode .wp-block-table.is-style-stripes tbody tr:nth-child(2n + 1) a,
 body.dark-mode code,
 body.dark-mode pre {
-	color: #1d2327;
+	color: var(--text);
 }
 
 body.dark-mode.custom-background .site-header-content {
@@ -2022,11 +2036,11 @@ body.dark-mode.custom-background .site-header-content {
 }
 
 body.dark-mode *::-moz-selection {
-	color: #1d2327;
+	color: var(--text);
 }
 
 body.dark-mode *::selection {
-	color: #1d2327;
+	color: var(--text);
 }
 
 body.dark-mode h1,
@@ -2087,7 +2101,7 @@ body.dark-mode a.assistive-text:visited {
 
 body.dark-mode #primary-menu-modal li a,
 body.dark-mode #primary-menu-modal li a:visited {
-	color: #0a4b78;
+	color: var(--link);
 }
 
 body.dark-mode #primary-menu-modal li a:active,
@@ -2287,8 +2301,8 @@ for people that prefer not to see them */
 		right: -20px;
 		width: 100vw;
 		padding: 0 1rem;
-		background-color: #fff;
-		box-shadow: 0 8px 8px -4px #1d2327;
+		background-color: var(--body);
+		box-shadow: 0 8px 8px -4px var(--text);
 	}
 
 	.header-sidebar,
