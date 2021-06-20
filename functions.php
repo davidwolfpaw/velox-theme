@@ -124,6 +124,18 @@ if ( ! function_exists( 'velox_setup' ) ) :
 					'slug'  => 'accent',
 					'color' => get_theme_mod( 'accent_color', '#d63638' ),
 				),
+				array(
+
+					'name'  => __( 'Link Color', 'velox' ),
+					'slug'  => 'link',
+					'color' => get_theme_mod( 'link_color', '#0a4b78' ),
+				),
+				array(
+
+					'name'  => __( 'Link Active/Hover/Focus Color', 'velox' ),
+					'slug'  => 'link-active',
+					'color' => get_theme_mod( 'link_active_color', '#d63638' ),
+				),
 			)
 		);
 
