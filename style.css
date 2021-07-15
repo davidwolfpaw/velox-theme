@@ -1463,7 +1463,8 @@ blockquote.wp-block-quote.is-style-large cite {
 	text-decoration: none;
 }
 
-.h-entry .entry-content .wp-block-image figure a {
+.h-entry .entry-content figure.wp-block-image > a,
+.h-entry .entry-content .wp-block-image figure > a {
 	display: block;
 	border: 3px solid;
 	border-color: var(--link);
@@ -1473,13 +1474,17 @@ blockquote.wp-block-quote.is-style-large cite {
 	transition: background-color 0.5s, border-color 0.5s;
 }
 
-.h-entry .entry-content .wp-block-image figure a:active,
-.h-entry .entry-content .wp-block-image figure a:focus,
-.h-entry .entry-content .wp-block-image figure a:hover {
+.h-entry .entry-content figure.wp-block-image > a:active,
+.h-entry .entry-content figure.wp-block-image > a:focus,
+.h-entry .entry-content figure.wp-block-image > a:hover,
+.h-entry .entry-content .wp-block-image figure > a:active,
+.h-entry .entry-content .wp-block-image figure > a:focus,
+.h-entry .entry-content .wp-block-image figure > a:hover {
 	border: 3px solid #fff;
 	box-shadow: none;
 }
 
+.h-entry figure.wp-block-image a img,
 .h-entry .wp-block-image figure a img {
 	display: block;
 }
