@@ -1,0 +1,113 @@
+{
+	"version": 1.4,
+	"settings": {
+		"color": {
+			"link": true,
+			"gradients": [
+				{
+					"slug": "progress-pride",
+					"gradient": "linear-gradient(#fff 0%,#fff 9.1%,#f6a8b7 9.1%,#f6a8b7 18.2%,#5ccefa 18.2%,#5ccefa 27.3%,#784f16 27.3%,#784f16 36.4%,#000 36.4%,#000 45.5%,#e40303 45.5%,#e40303 54.6%,#ff8c00 54.6%,#ff8c00 63.7%,#ffed00 63.7%,#ffed00 72.8%,#008026 72.8%,#008026 81.9%,#004dff 81.9%,#004dff 91%,#750787 91%,#750787 100%)",
+					"name": "Progress Pride"
+				}
+			]
+		},
+		"layout": {
+			"contentSize": "45rem",
+			"wideSize": "64rem"
+		},
+		"typography": {
+			"customLineHeight": true,
+			"fontSizes": [
+				{
+					"slug": "extra-small",
+					"size": "16px",
+					"name": "Extra small"
+				},
+				{
+					"slug": "small",
+					"size": "18px",
+					"name": "Small"
+				},
+				{
+					"slug": "normal",
+					"size": "22px",
+					"name": "Normal"
+				},
+				{
+					"slug": "large",
+					"size": "28px",
+					"name": "Large"
+				},
+				{
+					"slug": "extra-large",
+					"size": "36px",
+					"name": "Extra large"
+				},
+				{
+					"slug": "huge",
+					"size": "72px",
+					"name": "Huge"
+				}
+			]
+		},
+		"spacing": {
+			"customPadding": true,
+			"units": [
+				"px",
+				"em",
+				"rem",
+				"vh",
+				"vw"
+			]
+		},
+		"border": {
+			"customColor": true,
+			"customRadius": true,
+			"customStyle": true,
+			"customWidth": true
+		},
+		"custom": {
+			"font-primary": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+			"line-height": {
+				"body": 1.6,
+				"heading": 1.25
+			},
+			"spacing": {
+				"unit": "20px",
+				"horizontal": "25px",
+				"vertical": "30px"
+			},
+			"font-weight":{
+				"light": "400",
+				"normal": "normal"
+			}
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--green)",
+			"text": "var(--wp--preset--color--dark-gray)"
+		},
+		"typography": {
+			"fontSize": "var(--wp--preset--font-size--normal)",
+			"lineHeight": "var(--wp--custom--line-height--body)"
+		},
+		"blocks": {
+			"core/site-tagline": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)",
+					"lineHeight": 1.4
+				}
+			},
+			"core/button": {
+				"border": {
+					"radius": "4px"
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--normal)",
+					"fontWeight": 700
+				}
+			}
+		}
+	}
+}
