@@ -190,6 +190,11 @@ if ( ! function_exists( 'velox_setup' ) ) :
 		 */
 		add_theme_support( 'block-templates' );
 
+		/**
+		 * Only load styles for used blocks in WordPress v5.8.0
+		 */
+		add_filter( 'should_load_separate_core_block_assets', '__return_true' );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'velox_setup', 20 );
