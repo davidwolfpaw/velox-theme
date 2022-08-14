@@ -142,38 +142,41 @@ if ( ! function_exists( 'velox_setup' ) ) :
 		/**
 		 * Add support for block editor wide images.
 		 */
-		add_theme_support( 'editor-font-sizes', array(
+		add_theme_support(
+			'editor-font-sizes',
 			array(
-				'name' => esc_attr__( 'Extra small', 'velox' ),
-				'size' => 16,
-				'slug' => 'extra-small'
-			),
-			array(
-				'name' => esc_attr__( 'Small', 'velox' ),
-				'size' => 18,
-				'slug' => 'small'
-			),
-			array(
-				'name' => esc_attr__( 'Normal', 'velox' ),
-				'size' => 22,
-				'slug' => 'normal'
-			),
-			array(
-				'name' => esc_attr__( 'Large', 'velox' ),
-				'size' => 28,
-				'slug' => 'large'
-			),
-			array(
-				'name' => esc_attr__( 'Extra large', 'velox' ),
-				'size' => 36,
-				'slug' => 'extra-large'
-			),
-			array(
-				'name' => esc_attr__( 'Huge', 'velox' ),
-				'size' => 72,
-				'slug' => 'huge'
+				array(
+					'name' => esc_attr__( 'Extra small', 'velox' ),
+					'size' => 16,
+					'slug' => 'extra-small',
+				),
+				array(
+					'name' => esc_attr__( 'Small', 'velox' ),
+					'size' => 18,
+					'slug' => 'small',
+				),
+				array(
+					'name' => esc_attr__( 'Normal', 'velox' ),
+					'size' => 22,
+					'slug' => 'normal',
+				),
+				array(
+					'name' => esc_attr__( 'Large', 'velox' ),
+					'size' => 28,
+					'slug' => 'large',
+				),
+				array(
+					'name' => esc_attr__( 'Extra large', 'velox' ),
+					'size' => 36,
+					'slug' => 'extra-large',
+				),
+				array(
+					'name' => esc_attr__( 'Huge', 'velox' ),
+					'size' => 72,
+					'slug' => 'huge',
+				),
 			)
-		) );
+		);
 
 		/**
 		 * Add support for block editor wide images.
@@ -279,7 +282,7 @@ function velox_scripts() {
 
 	// Pass theme mods to Velox scripts.
 	$velox_options = array(
-		'dark_mode'         => sanitize_key( get_theme_mod( 'dark_mode', 'default_light' ) ),
+		'dark_mode'          => sanitize_key( get_theme_mod( 'dark_mode', 'default_light' ) ),
 		'read_time'          => (bool) get_theme_mod( 'read_time', true ),
 		'progress_bar'       => (bool) get_theme_mod( 'progress_bar', true ),
 		'progress_bar_pride' => (bool) get_theme_mod( 'progress_bar_pride', true ),

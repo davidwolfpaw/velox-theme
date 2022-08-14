@@ -14,7 +14,7 @@ module.exports = {
 			true,
 			{
 				ignore: [ 'consecutive-duplicates-with-different-values' ]
-			}
+		}
 		],
 		'order/order': [ 'at-variables', 'dollar-variables', 'custom-properties', 'declarations' ],
 		'order/properties-order': [

@@ -30,7 +30,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Forms
 # Layout
 # Site Header
-    ## WordPress Admin Bar
+	## WordPress Admin Bar
 # Headers & Titles
 # Header Sidebar
 # Accessibility
@@ -39,16 +39,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Sidebars
 	## Widgets
 # Media
-    ## Captions
-    ## Galleries
-    ## Block Editor Blocks
+	## Captions
+	## Galleries
+	## Block Editor Blocks
 # Content
-    ## Comments
-    ## Posts and pages
+	## Comments
+	## Posts and pages
 # Infinite scroll
 # Navigation
-    ## Links
-    ## Menus
+	## Links
+	## Menus
 		### Main Navigation
 		### Footer Menu
 		### Header Modal
@@ -59,11 +59,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	@media prefers-color-scheme: light
 	@media prefers-color-scheme: dark
 	@media print
-    @media screen and (max-width: 600px)
-    @media screen and (min-width: 600px)
-    @media screen and (max-width: 767px)
-    @media screen and (min-width: 768px)
-    @media screen and (min-width: 1024px)
+	@media screen and (max-width: 600px)
+	@media screen and (min-width: 600px)
+	@media screen and (max-width: 767px)
+	@media screen and (min-width: 768px)
+	@media screen and (min-width: 1024px)
 --------------------------------------------------------------*/
 
 /* Variables
@@ -700,7 +700,7 @@ select {
 
 .site-header-wrap {
 	display: -ms-grid;
-	display: grid;	
+	display: grid;
 	position: relative;
 	z-index: 2;
 	padding: 0 1rem;
@@ -2181,18 +2181,18 @@ body.dark-mode #primary-menu-modal li a:hover {
 	}
 }
 
-/* Remove all animations and transitions  
-for people that prefer not to see them */  
-@media (prefers-reduced-motion: reduce) {  
+/* Remove all animations and transitions
+for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
 
-	*,  
-	*::before,  
-	*::after {  
-		transition-duration: 0.01ms !important;  
-		animation-duration: 0.01ms !important;  
-		animation-iteration-count: 1 !important;  
-		scroll-behavior: auto !important;  
-	}  
+	*,
+	*::before,
+	*::after {
+		transition-duration: 0.01ms !important;
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+	}
 }
 
 @media print {
@@ -2412,8 +2412,8 @@ for people that prefer not to see them */
 	}
 
 	/*--------------------------------------------------------------
-    # Header Sidebar
-    --------------------------------------------------------------*/
+	# Header Sidebar
+	--------------------------------------------------------------*/
 	.site-wrap {
 		display: -ms-grid;
 		display: grid;

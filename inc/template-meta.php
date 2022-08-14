@@ -15,7 +15,7 @@
  */
 function velox_get_entry_meta() {
 
-	$entry_meta = __( 'Posted On ', 'velox' );
+	$entry_meta  = __( 'Posted On ', 'velox' );
 	$entry_meta .= velox_get_post_date( array() );
 
 	return apply_filters( 'velox_get_entry_meta', $entry_meta );
@@ -31,7 +31,7 @@ function velox_get_entry_meta() {
  */
 function velox_get_entry_footer_meta() {
 
-	$entry_meta = '<div class="entry-meta-categories">';
+	$entry_meta  = '<div class="entry-meta-categories">';
 	$entry_meta .= velox_get_post_categories( array() );
 	$entry_meta .= '</div>';
 	$entry_meta .= '<div class="entry-meta-tags">';
